@@ -13,58 +13,344 @@
     </div>
   </div>
 </div>
-<div class="card" style="width: 40rem">
-    <div class="card-body">
-      <h5 class="card-title">Work Experience</h5>
-      <div>
-          <div class="row1" style="display: flex;justify-content: space-between">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Job Title</label>
-                <input type="text" class="form-control" id="jobTitle"  placeholder="eg.Sales Manager" />
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">City/Town</label>
-                <input type="text" class="form-control" id="place"  placeholder="eg. Chennai" />
-            </div>
-          </div>
-          <div class="row2">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Employer</label>
-                <input type="text" class="form-control" id="jobTitle"  placeholder="eg. PwC" />
-            </div>
-          </div>
-          <div class="row3">
-            <label for="exampleInputEmail1">Start Date</label> 
-            <div class="dropdown">
-                <button class="btn btn-sm btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Auguest
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Dont Show</a></li>
-                  <li><a class="dropdown-item" href="#">Show year only</a></li>
-                  <li><a class="dropdown-item" href="#">January</a></li>
-                  <li><a class="dropdown-item" href="#">February</a></li>
-                  <li><a class="dropdown-item" href="#">March</a></li>
-                  <li><a class="dropdown-item" href="#">April</a></li>
-                  <li><a class="dropdown-item" href="#">May</a></li>
-                  <li><a class="dropdown-item" href="#">June</a></li>
-                  <li><a class="dropdown-item" href="#">July</a></li>
-                  <li><a class="dropdown-item" href="#">Auguest</a></li>
-                  <li><a class="dropdown-item" href="#">September</a></li>
-                  <li><a class="dropdown-item" href="#">October</a></li>
-                  <li><a class="dropdown-item" href="#">November</a></li>
-                  <li><a class="dropdown-item" href="#">December</a></li>
-                </ul>
-              </div>
-          </div>
+<!-- work -->
+<div class="card" style="width: 40rem; margin-bottom: 2rem;">
+  <div class="card-body">
+    <h5 class="card-title">Work Experience</h5>
+    <div>
+      <div class="row1" style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Job Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobTitle"
+            placeholder="eg.Sales Manager"
+          />
         </div>
-      <div style="display: flex; justify-content: space-between">
+        <div class="form-group">
+          <label for="exampleInputEmail1">City/Town</label>
+          <input
+            type="text"
+            class="form-control"
+            id="place"
+            placeholder="eg. Chennai"
+          />
+        </div>
+      </div>
+      <div class="row2" style="margin-bottom: 1rem;">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Employer</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobTitle"
+            placeholder="eg. PwC"
+          />
+        </div>
+      </div>
+      <div class="row3" style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+        <div>
+          <div>
+            <label for="exampleInputEmail1">Start Date</label>
+          </div>
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem; margin-right: 8px;">
+            <option selected>January</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem;">
+            <option selected>2021</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+        </div>
+        <div>
+          <div>
+            <label for="exampleInputEmail1">End Date</label>
+          </div>
+          <select class="custom-select"style="width: 8.2rem; height: 2.2rem; margin-right: 8px;">
+            <option selected>January</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem;">
+            <option selected>2021</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+        </div>
+      </div>
+      <div class="row4" style="margin-bottom: 1rem;">
+        <p>Description</p>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+      <div>
         <button type="button" class="btn btn-outline-secondary btn-sm">
           Tips
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-outline-secondary btn-sm"
+          style="margin-right: 1rem"
+        >
+          Delete
         </button>
         <button type="button" class="btn btn-outline-secondary btn-sm">
           Save
         </button>
       </div>
     </div>
+    <div class="addNew" style="text-align: center;"> 
+      <p>Add another work experience</p>
+    </div>
   </div>
+</div>
+<!-- educationalqualifation -->
+<div class="card" style="width: 40rem ; margin-bottom: 2rem;">
+  <div class="card-body">
+    <h5 class="card-title">Education and Qualifications</h5>
+    <div>
+      <div class="row1" style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Degree</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobTitle"
+            placeholder="eg. Bachelor of Science"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">City/Town</label>
+          <input
+            type="text"
+            class="form-control"
+            id="place"
+            placeholder="eg. Chennai"
+          />
+        </div>
+      </div>
+      <div class="row2" style="margin-bottom: 1rem;">
+        <div class="form-group">
+          <label for="exampleInputEmail1">School</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobTitle"
+            placeholder="eg. Chennai University"
+          />
+        </div>
+      </div>
+      <div class="row3" style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+        <div>
+          <div>
+            <label for="exampleInputEmail1">Start Date</label>
+          </div>
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem; margin-right: 8px;">
+            <option selected>January</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem;">
+            <option selected>2021</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+        </div>
+        <div>
+          <div>
+            <label for="exampleInputEmail1">End Date</label>
+          </div>
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem; margin-right: 8px;">
+            <option selected>January</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem;">
+            <option selected>2021</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+        </div>
+      </div>
+      <div class="row4" style="margin-bottom: 1rem;">
+        <p>Description</p>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+      <div>
+        <button type="button" class="btn btn-outline-secondary btn-sm">
+          Tips
+        </button>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-outline-secondary btn-sm"
+          style="margin-right: 1rem"
+        >
+          Delete
+        </button>
+        <button type="button" class="btn btn-outline-secondary btn-sm">
+          Save
+        </button>
+      </div>
+    </div>
+    <div class="addNew" style="text-align: center;"> 
+      <p>Add another education</p>
+    </div>
+  </div>
+</div>
+<!-- interests -->
+<div class="card" style="width: 40rem; margin-bottom: 2rem;">
+  <div class="card-body">
+    <h5 class="card-title">Interests</h5>
+    <label for="exampleInputEmail1">Hobby</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobTitle"
+            placeholder="eg. Hiking"
+          />
+          <div style="display: flex; justify-content: space-between;margin-top:1rem; margin-bottom: 1.5rem;">
+            <div>
+              <button type="button" class="btn btn-outline-secondary btn-sm">
+                Tips
+              </button>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm"
+                style="margin-right: 1rem"
+              >
+                Delete
+              </button>
+              <button type="button" class="btn btn-outline-secondary btn-sm">
+                Save
+              </button>
+            </div>
+          </div>
+          <div class="addNew" style="text-align: center;"> 
+            <p>Add another hobby</p>
+          </div>
+  </div>
+</div>
+<!-- reference -->
+<div class="card" style="width: 40rem; margin-bottom: 2rem;">
+  <div class="card-body">
+    <h5 class="card-title">Reference</h5>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Company Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="jobTitle"
+         
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Contact Person</label>
+        <input
+          type="text"
+          class="form-control"
+          id="jobTitle"
+          
+        />
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Phone number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="jobTitle"
+        
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="jobTitle"
+         
+        />
+      </div>
+    </div>
+    <div style="margin-left: 79%;margin-bottom: 1.5rem;">
+      <button
+                type="button"
+                class="btn btn-outline-secondary btn-sm"
+                style="margin-right: 1rem"
+              >
+                Delete
+              </button>
+              <button type="button" class="btn btn-outline-secondary btn-sm">
+                Save
+              </button>
+    </div>
+    <div class="addNew" style="text-align: center;"> 
+      <p>Add another reference</p>
+    </div>
+  </div>
+</div>
+<!-- skills -->
+<div class="card" style="width: 40rem ; margin-bottom: 2rem;">
+  <div class="card-body">
+    <h5 class="card-title">Education</h5>
+    <div>
+      <div class="row1" style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Skill</label>
+          <input
+            type="text"
+            class="form-control"
+            id="jobTitle"
+            placeholder="eg. Microsoft Word"
+          />
+        </div>
+        <div>
+          <div>
+            <label for="exampleInputEmail1">Start Date</label>
+          </div>
+            <div>
+              <select class="custom-select" style="width: 17rem; height: 2.2rem;">
+                <option selected>January</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+              </select>
+            </div>
+        
+      </div>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem;">
+        <div>
+          <button type="button" class="btn btn-outline-secondary btn-sm">
+            Tips
+          </button>
+        </div>
+        <div>
+          <button
+            type="button"
+            class="btn btn-outline-secondary btn-sm"
+            style="margin-right: 1rem"
+          >
+            Delete
+          </button>
+          <button type="button" class="btn btn-outline-secondary btn-sm">
+            Save
+          </button>
+        </div>
+      </div>
+      <div class="addNew" style="text-align: center;"> 
+        <p>Add another education</p>
+      </div>
+</div>
+<!-- extra -->
