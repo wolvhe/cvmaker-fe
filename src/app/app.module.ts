@@ -4,12 +4,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PinfoComponent } from './pinfo/pinfo.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { TesttqueryComponent } from './testtquery/testtquery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PinfoComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    TesttqueryComponent
   ],
   imports: [
     BrowserModule,
