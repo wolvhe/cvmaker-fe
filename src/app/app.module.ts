@@ -7,14 +7,12 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CKEditorModule } from 'ng2-ckeditor';
-import { ExperiencesComponent } from './experiences/experiences.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExperiencesComponent
   ],
   imports: [
     BrowserModule,
