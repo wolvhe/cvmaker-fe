@@ -1,3 +1,23 @@
+<!-- progress bar -->
+<div class="container">
+  <input type="radio" class="radio" name="progress" value="five" id="five">
+  <label for="five" class="label">5%</label>
+  <!-- <i class="fas fa-cog"  name="progress" value="five" id="five"></i> -->
+
+  <input type="radio" class="radio" name="progress" value="fifty" id="fifty">
+  <label for="fifty" class="label">50%</label>
+
+  <input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">
+  <label for="onehundred" class="label">100%</label>
+
+  <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+</div>
+
+
+
+
 <!-- resumeObjective -->
 <div class="card" style="height: 18rem;width: 40rem;margin-bottom: 2rem">
   <div class="card-body">
@@ -28,12 +48,8 @@
       <quill-editor [modules]="editorModules"></quill-editor>
     </div>
     <div style="margin-top: 3.5rem; display: flex; justify-content: space-between">
-      <button
-        data-toggle="modal"
-        data-target="#exampleModalCenter"
-        type="button"
-        class="btn tipsButton btn-outline-secondary btn-sm"
-      >
+      <button data-toggle="modal" data-target="#exampleModalCenter" type="button"
+        class="btn tipsButton btn-outline-secondary btn-sm">
         Tips
       </button>
       <button type="button" class="saveButton btn btn-outline-secondary btn-sm">
@@ -68,60 +84,36 @@
       </div>
     </div>
     <div>
-      <div
-        class="row1"
-        style="
+      <div class="row1" style="
           display: flex;
           justify-content: space-between;
           margin-bottom: 1rem;
-        "
-      >
+        ">
         <div class="form-group">
           <label for="exampleInputEmail1">Job Title</label>
-          <input
-            type="text"
-            class="form-control"
-            id="jobTitle"
-            placeholder="eg.Sales Manager"
-          />
+          <input type="text" class="form-control" id="jobTitle" placeholder="eg.Sales Manager" />
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">City/Town</label>
-          <input
-            type="text"
-            class="form-control"
-            id="place"
-            placeholder="eg. Chennai"
-          />
+          <input type="text" class="form-control" id="place" placeholder="eg. Chennai" />
         </div>
       </div>
       <div class="row2" style="margin-bottom: 1rem">
         <div class="form-group">
           <label for="exampleInputEmail1">Employer</label>
-          <input
-            type="text"
-            class="form-control"
-            id="jobTitle"
-            placeholder="eg. PwC"
-          />
+          <input type="text" class="form-control" id="jobTitle" placeholder="eg. PwC" />
         </div>
       </div>
-      <div
-        class="row3"
-        style="
+      <div class="row3" style="
           display: flex;
           justify-content: space-between;
           margin-bottom: 1rem;
-        "
-      >
+        ">
         <div>
           <div>
             <label for="exampleInputEmail1">Start Date</label>
           </div>
-          <select
-            class="custom-select"
-            style="width: 8.2rem; height: 2.2rem; margin-right: 8px"
-          >
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem; margin-right: 8px">
             <option selected>January</option>
             <option value="1">Male</option>
             <option value="2">Female</option>
@@ -136,10 +128,7 @@
           <div>
             <label for="exampleInputEmail1">End Date</label>
           </div>
-          <select
-            class="custom-select"
-            style="width: 8.2rem; height: 2.2rem; margin-right: 8px"
-          >
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem; margin-right: 8px">
             <option selected>January</option>
             <option value="1">Male</option>
             <option value="2">Female</option>
@@ -158,29 +147,19 @@
         </div>
       </div>
     </div>
-    <div
-      style="
+    <div style="
         display: flex;
         justify-content: space-between;
         margin-bottom: 1.5rem;
-      "
-    >
+      ">
       <div>
-        <button
-          data-toggle="modal"
-          data-target="#workTips"
-          type="button"
-          class="btn tipsButton btn-outline-secondary btn-sm"
-        >
+        <button data-toggle="modal" data-target="#workTips" type="button"
+          class="btn tipsButton btn-outline-secondary btn-sm">
           Tips
         </button>
       </div>
       <div>
-        <button
-          type="button"
-          class="btn deleteButton btn-outline-secondary btn-sm"
-          style="margin-right: 1rem"
-        >
+        <button type="button" class="btn deleteButton btn-outline-secondary btn-sm" style="margin-right: 1rem">
           Delete
         </button>
         <button type="button" class="btn saveButton btn-outline-secondary btn-sm">
@@ -219,60 +198,36 @@
       </div>
     </div>
     <div>
-      <div
-        class="row1"
-        style="
+      <div class="row1" style="
           display: flex;
           justify-content: space-between;
           margin-bottom: 1rem;
-        "
-      >
+        ">
         <div class="form-group">
           <label for="exampleInputEmail1">Degree</label>
-          <input
-            type="text"
-            class="form-control"
-            id="jobTitle"
-            placeholder="eg. Bachelor of Science"
-          />
+          <input type="text" class="form-control" id="jobTitle" placeholder="eg. Bachelor of Science" />
         </div>
         <div class="form-group">
           <label for="exampleInputEmail1">City/Town</label>
-          <input
-            type="text"
-            class="form-control"
-            id="place"
-            placeholder="eg. Chennai"
-          />
+          <input type="text" class="form-control" id="place" placeholder="eg. Chennai" />
         </div>
       </div>
       <div class="row2" style="margin-bottom: 1rem">
         <div class="form-group">
           <label for="exampleInputEmail1">School</label>
-          <input
-            type="text"
-            class="form-control"
-            id="jobTitle"
-            placeholder="eg. Chennai University"
-          />
+          <input type="text" class="form-control" id="jobTitle" placeholder="eg. Chennai University" />
         </div>
       </div>
-      <div
-        class="row3"
-        style="
+      <div class="row3" style="
           display: flex;
           justify-content: space-between;
           margin-bottom: 1rem;
-        "
-      >
+        ">
         <div>
           <div>
             <label for="exampleInputEmail1">Start Date</label>
           </div>
-          <select
-            class="custom-select"
-            style="width: 8.2rem; height: 2.2rem; margin-right: 8px"
-          >
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem; margin-right: 8px">
             <option selected>January</option>
             <option value="1">Male</option>
             <option value="2">Female</option>
@@ -287,10 +242,7 @@
           <div>
             <label for="exampleInputEmail1">End Date</label>
           </div>
-          <select
-            class="custom-select"
-            style="width: 8.2rem; height: 2.2rem; margin-right: 8px"
-          >
+          <select class="custom-select" style="width: 8.2rem; height: 2.2rem; margin-right: 8px">
             <option selected>January</option>
             <option value="1">Male</option>
             <option value="2">Female</option>
@@ -309,29 +261,19 @@
         </div>
       </div>
     </div>
-    <div
-      style="
+    <div style="
         display: flex;
         justify-content: space-between;
         margin-bottom: 1.5rem;
-      "
-    >
+      ">
       <div>
-        <button
-          data-toggle="modal"
-          data-target="#educationTips"
-          type="button"
-          class="btn tipsButton btn-outline-secondary btn-sm"
-        >
+        <button data-toggle="modal" data-target="#educationTips" type="button"
+          class="btn tipsButton btn-outline-secondary btn-sm">
           Tips
         </button>
       </div>
       <div>
-        <button
-          type="button"
-          class="btn deleteButton btn-outline-secondary btn-sm"
-          style="margin-right: 1rem"
-        >
+        <button type="button" class="btn deleteButton btn-outline-secondary btn-sm" style="margin-right: 1rem">
           Delete
         </button>
         <button type="button" class="btn saveButton btn-outline-secondary btn-sm">
@@ -370,36 +312,21 @@
       </div>
     </div>
     <label for="exampleInputEmail1">Hobby</label>
-    <input
-      type="text"
-      class="form-control"
-      id="jobTitle"
-      placeholder="eg. Hiking"
-    />
-    <div
-      style="
+    <input type="text" class="form-control" id="jobTitle" placeholder="eg. Hiking" />
+    <div style="
         display: flex;
         justify-content: space-between;
         margin-top: 1rem;
         margin-bottom: 1.5rem;
-      "
-    >
+      ">
       <div>
-        <button
-          data-toggle="modal"
-          data-target="#interestTips"
-          type="button"
-          class="btn tipsButton btn-outline-secondary btn-sm"
-        >
+        <button data-toggle="modal" data-target="#interestTips" type="button"
+          class="btn tipsButton btn-outline-secondary btn-sm">
           Tips
         </button>
       </div>
       <div>
-        <button
-          type="button"
-          class="btn deleteButton btn-outline-secondary btn-sm"
-          style="margin-right: 1rem"
-        >
+        <button type="button" class="btn deleteButton btn-outline-secondary btn-sm" style="margin-right: 1rem">
           Delete
         </button>
         <button type="button" class="btn saveButton btn-outline-secondary btn-sm">
@@ -437,9 +364,7 @@
         </div>
       </div>
     </div>
-    <div
-      style="display: flex; justify-content: space-between; margin-bottom: 1rem"
-    >
+    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem">
       <div class="form-group">
         <label for="exampleInputEmail1">Company Name</label>
         <input type="text" class="form-control" id="jobTitle" />
@@ -449,9 +374,7 @@
         <input type="text" class="form-control" id="jobTitle" />
       </div>
     </div>
-    <div
-      style="display: flex; justify-content: space-between; margin-bottom: 1rem"
-    >
+    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem">
       <div class="form-group">
         <label for="exampleInputEmail1">Phone number</label>
         <input type="text" class="form-control" id="jobTitle" />
@@ -462,11 +385,7 @@
       </div>
     </div>
     <div style="margin-left: 79%; margin-bottom: 1.5rem">
-      <button
-        type="button"
-        class="btn deleteButton btn-outline-secondary btn-sm"
-        style="margin-right: 1rem"
-      >
+      <button type="button" class="btn deleteButton btn-outline-secondary btn-sm" style="margin-right: 1rem">
         Delete
       </button>
       <button type="button" class="btn saveButton btn-outline-secondary btn-sm">
@@ -504,22 +423,14 @@
       </div>
     </div>
     <div>
-      <div
-        class="row1"
-        style="
+      <div class="row1" style="
           display: flex;
           justify-content: space-between;
           margin-bottom: 1rem;
-        "
-      >
+        ">
         <div class="form-group">
           <label for="exampleInputEmail1">Skill</label>
-          <input
-            type="text"
-            class="form-control"
-            id="jobTitle"
-            placeholder="eg. Microsoft Word"
-          />
+          <input type="text" class="form-control" id="jobTitle" placeholder="eg. Microsoft Word" />
         </div>
         <div>
           <div>
@@ -534,29 +445,19 @@
           </div>
         </div>
       </div>
-      <div
-        style="
+      <div style="
           display: flex;
           justify-content: space-between;
           margin-bottom: 1.5rem;
-        "
-      >
+        ">
         <div>
-          <button
-            data-toggle="modal"
-            data-target="#skillsTips"
-            type="button"
-            class="btn tipsButton btn-outline-secondary btn-sm"
-          >
+          <button data-toggle="modal" data-target="#skillsTips" type="button"
+            class="btn tipsButton btn-outline-secondary btn-sm">
             Tips
           </button>
         </div>
         <div>
-          <button
-            type="button"
-            class="btn deleteButton btn-outline-secondary btn-sm"
-            style="margin-right: 1rem"
-          >
+          <button type="button" class="btn deleteButton btn-outline-secondary btn-sm" style="margin-right: 1rem">
             Delete
           </button>
           <button type="button" class="btn saveButton btn-outline-secondary btn-sm">
@@ -568,126 +469,112 @@
         <p>Add another education</p>
       </div>
     </div>
-    <!-- extra -->
 
-    
-  
-  
-  
-  
-  
-  
-  
   </div>
 
 
+
 </div>
+<!-- extra -->
+
+<div class="form-section card" style="overflow: hidden;">
+  <div class="form-element col-1"><select style="width: 30rem;height: 50px;"
+      class="form-select-custom form__select-element">
+      <option value="">+ Add extra section</option>
+      <option value="course">Courses</option>
+      <option value="availability">Achievements</option>
+      <option value="variousInformation">Publications</option>
+      <option value="single_textarea">Create custom section</option>
+    </select><i style="float: right;" class="form-select-custom--arrow"></i></div>
+</div>
+
+
 <!-- ModalTips -->
-<div
-class="modal fade"
-id="exampleModalCenter"
-tabindex="-1"
-role="dialog"
-aria-labelledby="exampleModalCenterTitle"
-aria-hidden="true"
->
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-body">
-      <p>Tips</p>
-      <small>1.Your profile is always placed at the top of your resume.<br>
-      2.Describe yourself in short and strong terms with both the vacancy
-      and job title in mind. Do not use one liners, but try to be as
-      concise as possible. <br>3.Create a good profile by mentioning each of
-      the following at the very least; achievements, qualities, ambitions,
-      goals, and what you are looking for.</small>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Tips</p>
+        <small>1.Your profile is always placed at the top of your resume.<br>
+          2.Describe yourself in short and strong terms with both the vacancy
+          and job title in mind. Do not use one liners, but try to be as
+          concise as possible. <br>3.Create a good profile by mentioning each of
+          the following at the very least; achievements, qualities, ambitions,
+          goals, and what you are looking for.</small>
+      </div>
     </div>
   </div>
 </div>
-</div>
-<div
-class="modal fade"
-id="workTips"
-tabindex="-1"
-role="dialog"
-aria-labelledby="exampleModalCenterTitle"
-aria-hidden="true"
->
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-body">
-      <p>Tips</p>
-      <small>1.Use the correct job title for the job vacancy you are applying for. For example, 'Seller' should be written as 'Account Manager'.<br>
-        2.Describe your tasks, responsibilities, and any competencies developed as clearly as possible.<br>
-        3.Take a good look at what the company is looking for. Compose your text with the needs of the company in mind, and complete it with your own experience.<br>
-        4.If you have work experience, only mention the relevant tasks and responsibilities for the vacancy you wish to apply.<br>
-        5.Sorting your items chronologically? Click on the Wheel icon at the right top of the section and choose 'sort chronologically'.
+<div class="modal fade" id="workTips" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Tips</p>
+        <small>1.Use the correct job title for the job vacancy you are applying for. For example, 'Seller' should be
+          written as 'Account Manager'.<br>
+          2.Describe your tasks, responsibilities, and any competencies developed as clearly as possible.<br>
+          3.Take a good look at what the company is looking for. Compose your text with the needs of the company in
+          mind, and complete it with your own experience.<br>
+          4.If you have work experience, only mention the relevant tasks and responsibilities for the vacancy you wish
+          to apply.<br>
+          5.Sorting your items chronologically? Click on the Wheel icon at the right top of the section and choose 'sort
+          chronologically'.
         </small>
+      </div>
     </div>
   </div>
 </div>
-</div>
-<div
-class="modal fade"
-id="educationTips"
-tabindex="-1"
-role="dialog"
-aria-labelledby="exampleModalCenterTitle"
-aria-hidden="true"
->
-<div class="modal-dialog modal-dialog-centered" role="document">
-  <div class="modal-content">
-    <div class="modal-body">
-      <p>Tips</p>
-      <small>1.Only mention courses that you have actually attended.<br>
-        2.Do not mention primary or secondary schools unless they are your latest education.<br>
-        3.If you didn't fully complete a course, it can still add value to your resume or at least explain a gap in your work history.<br>
-        4.Add a description for your course to explain exactly what it entailed to potential employers.<br>
-        5.Sorting your items chronologically? Click on the Wheel icon at the right top of the section and choose 'sort chronologically'.
+<div class="modal fade" id="educationTips" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Tips</p>
+        <small>1.Only mention courses that you have actually attended.<br>
+          2.Do not mention primary or secondary schools unless they are your latest education.<br>
+          3.If you didn't fully complete a course, it can still add value to your resume or at least explain a gap in
+          your work history.<br>
+          4.Add a description for your course to explain exactly what it entailed to potential employers.<br>
+          5.Sorting your items chronologically? Click on the Wheel icon at the right top of the section and choose 'sort
+          chronologically'.
         </small>
+      </div>
     </div>
   </div>
 </div>
-</div>
-<div
-class="modal fade"
-id="interestTips"
-tabindex="-1"
-role="dialog"
-aria-labelledby="exampleModalCenterTitle"
-aria-hidden="true"
->
-<div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content">
-  <div class="modal-body">
-    <p>Tips</p>
-    <small>1.Only mention hobbies which add value to your resume and the job you wish to apply for. For example, 'Morris Dancing' may not be relevant to the IT sector, but 'Programming' would be.<br>
-      2.Feel free to mention hobbies that tell the employer about your personality, such as sports, photography, or travelling.<br>
-      3.Do not mention adult hobbies or hobbies that can cause a negative image. For example, gambling, political stances, etc.
-      </small>
+<div class="modal fade" id="interestTips" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Tips</p>
+        <small>1.Only mention hobbies which add value to your resume and the job you wish to apply for. For example,
+          'Morris Dancing' may not be relevant to the IT sector, but 'Programming' would be.<br>
+          2.Feel free to mention hobbies that tell the employer about your personality, such as sports, photography, or
+          travelling.<br>
+          3.Do not mention adult hobbies or hobbies that can cause a negative image. For example, gambling, political
+          stances, etc.
+        </small>
+      </div>
+    </div>
   </div>
 </div>
-</div>
-</div>
-<div
-class="modal fade"
-id="skillsTips"
-tabindex="-1"
-role="dialog"
-aria-labelledby="exampleModalCenterTitle"
-aria-hidden="true"
->
-<div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content">
-  <div class="modal-body">
-    <p>Tips</p>
-    <small>
-      1.Only mention skills that are valuable for the vacancy you wish to apply for.<br>
-      2.Examples : Great communicator, team player, reliable, etc.<br>
-      3.Mention any valuable skills related to the vacancy, such as computer and software skills. For example : Word, Excel, Photoshop, etc.
-      </small>
+<div class="modal fade" id="skillsTips" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p>Tips</p>
+        <small>
+          1.Only mention skills that are valuable for the vacancy you wish to apply for.<br>
+          2.Examples : Great communicator, team player, reliable, etc.<br>
+          3.Mention any valuable skills related to the vacancy, such as computer and software skills. For example :
+          Word, Excel, Photoshop, etc.
+        </small>
+      </div>
+    </div>
   </div>
 </div>
-</div>
-</div>
-<!--  -->
+<!-- language -->
