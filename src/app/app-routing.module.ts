@@ -9,8 +9,10 @@ import { BerkeleyComponent } from './template/berkeley/berkeley.component';
 import { EdinburghComponent } from './template/edinburgh/edinburgh.component';
 import { OtagoComponent } from './template/otago/otago.component';
 import { PrincetonComponent } from './template/princeton/princeton.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
   {path: 'info', component: PinfoComponent},
   {path: 'experience', component: ExperienceComponent},
   {path: 'test', component: TesttqueryComponent},

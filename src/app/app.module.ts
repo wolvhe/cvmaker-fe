@@ -12,6 +12,7 @@ import { EdinburghComponent } from './template/edinburgh/edinburgh.component';
 import { PrincetonComponent } from './template/princeton/princeton.component';
 import { OtagoComponent } from './template/otago/otago.component';
 import { BerkeleyComponent } from './template/berkeley/berkeley.component';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { BerkeleyComponent } from './template/berkeley/berkeley.component';
     EdinburghComponent,
     PrincetonComponent,
     OtagoComponent,
-    BerkeleyComponent
+    BerkeleyComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
