@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PinfoComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() { 
+  }
   ngOnInit(): void {
   }
 
+  visible:boolean=false;
+
+  displayinfo(){
+    return this.visible = !this.visible;
+   }
+
+  
 }
