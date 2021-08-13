@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { PinfoComponent } from './pinfo/pinfo.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { TesttqueryComponent } from './testtquery/testtquery.component';
-
+import { QuillModule } from 'ngx-quill';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +15,8 @@ import { TesttqueryComponent } from './testtquery/testtquery.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    QuillModule
   ],
   providers: [],
   bootstrap: [AppComponent]

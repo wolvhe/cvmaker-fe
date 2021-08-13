@@ -15,5 +15,17 @@ export class ExperienceComponent implements OnInit {
   ngOnInit(){
     
   }
-  
+  editorModules = {toolbar: [
+    [
+      'bold', 'italic', 'underline'
+    ],
+    [
+      {
+        'list': 'ordered'
+      },
+      {
+        'list': 'bullet'
+      }
+    ]
+  ]}
 }
