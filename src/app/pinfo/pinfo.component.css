@@ -5,3 +5,15 @@
     justify-content: center;
     margin: 0 auto;
 }
+
+label{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.custom-select{
+    width: 100%;
+    height: 2.2rem; 
+    margin-right:8px;
+}
