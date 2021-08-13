@@ -6,12 +6,14 @@ import { PinfoComponent } from './pinfo/pinfo.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { TesttqueryComponent } from './testtquery/testtquery.component';
 import { QuillModule } from 'ngx-quill';
+import { TemplateComponent } from './template/template.component';
 @NgModule({
   declarations: [
     AppComponent,
     PinfoComponent,
     ExperienceComponent,
-    TesttqueryComponent
+    TesttqueryComponent,
+    TemplateComponent
   ],
   imports: [
     BrowserModule,
