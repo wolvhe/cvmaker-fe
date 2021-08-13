@@ -71,3 +71,16 @@
 .sideSettingsButton:hover {
   transform: rotate(360deg);
 }
+.nextButton {
+  height: 50px;
+  width: 200px;
+  background-color: #626CCC;
+  border: #4287f5;
+  border-radius: 4px;
+  color: white;
+  font-weight: 900;
+  font-size: 16px;
+}
+.prevButton:hover {
+  text-decoration: underline;
+}
