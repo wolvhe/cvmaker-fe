@@ -47,3 +47,11 @@ label{
 @keyframes animate-positive{
     0%{ width: 0; }
 }
+
+footer{
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    margin: 35px 0 30px 0;
+    padding: 0 150px
+}
