@@ -36,6 +36,7 @@
   margin-right: 2rem;
   margin-bottom: 2rem;
   height: 25rem;
+  width: 20rem;
 }
 .card-header {
   text-align: center;
@@ -57,3 +58,9 @@
 .prevButton:hover {
   text-decoration: underline;
 }
+.template-modal-content {
+  width: 50rem;
+  height: 40rem;
+  padding: 10px;
+}
+

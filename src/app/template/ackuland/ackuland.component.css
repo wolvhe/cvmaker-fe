@@ -1,0 +1,13 @@
+.akuland-main {
+    max-width: 800px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.ackuland-header {
+    width: 100%;
+    /* padding: 10px; */
+}
+.ackuland-text {
+    background-color: white;
+    border: 2px solid black;
+}
