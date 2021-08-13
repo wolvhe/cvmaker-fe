@@ -1,27 +1,39 @@
-.progress-title{
-    font-size: 18px;
-    font-weight: 700;
-    color: #000;
-    margin: 0 0 30px;
-}
-.progress{
-    height: 17px;
-    background: rgba(0,0,0,0.1);
-    border-radius: 15px;
-    margin-bottom: 30px;
-    overflow: visible;
-    position: relative;
-}
-.progress .progress-bar{
-    border-radius: 15px;
-    box-shadow: none;
-    position: relative;
-    animation: animate-positive 2s;
+.experience-page-header {
+  text-align: center;
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  color: blue;
 }
 
-@-webkit-keyframes animate-positive{
-    0%{ width: 0; }
+.progress-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 30px;
 }
-@keyframes animate-positive{
-    0%{ width: 0; }
+.progress {
+  height: 17px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 30px;
+  overflow: visible;
+  position: relative;
+}
+.progress .progress-bar {
+  border-radius: 15px;
+  box-shadow: none;
+  position: relative;
+  animation: animate-positive 2s;
+}
+
+@-webkit-keyframes animate-positive {
+  0% {
+    width: 0;
+  }
+}
+@keyframes animate-positive {
+  0% {
+    width: 0;
+  }
 }
