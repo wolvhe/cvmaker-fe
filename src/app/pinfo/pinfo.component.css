@@ -1,4 +1,10 @@
-
+.pinfo_header{
+    text-align: center;
+    font: 40px Open,sans-serif;
+    margin-top: 4rem;
+    padding: 0;
+    color: white;
+}
 .pinfo_card{
     background-color: white;    
     width: 60%;
@@ -38,16 +44,17 @@ label{
 .progress{
     height: 17px;
     background: rgba(0,0,0,0.1);
-    border-radius: 15px;
+    border-radius: 0px;
     margin-bottom: 30px;
     overflow: visible;
     position: relative;
 }
 .progress .progress-bar{
-    border-radius: 15px;
+    /* border-radius: 15px; */
     box-shadow: none;
     position: relative;
     animation: animate-positive 2s;
+   
 }
 @-webkit-keyframes animate-positive{
     0%{ width: 0; }
