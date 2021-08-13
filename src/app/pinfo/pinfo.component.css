@@ -7,6 +7,14 @@
     z-index: 1;
 }
 
+.experience-page-header {
+    text-align: center;
+      font-size: 40px;
+      margin: 0;
+      padding: 0;
+      color: white;
+  }
+
 label{
     font-size: 12px;
     font-weight: 400;
