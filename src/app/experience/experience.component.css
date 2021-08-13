@@ -44,7 +44,7 @@
 }
 .tipsButton:hover {
   background: none;
-  color: #000;
+  color: rgb(255, 187, 0);
 }
 .saveButton:hover {
   background: none;
