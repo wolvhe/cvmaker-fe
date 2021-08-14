@@ -42,9 +42,13 @@
   border-color: lightblue;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(189, 189, 243);
 }
-.tipsButton:hover {
+.fa-lightbulb:hover {
   background: none;
   color: rgb(255, 187, 0);
+}
+.tipsButton{
+  background: none;
+  color: gray;
 }
 .saveButton:hover {
   background: none;
@@ -54,7 +58,7 @@
   background: none;
   color: #ff221e !important;
 }
-.button--move-up:hover, .button--move-down:hover {
+.fa-chevron-up:hover, .fa-chevron-down:hover {
   cursor: pointer;
   color: #4287f5
 }
