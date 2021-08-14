@@ -117,3 +117,53 @@ footer{
   .panel-default{
       border-color: transparent;
   }
+
+  .wrapper{
+      height: 200px;
+      width: 200px;
+      position: relative;
+      border:5px solid #fff;
+      background-color: gray;
+      border-radius: 10px;
+      overflow: hidden;
+
+  }
+
+  .my_file{
+    position: absolute;
+     background-image: url('https://www.searchpng.com/wp-content/uploads/2019/07/Add-Icon-Plus-Icon-715x715.jpg');
+    bottom: 0;
+    outline: none;
+    color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.5s;  
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+  }
+
+  .my-file::-webkit-file-upload-button{
+      visibility: hidden;
+  }
+  .my_file::before
+  {
+      content:'       +         ';
+      font-family: fontAwesome;
+      font-size: 50px;
+      color: #fff;
+      display: inline-block;
+      -webkit-user-select:none;
+  }
+    .my_file::after{
+        content: '  +  ';
+        font-family: 'arial';
+        font-weight: bold;
+        color:#fff;
+        display: block;
+        font-size: 14px;
+        position: absolute;
+    }
+    .my_file:hover{
+        opacity: 1;
+    }
