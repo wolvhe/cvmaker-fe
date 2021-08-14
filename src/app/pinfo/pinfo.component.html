@@ -1,23 +1,37 @@
-<div style="display: flex; margin: auto; width: 35%; margin-top: 2rem; margin-bottom: 1rem;">
+
+<div class="pinfo_header">
+  <strong>Personal Information</strong>
+</div>
+
+<div style="display: flex; margin: auto; width: 35%; margin-top: 2rem; margin-bottom: 1rem;justify-content: center;">
   <div style="display: flex;">
-    <span style="margin-top: -5px;"><i class="fas fa-user-circle fa-3x"  style="background-color: white; border-radius: 50%; color: #1C73BA;"></i><label>Personal</label></span>
-    
-    <div class="progress" style="width: 18rem;  margin-left: -35px; margin-top: 11px; height: 10px;">
-      <div class="progress-bar progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <span ><a href='/info'><i class="fas fa-user-circle fa-3x" style="background-color: white;  color: #6169cf;border-radius: 50%;"></i></a></span>
+    <div class="progress" style="width: 12rem; margin-top: 18px; height: 8px;">
+      <div class="progress-bar progress-bar" role="progressbar" style="width: 10%;background-color: #626ccc;border-radius: 15rem;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
   </div>
+  
   <div style="display: flex;">
-    <span><img style="width: 45px; height: 45px; margin-top: -8px;" src="https://cdn1.iconfinder.com/data/icons/ui-5/502/file-512.png">
-      <label>Experience</label>
-    </span>
-    <div class="progress" style="width: 18rem; margin-top: 10px; margin-left:-40px; ; height: 10px;">
-      <div class="progress-Resume languageEnglishbar progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <span><a href='/experience'><button class="exp-button"
+      style="background-color: #6169cf; border-radius: 50%; border: none;position: relative;bottom: 0.5rem;margin-top: 5px;">
+      <div class="progress-bar__icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+          viewBox="0 0 24 24" class="svg--Description" height="2.9em" width="2em" xmlns="http://www.w3.org/2000/svg"
+          style="color: white">
+          <path
+            d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z">
+          </path>
+        </svg></div>
+    </button></a>
+</span>
+    <div class="progress" style="width: 12rem; margin-top: 18px; height: 8px;">
+      <div class="progress-bar progress-bar" role="progressbar" style="width: 0%;background-color: #626ccc;border-radius: 15rem" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
-      <span><img style="width: 45px; height: 45px; margin-top: -8px;" src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/write-circle-blue-512.png">
-        <label>Template</label>
+    <span><a href='/template'><img style="width: 45px; height: 45px; margin-top: -3px; color: #6169cf" src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/write-circle-blue-512.png"></a>
+
     </span>
   </div>
 </div>
+
 <div class="pinfo_card my-5 p-5">
 
   <h3>Personal Details</h3>
@@ -33,7 +47,7 @@
         <div class="col-lg-4">
           <div class="form-group">
             <label >Profile Picture*</label>
-            <input type="file" class="form-control form-control-lg" >
+            <input type="file" class="form-control form-control-lg" > 
           </div>
         </div>
 
@@ -109,16 +123,12 @@
       </div>
 <br>
     
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
 
-<div class="accordion" id="accordionExample">
-      <div class="accordion-item">
-        
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-          <div class="accordion-body">
-             
-            
-            
-            
+
             <!--BIRTH INFO  -->
 
             <div class="row mt-3">
@@ -200,17 +210,20 @@
               </div>
             </div>
 
-          </div>
-        </div>
 
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" >
-            Additional Information
-          </button>
-        </h2>
       </div>
-      
     </div>
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        &nbsp;Additional Information
+      </button>
+    </h2>
+    
+  </div>
+  
+</div>
+
+
     <br>
     <div class="d-flex justify-content-center">
       <button type="submit" class="submitbtn">Next Step &nbsp;&nbsp;&nbsp;<i class="far fa-angle-right"></i></button>
@@ -228,3 +241,4 @@
   
   
 
+ 

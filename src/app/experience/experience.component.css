@@ -1,9 +1,9 @@
 .experience-page-header {
-  text-align: center;
-    font-size: 40px;
-    margin: 0;
+    text-align: center;
+    margin-top: 4rem;
     padding: 0;
-    color: blue;
+    color: white;
+    font: 40px Open,sans-serif;
 }
 .card{
   border-radius: 4px;
@@ -18,13 +18,13 @@
 .progress{
     height: 17px;
     background: rgba(0,0,0,0.1);
-    border-radius: 15px;
+    /* border-radius: 15px; */
     margin-bottom: 30px;
     overflow: visible;
     position: relative;
 }
 .progress .progress-bar{
-    border-radius: 15px;
+    /* border-radius: 15px; */
     box-shadow: none;
     position: relative;
     animation: animate-positive 2s;
