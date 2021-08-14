@@ -87,3 +87,6 @@
 .prevButton:hover {
   text-decoration: underline;
 }
+.fa-lightbulb:hover{
+  color: gold;
+}

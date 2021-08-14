@@ -7,13 +7,25 @@ import { ExperienceComponent } from './experience/experience.component';
 import { TesttqueryComponent } from './testtquery/testtquery.component';
 import { QuillModule } from 'ngx-quill';
 import { TemplateComponent } from './template/template.component';
+import { AckulandComponent } from './template/ackuland/ackuland.component';
+import { EdinburghComponent } from './template/edinburgh/edinburgh.component';
+import { PrincetonComponent } from './template/princeton/princeton.component';
+import { OtagoComponent } from './template/otago/otago.component';
+import { BerkeleyComponent } from './template/berkeley/berkeley.component';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     PinfoComponent,
     ExperienceComponent,
     TesttqueryComponent,
-    TemplateComponent
+    TemplateComponent,
+    AckulandComponent,
+    EdinburghComponent,
+    PrincetonComponent,
+    OtagoComponent,
+    BerkeleyComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
