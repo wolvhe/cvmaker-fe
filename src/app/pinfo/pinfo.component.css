@@ -1,7 +1,7 @@
 .pinfo_header{
     text-align: center;
-    font: 40px Open,sans-serif;
     margin-top: 4rem;
+    font: 40px Open,sans-serif;
     padding: 0;
     color: white;
 }
@@ -12,6 +12,14 @@
     margin: 0 auto;
     z-index: 1;
 }
+
+.experience-page-header {
+    text-align: center;
+      font-size: 40px;
+      margin: 0;
+      padding: 0;
+      color: white;
+  }
 
 label{
     font-size: 12px;
