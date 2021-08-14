@@ -77,3 +77,35 @@ label{
 .submitbtn:hover{
     text-decoration: underline;
 }
+
+.panels_custom{
+    color: black;
+    font-size: 400;
+}
+
+.panels_custom a{
+    font-size: 16px;
+    text-decoration: none;
+}
+
+
+.panels_custom a:hover{
+    color : grey;
+}
+
+
+
+.nextButton {
+    height: 50px;
+    width: 200px;
+    background-color: #626CCC;
+    border: #4287f5;
+    border-radius: 4px;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  .panel-default{
+      border-color: transparent;
+  }
