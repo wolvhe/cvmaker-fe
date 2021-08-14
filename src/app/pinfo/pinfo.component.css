@@ -5,6 +5,10 @@
     padding: 0;
     color: white;
 }
+
+input{
+    font-size: 14px;
+}
 .pinfo_card{
     background-color: white;    
     width: 60%;
