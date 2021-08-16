@@ -12,6 +12,9 @@ export class CommonService {
   sharedEdinTextStyleSource = new ReplaySubject<any>(1);
   sharedPrinStyleSource = new ReplaySubject<any>(1);
   sharedPrinTextStyleSource = new ReplaySubject<any>(1);
+  sharedselectStyleSource = new ReplaySubject<any>(1);
+  sharedOtagoStyleSource = new ReplaySubject<any>(1);
+
 
   
   public sharedStyle$ = this.sharedStyleSource.asObservable();
@@ -19,8 +22,14 @@ export class CommonService {
   public sharedEdinTextStyle$ = this.sharedEdinTextStyleSource.asObservable();
   public sharedPrinStyle$ = this.sharedPrinStyleSource.asObservable();
   public sharedPrinTextStyle$ = this.sharedPrinTextStyleSource.asObservable();
-  
+  public sharedselectStyle$ = this.sharedselectStyleSource.asObservable();
+  public sharedOtagoStyle$ = this.sharedOtagoStyleSource.asObservable();
+
+
   constructor() { }
+  selectStyle(value: any) {
+    this.sharedselectStyleSource.next(value);
+  }
   newStyle(value: any) {
     this.sharedStyleSource.next(value);
   }
@@ -32,5 +41,8 @@ export class CommonService {
   }
   newPrinTextStyle(value: any) {
     this.sharedPrinTextStyleSource.next(value);
+  }
+  newOtagoStyle(value:any){
+    this.sharedOtagoStyleSource.next(value)
   }
 }

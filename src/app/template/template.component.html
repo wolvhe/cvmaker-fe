@@ -1,9 +1,6 @@
 <div class="experience-page-header">
   <strong>Select template</strong>
 </div>
-
-<div>
- 
   <div style="
       display: flex;
       margin: auto;
@@ -47,17 +44,17 @@
         <div class="progress-bar progress-bar2" role="progressbar" style="width: 100%;background-color: #626ccc;border-radius: 15rem" aria-valuenow="0"
           aria-valuemin="50" aria-valuemax="100"></div>
       </div>
-      <span><img style="width: 45px; height: 45px; margin-top: -2px ; color: #6169cf;" 
+      <span><img style="width: 45px; height: 45px; margin-top: -2px ; " 
           src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/write-circle-blue-512.png" />
       </span>
     </div>
   </div>
-</div>
+
 
 <div style="margin: 3rem auto; width: 60%">
   <div style="display: flex">
-    <div class="card templatecards">
-      <div class="card-header">Ackuland</div>
+    <div class="card templatecards" [ngClass]="{'templatecards': toggleAcku, 'templatecardsNew': !toggleAcku}">
+      <div class="card-header">Ackuland<i style="float:right;" *ngIf="isShown" class="fas fa-check-circle"></i></div>
       <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item" style="margin-right: 10px;">
           <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
@@ -83,8 +80,8 @@
         <app-ackuland></app-ackuland>
       </div>
     </div>
-    <div class="card templatecards">
-      <div class="card-header">Edinburgh</div>
+    <div class="card templatecards" [ngClass]="{'templatecards': toggleEdin, 'templatecardsNew': !toggleEdin}">
+      <div class="card-header">Edinburgh<i style="float:right;" *ngIf="isShownEdin" class="fas fa-check-circle"></i></div>
       <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item" style="margin-right: 10px;">
           <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
@@ -110,8 +107,8 @@
         <app-edinburgh></app-edinburgh>
       </div>
     </div>
-    <div class="card templatecards">
-      <div class="card-header">Princeton</div>
+    <div class="card templatecards" [ngClass]="{'templatecards': togglePrin, 'templatecardsNew': !togglePrin}">
+      <div class="card-header">Princeton<i style="float:right;" *ngIf="isShownPrin" class="fas fa-check-circle"></i></div>
       <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item" style="margin-right: 10px;">
           <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
@@ -140,14 +137,14 @@
   </div>
   <!--  -->
   <div style="display: flex">
-    <div class="card templatecards">
-      <div class="card-header">Otago</div>
+    <div class="card templatecards" [ngClass]="{'templatecards': toggleOtago, 'templatecardsNew': !toggleOtago}">
+      <div class="card-header">Otago<i style="float:right;" *ngIf="isShownOtago" class="fas fa-check-circle"></i></div>
       <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#otagoModal">
         <app-otago></app-otago>
       </div>
     </div>
-    <div class="card templatecards">
-      <div class="card-header">Berkeley</div>
+    <div class="card templatecards" [ngClass]="{'templatecards': toggleBerk, 'templatecardsNew': !toggleBerk}">
+      <div class="card-header">Berkeley<i style="float:right;" *ngIf="isShownBerk" class="fas fa-check-circle"></i></div>
       <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#berkeleyModal">
         <app-berkeley></app-berkeley>
       </div>
@@ -208,11 +205,10 @@
         </div>
         <div style="margin: auto; width: 38%">
           <div>
-            <a href="/template">
-              <button class="nextButton">
-                <span>Select</span>
+              <button class="nextButton" data-dismiss="modal" (click)="changeAcku()" (click)="onselect()"  ng-init="toggleAcku = true" ng-click="toggleAcku = !toggleAcku">
+                <span>{{toggleAcku ? 'Select' : 'Remove'}}</span>
               </button>
-            </a>
+              <!-- (mouseup)="onClickSelect()" -->
           </div>
         </div>
       </div>
@@ -232,11 +228,9 @@
         </div>
         <div style="margin: auto; width: 38%">
           <div>
-            <a href="/template">
-              <button class="nextButton">
-                <span>Select</span>
-              </button>
-            </a>
+            <button class="nextButton" data-dismiss="modal" (click)="changeEdin()" (click)="onselectEdin()"  ng-init="toggleEdin = true" ng-click="toggleEdin = !toggleEdin">
+              <span>{{toggleEdin ? 'Select' : 'Remove'}}</span>
+            </button>
           </div>
         </div>
       </div>
@@ -256,11 +250,9 @@
         </div>
         <div style="margin: auto; width: 38%">
           <div>
-            <a href="/template">
-              <button class="nextButton">
-                <span>Select</span>
-              </button>
-            </a>
+            <button class="nextButton" data-dismiss="modal" (click)="changePrin()" (click)="onselectPrin()"  ng-init="togglePrin = true" ng-click="togglePrin = !togglePrin">
+              <span>{{togglePrin ? 'Select' : 'Remove'}}</span>
+            </button>
           </div>
         </div>
       </div>
@@ -279,11 +271,9 @@
         </div>
         <div style="margin: auto; width: 38%">
           <div>
-            <a href="/template">
-              <button class="nextButton">
-                <span>Select</span>
-              </button>
-            </a>
+            <button class="nextButton" data-dismiss="modal" (click)="changeOtago()" (click)="onselectOtago()"  ng-init="toggleOtago = true" ng-click="toggleOtago = !toggleOtago">
+              <span>{{toggleOtago ? 'Select' : 'Remove'}}</span>
+            </button>
           </div>
         </div>
       </div>
@@ -303,11 +293,9 @@
         </div>
         <div style="margin: auto; width: 38%">
           <div>
-            <a href="/template">
-              <button class="nextButton">
-                <span>Select</span>
-              </button>
-            </a>
+            <button class="nextButton" data-dismiss="modal" (click)="changeBerk()" (click)="onselectBerk()"  ng-init="toggleBerk = true" ng-click="toggleBerk = !toggleBerk">
+              <span>{{toggleBerk ? 'Select' : 'Remove'}}</span>
+            </button>
           </div>
         </div>
       </div>
