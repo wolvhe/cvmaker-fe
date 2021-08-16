@@ -44,13 +44,19 @@
       <div class="row mt-3">
         
         
-        <div class="col-lg-4">
-          <div class="form-group">
+          <div class="col-lg-4">
+            <div class="form-group">
+              <div class="container text-center">
 
             <!-- Button trigger modal -->
             <div class="profile_pic">
               <button type="button"   data-toggle="modal" data-target="#exampleModalCenter">
-                <img src="" alt="">
+                <DIV class="">
+
+                </DIV><i class="fas fa-camera fa-4x" ></i>
+                <br><br>
+
+                <h6>Add profile picture</h6>
               </button>
             </div>
             
@@ -65,8 +71,9 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body">
-                    ...
+                  <div class="modal-body">    
+                    <img [src]="url" width="200" height="200"><br>
+                    <input type="file"(change)="onselectFile($event)">
                   </div>
                   <div class="modal-footer" style="text-align: left;">
                     <div class="row align-content-center" >
@@ -94,9 +101,9 @@
               </div>
             </div>
 
+            </div>
           </div>
-        </div>
-
+          </div>
 
 
 
