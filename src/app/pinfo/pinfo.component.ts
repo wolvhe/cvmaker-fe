@@ -12,11 +12,5 @@ export class PinfoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  visible:boolean=false;
-
-  displayinfo(){
-    return this.visible = !this.visible;
-   }
-
   
 }

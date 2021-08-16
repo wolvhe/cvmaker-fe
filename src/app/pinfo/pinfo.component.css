@@ -121,3 +121,19 @@ footer{
   .panel-default{
       border-color: transparent;
   }
+
+
+  .btn-modal{
+      background: none;
+      border: none;
+
+  }
+
+  .tog{
+   text-align: center;   
+  }
+
+  .profile_pic button{
+      background: none;
+
+  }
