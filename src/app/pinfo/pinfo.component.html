@@ -44,14 +44,16 @@
       <div class="row mt-3">
         
         
-        <div class="col-lg-4">
-          <div class="form-group">
+          <div class="col-lg-4">
+            <div class="form-group">
+              <div class="container text-center">
+                <img [src]="url" height="200"><br>
+                <input type="file"(change)="onselectFile($event)">
 
-            <input type="file" class="my_file" >
 
+            </div>
           </div>
-        </div>
-
+          </div>
 
 
 
