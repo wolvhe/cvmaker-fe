@@ -9,4 +9,6 @@
 .ackuland-text {
     background-color: white;
     border: 2px solid black;
+    position: relative;
+    top: 2.5rem;
 }

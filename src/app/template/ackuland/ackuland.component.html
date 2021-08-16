@@ -5,21 +5,25 @@
         </div>
     </div>
     <div style="display: flex;">
-        <div style="width: 300px;">
-            <p>PERSONAL</p>
-            <span>name</span><br>
-            <span>email</span><br><br>
-            <p>INTERESTS</p>
-            <span>cooking</span><br><br>
-            <p>LANGUAGUES</p>
-            <span>english</span><br><br>
+        <div [ngStyle]="(styling.sharedStyle$ | async)" style="background-color: lightgray; height: 100%;">
+            <div style="width: 180px; margin-top: 1rem;">
+                <p>PERSONAL</p>
+                <span>name</span><br>
+                <span>email</span><br><br>
+                <p>INTERESTS</p>
+                <span>cooking</span><br><br>
+                <p>LANGUAGUES</p>
+                <span>english</span><br><br>
+            </div>
         </div>
-        <div>
-            <p>Developer</p>
-            <p>EDUCATION AND QUALIFICATIONS</p>
-            <p>WORK EXPERIENCE</p>
-            <p>REFERENCES</p>
-            <p>SKILLS</p>
+        <div style="background-color: #FBFBFB;">
+            <div style="margin-top: 1rem;">
+                <p>Developer</p>
+                <p>EDUCATION AND QUALIFICATIONS</p>
+                <p>WORK EXPERIENCE</p>
+                <p>REFERENCES</p>
+                <p>SKILLS</p>
+            </div>
         </div>
     </div>
 

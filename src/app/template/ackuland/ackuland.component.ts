@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
   selector: 'app-ackuland',
   templateUrl: './ackuland.component.html',
-  styleUrls: ['./ackuland.component.css']
+  styleUrls: ['./ackuland.component.css'],
 })
 export class AckulandComponent implements OnInit {
+  constructor(public styling: CommonService) {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
+ 
 
 }
