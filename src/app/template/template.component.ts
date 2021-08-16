@@ -19,21 +19,21 @@ export class TemplateComponent implements OnInit {
   //   this.bgColor = 'grey';
   // }
   onClickColor1() {
-    this.styling.newStyle({ 'background-color': 'blue' });
+    this.styling.newStyle({ 'background-color': 'lightslategray' });
   }
   onClickColor2() {
-    this.styling.newStyle({ 'background-color': 'red' });
-  }
-  onClickColor3() {
-    this.styling.newStyle({ 'background-color': 'black' });
-  }
-  onClickColor4() {
-    this.styling.newStyle({ 'background-color': 'green' });
-  }
-  onClickColor5() {
     this.styling.newStyle({ 'background-color': 'pink' });
   }
+  onClickColor3() {
+    this.styling.newStyle({ 'background-color': 'rgb(250, 250, 119)' });
+  }
+  onClickColor4() {
+    this.styling.newStyle({ 'background-color': 'rgb(119, 219, 250)' });
+  }
+  onClickColor5() {
+    this.styling.newStyle({ 'background-color': 'rgb(248, 149, 142)' });
+  }
   onClickColor6() {
-    this.styling.newStyle({ 'background-color': 'brown' });
+    this.styling.newStyle({ 'background-color': 'rgb(19, 161, 0)' });
   }
 }
