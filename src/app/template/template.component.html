@@ -61,22 +61,22 @@
       <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item" style="margin-right: 10px;">
           <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
-          <i (mouseup)="onClickColor1()" style="color: lightslategray; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          <i (mouseup)="onClickAckuColor1()" style="color: lightslategray; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
         </li>
         <li class="nav-item" style="margin-right: 10px;">
-          <i (mouseup)="onClickColor2()" style="color: pink; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          <i (mouseup)="onClickAckuColor2()" style="color: pink; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
         </li>
         <li class="nav-item" style="margin-right: 10px;">
-          <i (mouseup)="onClickColor3()" style="color: rgb(250, 250, 119); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          <i (mouseup)="onClickAckuColor3()" style="color: rgb(250, 250, 119); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
         </li>
         <li class="nav-item" style="margin-right: 10px;">
-          <i (mouseup)="onClickColor4()" style="color: rgb(119, 219, 250); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          <i (mouseup)="onClickAckuColor4()" style="color: rgb(119, 219, 250); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
         </li>
         <li class="nav-item" style="margin-right: 10px;">
-          <i (mouseup)="onClickColor5()" style="color: rgb(248, 149, 142); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          <i (mouseup)="onClickAckuColor5()" style="color: rgb(248, 149, 142); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
         </li>
         <li class="nav-item" style="margin-right: 10px;">
-          <i (mouseup)="onClickColor6()" style="color: rgb(19, 161, 0); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          <i (mouseup)="onClickAckuColor6()" style="color: rgb(19, 161, 0); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
         </li>
       </ul></div>
       <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#ackulandModal">
@@ -85,13 +85,55 @@
     </div>
     <div class="card templatecards">
       <div class="card-header">Edinburgh</div>
-      <div class="card-body" style="cursor: pointer;" data-toggle="modal" data-target="#edinburghModal">
+      <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item" style="margin-right: 10px;">
+          <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
+          <i (mouseup)="onClickEdinColor1()" style="color: lightslategray; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+        <li class="nav-item" style="margin-right: 10px;">
+          <i (mouseup)="onClickEdinColor2()" style="color: hotpink; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+        <li class="nav-item" style="margin-right: 10px;">
+          <i (mouseup)="onClickEdinColor3()" style="color: darkorange; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+        <li class="nav-item" style="margin-right: 10px;">
+          <i (mouseup)="onClickEdinColor4()" style="color: darkslateblue; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+        <li class="nav-item" style="margin-right: 10px;">
+          <i (mouseup)="onClickEdinColor5()" style="color: brown; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+        <li class="nav-item" style="margin-right: 10px;">
+          <i (mouseup)="onClickEdinColor6()" style="color: rgb(19, 161, 0); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+      </ul></div>
+      <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#edinburghModal">
         <app-edinburgh></app-edinburgh>
       </div>
     </div>
     <div class="card templatecards">
       <div class="card-header">Princeton</div>
-      <div class="card-body" style="cursor: pointer;" data-toggle="modal" data-target="#princetonModal">
+      <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item" style="margin-right: 10px;">
+          <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
+          <i (mouseup)="onClickPrinColor1()" style="color: black; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+        <li class="nav-item" style="margin-right: 10px;">
+          <i (mouseup)="onClickPrinColor2()" style="color: rgb(202, 52, 52); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+        <li class="nav-item" style="margin-right: 10px;">
+          <i (mouseup)="onClickPrinColor3()" style="color: rgb(45, 58, 133); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+        <li class="nav-item" style="margin-right: 10px;">
+          <i (mouseup)="onClickPrinColor4()" style="color: rgb(99, 57, 57); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+        <li class="nav-item" style="margin-right: 10px;">
+          <i (mouseup)="onClickPrinColor5()" style="color: rgb(68, 155, 140); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+        <li class="nav-item" style="margin-right: 10px;">
+          <i (mouseup)="onClickPrinColor6()" style="color: darkorange; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+        </li>
+      </ul></div>
+      <div class="card-body scaled" style="cursor: pointer; overflow: hidden;" data-toggle="modal" data-target="#princetonModal">
         <app-princeton></app-princeton>
       </div>
     </div>
@@ -100,34 +142,34 @@
   <div style="display: flex">
     <div class="card templatecards">
       <div class="card-header">Otago</div>
-      <div class="card-body" style="cursor: pointer;" data-toggle="modal" data-target="#otagoModal">
+      <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#otagoModal">
         <app-otago></app-otago>
       </div>
     </div>
     <div class="card templatecards">
       <div class="card-header">Berkeley</div>
-      <div class="card-body" style="cursor: pointer;" data-toggle="modal" data-target="#berkeleyModal">
+      <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#berkeleyModal">
         <app-berkeley></app-berkeley>
       </div>
     </div>
     <div class="card templatecards">
       <div class="card-header">Harvard</div>
-      <div class="card-body">neo 🔥 </div>
+      <div class="card-body scaled">neo 🔥 </div>
     </div>
   </div>
   <!--  -->
   <div style="display: flex">
     <div class="card templatecards">
       <div class="card-header">Stanford</div>
-      <div class="card-body">neo 🔥 </div>
+      <div class="card-body scaled">neo 🔥 </div>
     </div>
     <div class="card templatecards">
       <div class="card-header">Cambridge</div>
-      <div class="card-body">neo 🔥 </div>
+      <div class="card-body scaled">neo 🔥 </div>
     </div>
     <div class="card templatecards">
       <div class="card-header">Oxford</div>
-      <div class="card-body">neo 🔥 </div>
+      <div class="card-body scaled">neo 🔥 </div>
     </div>
   </div>
 </div>
@@ -205,7 +247,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
-        <div class="modal-body">
+        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
           <app-princeton></app-princeton>
         </div>
         <div class="modal-footer">

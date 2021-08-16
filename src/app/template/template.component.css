@@ -74,7 +74,7 @@
 }
 
 .scaled {
-    zoom: 0.3; 
+    zoom: 0.5; 
     -moz-transform: scale(3); 
     -moz-transform-origin: 0 0;
 
@@ -82,3 +82,15 @@
     transform-origin: 0 0;
     margin: auto; */
 } 
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:active{
+  background: red;
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  width: 3px;
+  visibility: hidden;
+}

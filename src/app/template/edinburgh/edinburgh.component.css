@@ -1,0 +1,26 @@
+.edinburgh-left {
+  width: 180px;
+  margin-top: 1rem;
+  
+  background-color: lightgray;
+}
+.edinburgh-right {
+  margin-top: 1rem;
+  padding: 10px;
+}
+.headerTextStyle {
+  height: 50px;
+  background-color: darkslategray;
+  text-align: center;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+}
+.headerTextOuterStyle {
+  padding-bottom: 10px;
+  background-color: none;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+}
+small {
+    color: black;
+}
