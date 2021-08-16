@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PinfoComponent implements OnInit {
 
+  lang:any;
+
   constructor() { 
   }
   ngOnInit(): void {
+    this.lang = localStorage.getItem('lang') || 'english';
+  }
+
+  changeLang(lang: any){
+      localStorage.setItem('lang', lang);
+      window.location.reload();
+
   }
 
 public url="./assets/banner1.jpg";

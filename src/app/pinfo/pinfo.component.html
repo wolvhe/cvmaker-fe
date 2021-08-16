@@ -40,15 +40,15 @@
   <div class="col">
   <h3>Personal Details</h3>
   </div>
-  <div class="col">
+  <div class="col-3">
   <select class="custom-select">
-    <option value="english">English</option>
-    <option value="french">French</option>
-    <option value="spanish">Spanish</option>
-    <option value="italian">Italian</option>
-    <option value="polish">Polish</option>
-    <option value="turk">Turk</option>
-    <option value="german">German</option>
+    <option value="english" [selected]="lang == 'english'">English</option>
+    <option value="french" [selected]="lang == 'french'">French</option>
+    <option value="spanish" [selected]="lang == 'spanish'">Spanish</option>
+    <option value="italian" [selected]="lang == 'italian'">Italian</option>
+    <option value="polish" [selected]="lang == 'polish'">Polish</option>
+    <option value="turk" [selected]="lang == 'turk'">Turk</option>
+    <option value="german" [selected]="lang == 'german'">German</option>
   </select>
   </div>
 </div>
