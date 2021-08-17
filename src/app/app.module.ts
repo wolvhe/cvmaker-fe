@@ -32,7 +32,7 @@ import { TestComponent } from './test/test.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    QuillModule
+    QuillModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
