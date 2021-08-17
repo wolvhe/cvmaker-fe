@@ -14,7 +14,8 @@ export class PinfoComponent implements OnInit {
   }
 
 public url="./assets/banner1.jpg";
-public deg=0;
+public deg=60;
+public rot = this.deg+"deg";
 
 onselectFile(e:any){
   if(e.target.files){
