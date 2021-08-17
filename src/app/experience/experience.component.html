@@ -48,9 +48,13 @@
       <div class="card-body">  
         <div style="display: flex; justify-content: space-between;">
           <div class="collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <div>
-                  <h5 class="card-title" style="cursor: pointer;"><i class="fas fa-user-circle"></i> <strong> Resume Objective</strong> </h5>
-                </div>
+            <div style="display: flex;">
+              <div *ngIf="showLog" style="height: 10px; width: 30px; text-align: center;">
+                <p style="margin-right: 5px; border: 2px solid black; border-radius: 50%;" >{{ log }}</p>
+              </div>
+              <h5 class="card-title" style="cursor: pointer;"><i class="fas fa-user-circle"></i> 
+                <strong> Resume Objective</strong> </h5>
+            </div>
           </div>
             <div style="display: flex; align-items: baseline;float: right;">
               <div class="button--move-up">
@@ -108,7 +112,12 @@
       <div class="card-body">
         <div  style="display: flex; justify-content: space-between;">
         <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne" >
-          <h5 class="card-title" style="cursor: pointer;"><i class="fas fa-briefcase"></i> <strong> Work Experience</strong> </h5>
+          <div style="display: flex;">
+            <div *ngIf="showLog1" style="height: 10px; width: 30px; text-align: center;">
+              <p style="margin-right: 5px; border: 2px solid black; border-radius: 50%;" >{{ log1 }}</p>
+            </div>
+            <h5 class="card-title" style="cursor: pointer;"><i class="fas fa-briefcase"></i> <strong> Work Experience</strong> </h5>
+          </div>
         </div>
           <div style="display: flex; align-items: baseline">
             <div class="button--move-up">
@@ -253,7 +262,7 @@
             </div>
           </div>
           <div class="addNew" style="text-align: center">
-            <p>Add another work experience</p>
+            <!-- <p>Add another work experience</p> -->
           </div>
         </div>
       </div>
@@ -265,7 +274,10 @@
     <div class="card-body">
     <div style="display: flex; justify-content: space-between; ">
       <div data-toggle="collapse" data-target="#collapseEdu" aria-expanded="true" aria-controls="collapseOne" >
-        <div>
+        <div style="display: flex;">
+          <div *ngIf="showLog2" style="height: 10px; width: 30px; text-align: center;">
+            <p style="margin-right: 5px; border: 2px solid black; border-radius: 50%;" >{{ log2 }}</p>
+          </div>
           <h5 class="card-title" style="cursor: pointer;"><i class="fas fa-graduation-cap"></i> <strong>  Education and Qualifications</strong> </h5>
         </div>
       </div>
@@ -411,7 +423,7 @@
           </div>
         </div>
         <div class="addNew" style="text-align: center">
-          <p>Add another education</p>
+          <!-- <p>Add another education</p> -->
         </div>
       </div>
     </div>
@@ -423,7 +435,10 @@
     <div class="card-body">
     <div style="display: flex; justify-content: space-between;">
       <div data-toggle="collapse" data-target="#collapseInterests" aria-expanded="true" aria-controls="collapseOne" >
-        <div>
+        <div style="display: flex;">
+          <div *ngIf="showLog3" style="height: 10px; width: 30px; text-align: center;">
+            <p style="margin-right: 5px; border: 2px solid black; border-radius: 50%;" >{{ log3 }}</p>
+          </div>
           <h5 class="card-title" style=" cursor: pointer;"><i class="fas fa-palette"></i> <strong> Interests</strong> </h5>
         </div>
       </div>
@@ -486,7 +501,7 @@
         </div>
       </div>
       <div class="addNew" style="text-align: center">
-        <p>Add another hobby</p>
+        <!-- <p>Add another hobby</p> -->
       </div>
       </div>
     </div>
@@ -498,7 +513,10 @@
     <div class="card-body">
     <div  style="display: flex; justify-content: space-between;">
       <div data-toggle="collapse" data-target="#collapseRef" aria-expanded="true" aria-controls="collapseOne">
-        <div>
+        <div style="display: flex;">
+          <div *ngIf="showLog4" style="height: 10px; width: 30px; text-align: center;">
+            <p style="margin-right: 5px; border: 2px solid black; border-radius: 50%;" >{{ log4 }}</p>
+          </div>
           <h5 class="card-title" style=" cursor: pointer;"><i class="far fa-comment-alt"></i>  <strong>  References</strong> </h5>
         </div>
       </div>
@@ -566,7 +584,7 @@
         </button>
       </div>
       <div class="addNew" style="text-align: center">
-        <p>Add another reference</p>
+        <!-- <p>Add another reference</p> -->
       </div>
       </div>
     </div>
@@ -578,7 +596,10 @@
     <div class="card-body">
       <div style="display: flex; justify-content: space-between; ">
       <div data-toggle="collapse" data-target="#collapseSkills" aria-expanded="true" aria-controls="collapseOne" >
-        <div>
+        <div style="display: flex;">
+          <div *ngIf="showLog5" style="height: 10px; width: 30px; text-align: center;">
+            <p style="margin-right: 5px; border: 2px solid black; border-radius: 50%;" >{{ log5 }}</p>
+          </div>
           <h5 class="card-title" style="cursor: pointer;"> <i class="fas fa-pencil-ruler"></i>  <strong>  Skills</strong></h5>
         </div>
       </div>
@@ -666,7 +687,7 @@
           </div>
         </div>
         <div class="addNew" style="text-align: center">
-          <p>Add another education</p>
+          <!-- <p>Add another education</p> -->
         </div>
       </div>
       <!-- extra -->
@@ -679,7 +700,10 @@
     <div class="card-body">
     <div style="display: flex; justify-content: space-between;"> 
       <div data-toggle="collapse" data-target="#collapseLanguage" aria-expanded="true" aria-controls="collapseOne" >
-        <div>
+        <div style="display: flex;">
+          <div *ngIf="showLog6" style="height: 10px; width: 30px; text-align: center;">
+            <p style="margin-right: 5px; border: 2px solid black; border-radius: 50%;" >{{ log6 }}</p>
+          </div>
           <h5 class="card-title" style=" cursor: pointer;"><i class="fas fa-globe"></i> <strong> Languages</strong> </h5>
         </div>
       </div>
@@ -770,7 +794,7 @@
           </div>
         </div>
         <div class="addNew" style="text-align: center">
-          <p>Add another language</p>
+          <!-- <p>Add another language</p> -->
         </div>
       </div>
       <!-- extra -->
@@ -783,7 +807,10 @@
     <div class="card-body">
       <div style="display: flex; justify-content: space-between;">
       <div data-toggle="collapse" data-target="#collapseCourse" aria-expanded="true" aria-controls="collapseOne" >
-        <div>
+        <div style="display: flex;">
+          <div *ngIf="showLog7" style="height: 10px; width: 30px; text-align: center;">
+            <p style="margin-right: 5px; border: 2px solid black; border-radius: 50%;" >{{ log7 }}</p>
+          </div>
           <h5 class="card-title" style="cursor: pointer;"><i class="fas fa-clipboard"></i> <strong> Courses</strong> </h5>
         </div>
       </div>
@@ -929,7 +956,7 @@
           </div>
         </div>
         <div class="addNew" style="text-align: center">
-          <p>Add another Course</p>
+          <!-- <p>Add another Course</p> -->
         </div>
       </div>
     </div>
@@ -941,7 +968,10 @@
     <div class="card-body">  
         <div style="display: flex; justify-content: space-between; ">
           <div class="collapsed" data-toggle="collapse" data-target="#collapseAchieve" aria-expanded="true" aria-controls="collapseOne">
-            <div>
+            <div style="display: flex;">
+              <div *ngIf="showLog8" style="height: 10px; width: 30px; text-align: center;">
+                <p style="margin-right: 5px; border: 2px solid black; border-radius: 50%;" >{{ log8 }}</p>
+              </div>
               <h5 class="card-title" style="cursor: pointer;"><i class="far fa-clock"></i> <strong>  Achievements</strong> </h5>
             </div>
           </div>
@@ -993,7 +1023,10 @@
     <div class="card-body">  
       <div style="display: flex; justify-content: space-between;"> 
           <div class="collapsed" data-toggle="collapse" data-target="#collapsePublic" aria-expanded="true" aria-controls="collapseOne">
-            <div>
+            <div style="display: flex;">
+              <div *ngIf="showLog9" style="height: 10px; width: 30px; text-align: center;">
+                <p style="margin-right: 5px; border: 2px solid black; border-radius: 50%;" >{{ log9 }}</p>
+              </div>
               <h5 class="card-title" style=" cursor: pointer;"><i class="fas fa-file-alt"></i> <strong> Publications</strong> </h5>
             </div>
           </div>

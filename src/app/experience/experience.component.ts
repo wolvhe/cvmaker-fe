@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html', 
@@ -12,7 +11,7 @@ export class ExperienceComponent implements OnInit {
   constructor() { }
 
   ngOnInit(){
-    
+  
   }
   editorModules = {toolbar: [
     [
@@ -44,7 +43,7 @@ export class ExperienceComponent implements OnInit {
   showLog2 = false;
   onShowCountEducation() {
     this.showLog2 = true;
-    return (this.log1 = this.log1 + 1);
+    return (this.log2 = this.log2 + 1);
   }
   log3 = 0;
   showLog3 = false;
