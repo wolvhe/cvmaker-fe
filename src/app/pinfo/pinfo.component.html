@@ -83,10 +83,13 @@
                    <h6>Add profile picture</h6>
                  </button>
               </div>
+              
               <div *ngIf="url.length>0">
-                <div style="width: 200px; height: 200px;">
-                  <img [src]="url" alt="no image found" width="200" height="200">
-                </div>
+                <button type="button"   data-toggle="modal" data-target="#exampleModalCenter" style="border: none; background:transparent;">
+                  <div style="width: 200px; height: 200px;">
+                    <img [src]="url" alt="no image found" width="200" height="200">
+                  </div>
+                </button>  
 
               </div>
               
