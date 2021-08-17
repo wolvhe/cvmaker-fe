@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from '../services/common.service';
 
 @Component({
   selector: 'app-pinfo',
@@ -9,7 +10,8 @@ export class PinfoComponent implements OnInit {
 
   lang:any;
 
-  constructor() { 
+  constructor(public styling:CommonService) { 
+    
   }
   ngOnInit(): void {
     console.log(this.url);
@@ -23,8 +25,7 @@ export class PinfoComponent implements OnInit {
   }
 
 public url="./assets/banner1.jpg";
-public deg =30;
-public rot="transform: rotate("+this.deg+"deg);"
+public value=0;
 
 onselectFile(e:any){
   if(e.target.files){
@@ -39,6 +40,11 @@ onselectFile(e:any){
 
 
 rotate(){
+  this.value=this.value+90;
+  if(this.value>360){
+    this.value=this.value-360;
+  }
+  return this.value;
 
 }
 
@@ -48,7 +54,5 @@ reset(){
 
   console.log(this.url);
 }
-
-
 
 }  

@@ -16,6 +16,7 @@ export class CommonService {
   sharedOtagoStyleSource = new ReplaySubject<any>(1);
   sharedBerkStyleSource = new ReplaySubject<any>(1);
   sharedBerkTextStyleSource = new ReplaySubject<any>(1);
+  sharedRotateSource =new ReplaySubject<any>(1);
 
   
   public sharedStyle$ = this.sharedStyleSource.asObservable();
@@ -27,6 +28,7 @@ export class CommonService {
   public sharedOtagoStyle$ = this.sharedOtagoStyleSource.asObservable();
   public sharedBerkStyle$ = this.sharedBerkStyleSource.asObservable();
   public sharedBerkTextStyle$ = this.sharedBerkTextStyleSource.asObservable();
+  public sharedRotate$ = this.sharedRotateSource.asObservable();
 
   constructor() { }
   selectStyle(value: any) {
@@ -53,4 +55,9 @@ export class CommonService {
   newBerkTextStyle(value:any){
     this.sharedBerkTextStyleSource.next(value)
   }
+
+  newRotate(value: any) {
+    this.sharedRotateSource.next(value);
+  }
 }
+
