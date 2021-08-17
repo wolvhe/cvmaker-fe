@@ -1,1 +1,30 @@
-<p>berkeley works!</p>
+<div class="body">
+    <h1 [ngStyle]="(styling.sharedBerkStyle$ | async)">Name</h1>
+    <h6 [ngStyle]="(styling.sharedBerkStyle$ | async)"><i class="fas fa-user-friends"></i> Personal</h6>
+    <p >Name:</p>
+    <p>Email:</p>
+    <h6 [ngStyle]="(styling.sharedBerkStyle$ | async)"><i class="fas fa-stream"></i> Resume Objective</h6>
+    <p>type here</p>
+    <h6 [ngStyle]="(styling.sharedBerkStyle$ | async)"><i class="fas fa-graduation-cap"></i> Education and Qualification</h6>
+    <div style="display: flex;flex-direction: row;">
+        <div style="display: flex; flex: 1;flex-direction: column;">
+             <p>text 1</p>
+             <p>text 2</p>
+             <p>text 3</p>
+         </div>
+         <div>
+             <p>year</p>
+         </div>
+     </div>
+     <h6 [ngStyle]="(styling.sharedBerkStyle$ | async)"><i class="fas fa-briefcase"></i> Work Experience</h6>
+     <div style="display: flex;flex-direction: row;">
+        <div style="display: flex; flex: 1;flex-direction: column;">
+             <p>text 1</p>
+             <p>text 2</p>
+             <p>text 3</p>
+         </div>
+         <div>
+             <p>year</p>
+         </div>
+     </div>
+</div>

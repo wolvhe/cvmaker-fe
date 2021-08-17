@@ -95,6 +95,59 @@ export class TemplateComponent implements OnInit {
   }
 
 //otago
+onClickOtagoColor1() {
+  this.styling.newOtagoStyle({ 'background-color': 'lightslategray' });
+}
+onClickOtagoColor2() {
+  this.styling.newOtagoStyle({ 'background-color': 'pink' });
+}
+onClickOtagoColor3() {
+  this.styling.newOtagoStyle({ 'background-color': 'rgb(250, 250, 119)' });
+}
+onClickOtagoColor4() {
+  this.styling.newOtagoStyle({ 'background-color': 'rgb(119, 219, 250)' });
+}
+onClickOtagoColor5() {
+  this.styling.newOtagoStyle({ 'background-color': 'rgb(248, 149, 142)' });
+}
+onClickOtagoColor6() {
+  this.styling.newOtagoStyle({ 'background-color': 'hotpink' });
+}
+
+//berk
+onClickBerkColor1() {
+  this.styling.newBerkStyle({ color: 'black', 'font-weight': 'bold' });
+}
+onClickBerkColor2() {
+  this.styling.newBerkStyle({
+    color: 'darkgreen',
+    'font-weight': 'bold',
+  });
+}
+onClickBerkColor3() {
+  this.styling.newBerkStyle({
+    color: 'rgb(45, 58, 133)',
+    'font-weight': 'bold',
+  });
+}
+onClickBerkColor4() {
+  this.styling.newBerkStyle({
+    color: 'rgb(99, 57, 57)',
+    'font-weight': 'bold',
+  });
+}
+onClickBerkColor5() {
+  this.styling.newBerkStyle({
+    color: 'hotpink',
+    'font-weight': 'bold',
+  });
+}
+onClickBerkColor6() {
+  this.styling.newBerkStyle({
+    color: 'red',
+    'font-weight': 'bold',
+  });
+}
 
 //toggle border
   toggleAcku: boolean = true;
@@ -117,6 +170,7 @@ export class TemplateComponent implements OnInit {
   changeBerk() {
     this.toggleBerk = !this.toggleBerk;
   }
+  
 //toggle show button
   isShown: boolean = false;
   onselect() {
