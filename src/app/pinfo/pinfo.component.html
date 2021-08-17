@@ -75,17 +75,21 @@
 
             <!-- Button trigger modal -->
             <div class="profile_pic">
-              <div class="add_profile">
+              <div *ngIf="url.length==0" class="add_profile">
+                <button type="button"   data-toggle="modal" data-target="#exampleModalCenter">
+                  <i class="fas fa-camera fa-4x" ></i>
+                   <br><br>
+   
+                   <h6>Add profile picture</h6>
+                 </button>
+              </div>
+              <div *ngIf="url.length>0">
+                <div style="width: 200px; height: 200px;">
+                  <img [src]="url" alt="no image found" width="200" height="200">
+                </div>
 
               </div>
-              <button type="button"   data-toggle="modal" data-target="#exampleModalCenter">
-                <DIV class="">
-
-                </DIV><i class="fas fa-camera fa-4x" ></i>
-                <br><br>
-
-                <h6>Add profile picture</h6>
-              </button>
+              
             </div>
             
 
@@ -99,16 +103,32 @@
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
-                  <div class="modal-body  ">    
-                    <img [src]="url" width="200" height="200" [ngStyle]="{'transform': 'rotate(' + value + 'deg)'}" ><br>
-                    <input type="file"(change)="onselectFile($event)">
+                  <div class="modal-body justify-content-between"  >    
+                    <div *ngIf="url.length==0" class="add_profile">
+                      <button type="button"   data-toggle="modal" data-target="#exampleModalCenter">
+                        <i class="fas fa-camera fa-4x" ></i>
+                         <br><br>
+         
+                         <h6>Add profile picture</h6>
+                       </button>
+                    </div>
+                    <div *ngIf="url.length>0">
+                      <div style="width: 200px;height: 200px; overflow: hidden; margin-left: 30%;">
+                        <img [src]="url" width="200" height="200" [ngStyle]="{'transform': 'rotate(' + value + 'deg)', 'zoom':zoom}" >
+                      </div>
+      
+                    </div>
+                      
+                                        
+<br>
+                    <input type="file"(change)="onselectFile($event)" >
                   </div>
                   <div class="modal-footer" style="text-align: left;">
                     <div class="row align-content-center" >
 
 
                       <div class="col tog">
-                        <input type="range"  step="any" min="1" max="10" value="1" style="width: 10rem;">
+                        <input [value]="zoom" type="range"  step="any" min="1" max="10"  style="width: 10rem;" (change)="change($event)" (input)="change($event)">
                         <span class="btn-modal">Zoom</span>
                       </div> 
                       

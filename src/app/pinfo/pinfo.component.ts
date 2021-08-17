@@ -24,7 +24,7 @@ export class PinfoComponent implements OnInit {
 
   }
 
-public url="./assets/banner1.jpg";
+public url="";
 public value=0;
 
 onselectFile(e:any){
@@ -33,10 +33,13 @@ onselectFile(e:any){
     reader.readAsDataURL(e.target.files[0]);
     reader.onload=(event:any)=>{
       this.url=event.target.result;
-    console.log(this.url);
+    
     }
   }
 }
+
+zoom : any=1;
+ 
 
 
 rotate(){
@@ -53,6 +56,10 @@ reset(){
   this.url="";
 
   console.log(this.url);
+}
+change(e:any){
+  this.zoom=e.target.value;
+  console.log(e)
 }
 
 }  
