@@ -13,6 +13,7 @@ import { PrincetonComponent } from './template/princeton/princeton.component';
 import { OtagoComponent } from './template/otago/otago.component';
 import { BerkeleyComponent } from './template/berkeley/berkeley.component';
 import { HomeComponent } from './home/home.component';
+import { TestComponent } from './test/test.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     PrincetonComponent,
     OtagoComponent,
     BerkeleyComponent,
-    HomeComponent
+    HomeComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

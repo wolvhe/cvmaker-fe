@@ -1,1 +1,48 @@
-<p>edinburgh works!</p>
+<div style="display: flex;">
+    <div class="edinburgh-left">
+        <div [ngStyle]="(styling.sharedEdinStyle$ | async)" class="headerTextOuterStyle">
+            <div class="headerTextStyle">
+                <p style="position: relative; top: 1rem;">NEO</p>
+            </div>
+        </div>
+        <div style="padding: 10px;">
+            <div style="display: flex; flex-direction: column;">
+                <span>Personal</span>
+                <small [ngStyle]="(styling.sharedEdinTextStyle$ | async)">email</small>
+                <small [ngStyle]="(styling.sharedEdinTextStyle$ | async)">emailId</small>
+                <br>
+                <span>Interests</span>
+                <small [ngStyle]="(styling.sharedEdinTextStyle$ | async)"><li>Cooking</li></small>
+                <br>
+                <span>Languagues</span>
+                <small [ngStyle]="(styling.sharedEdinTextStyle$ | async)"><li>english</li></small>
+            </div>
+        </div>
+    </div>
+    <div class="edinburgh-right">
+        developerinfo
+        <hr/>
+        <div style="display: flex; flex-direction: column;">
+            <span>Education and Qualifications</span>
+            <small [ngStyle]="(styling.sharedEdinTextStyle$ | async)">CollegeName</small>
+            <small [ngStyle]="(styling.sharedEdinTextStyle$ | async)" [ngStyle]="(styling.sharedEdinTextStyle$ | async)">CollegeDesc</small>
+            <br>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+            <span>Work experience</span>
+            <small [ngStyle]="(styling.sharedEdinTextStyle$ | async)">role</small>
+            <small [ngStyle]="(styling.sharedEdinTextStyle$ | async)">roleInfo</small>
+            <br>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+            <span>References</span>
+            <small [ngStyle]="(styling.sharedEdinTextStyle$ | async)">ref1</small>
+            <br>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+            <span>Skills</span>
+            <small [ngStyle]="(styling.sharedEdinTextStyle$ | async)">roleInfo</small>
+            <br>
+        </div>
+    </div>
+</div>

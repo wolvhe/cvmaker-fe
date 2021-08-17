@@ -1,1 +1,36 @@
-<p>otago works!</p>
+<div  class="otago-main">
+    <div style="display: flex;flex-direction: row;">
+        <div  style="display: flex;flex: 1; flex-direction: column;">
+            <h3>Name</h3>
+            <div class="info">
+            <p><i class="fas fa-home"></i> Address</p>
+            <p><i class="fas fa-phone"></i> 7894561231</p>
+            <p><i class="fas fa-envelope"></i> main@gmail.com</p>
+        </div>
+    </div>
+        <div [ngStyle]="(styling.sharedOtagoStyle$ | async)" style="border: 1px solid none;margin-bottom: 2rem;padding: 5px;background-color: teal;color: white;">
+            <h3>CV</h3>
+        </div>
+    </div>
+    <hr>
+    <h5>Intrest</h5>
+    <p>area of intrest</p>
+    <hr>
+<div style="display: flex;flex-direction: row;">
+   <div style="display: flex; flex: 1;flex-direction: column;">
+        <h5>Education and Qualification</h5>
+        <p>text 1</p>
+        <p>text 2</p>
+        <p>text 3</p>
+    </div>
+    <div>
+        <p>year</p>
+    </div>
+</div>
+<hr>
+<h5>Skills</h5>
+<p>intrest in skills</p>
+<hr>
+<h5>Courses</h5>
+<p>courses completed</p>
+</div>

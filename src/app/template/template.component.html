@@ -1,9 +1,6 @@
 <div class="experience-page-header">
   <strong>Select template</strong>
 </div>
-
-<div>
- 
   <div style="
       display: flex;
       margin: auto;
@@ -13,8 +10,16 @@
       justify-content: center;
     ">
     <div style="display: flex;">
-      <span ><a href="/info"><i class="fas fa-user-circle fa-3x"
-          style="background-color: white; color:#6169cf;border-radius: 50%;"></i></a></span>
+      <span >
+        <a href='/info'><button class="exp-button"
+          style="background-color: #6169CF; border-radius: 50%; border: none;position: relative;bottom: 0.5rem;margin-top: 5px;">
+          <div class="progress-bar__icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+              viewBox="0 0 24 24" class="svg--Description" height="2.9em" width="2em" xmlns="http://www.w3.org/2000/svg"
+              style="color: white">
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path>
+            </svg></div>
+        </button></a>
+      </span>
       <div class="progress" style="width: 12rem; margin-top: 18px; height: 8px">
         <div class="progress-bar progress-bar" role="progressbar" style="width: 100%;background-color: #626ccc;border-radius: 15rem" aria-valuenow="0"
           aria-valuemin="50" aria-valuemax="100"></div>
@@ -39,72 +44,57 @@
         <div class="progress-bar progress-bar2" role="progressbar" style="width: 100%;background-color: #626ccc;border-radius: 15rem" aria-valuenow="0"
           aria-valuemin="50" aria-valuemax="100"></div>
       </div>
-      <span><img style="width: 45px; height: 45px; margin-top: -2px ; color: #6169cf;" 
+      <span><img style="width: 45px; height: 45px; margin-top: -2px ; " 
           src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/write-circle-blue-512.png" />
       </span>
     </div>
   </div>
-</div>
+
 
 <div style="margin: 3rem auto; width: 60%">
   <div style="display: flex">
-    <div class="card templatecards">
-      <div class="card-header">Ackuland</div>
+    <div class="card templatecards" [ngClass]="{'templatecards': toggleAcku, 'templatecardsNew': !toggleAcku}">
+      <div class="card-header">Ackuland<i style="float:right;" *ngIf="isShown" class="fas fa-check-circle"></i></div>
       <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#ackulandModal">
         <app-ackuland></app-ackuland>
       </div>
     </div>
-    <div class="card templatecards">
-      <div class="card-header">Edinburgh</div>
-      <div class="card-body" style="cursor: pointer;" data-toggle="modal" data-target="#edinburghModal">
+    <div class="card templatecards" [ngClass]="{'templatecards': toggleEdin, 'templatecardsNew': !toggleEdin}">
+      <div class="card-header">Edinburgh<i style="float:right;" *ngIf="isShownEdin" class="fas fa-check-circle"></i></div>
+     
+      <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#edinburghModal">
         <app-edinburgh></app-edinburgh>
       </div>
     </div>
-    <div class="card templatecards">
-      <div class="card-header">Princeton</div>
-      <div class="card-body" style="cursor: pointer;" data-toggle="modal" data-target="#princetonModal">
+    <div class="card templatecards" [ngClass]="{'templatecards': togglePrin, 'templatecardsNew': !togglePrin}">
+      <div class="card-header">Princeton<i style="float:right;" *ngIf="isShownPrin" class="fas fa-check-circle"></i></div>
+  
+      <div class="card-body scaled" style="cursor: pointer; overflow: hidden;" data-toggle="modal" data-target="#princetonModal">
         <app-princeton></app-princeton>
       </div>
     </div>
   </div>
   <!--  -->
-  <div style="display: flex">
-    <div class="card templatecards">
-      <div class="card-header">Otago</div>
-      <div class="card-body" style="cursor: pointer;" data-toggle="modal" data-target="#otagoModal">
+  <div style="display: flex; justify-content: space-evenly;">
+    <div class="card templatecards" [ngClass]="{'templatecards': toggleOtago, 'templatecardsNew': !toggleOtago}">
+      <div class="card-header">Otago<i style="float:right;" *ngIf="isShownOtago" class="fas fa-check-circle"></i></div>
+
+      <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#otagoModal">
         <app-otago></app-otago>
       </div>
     </div>
-    <div class="card templatecards">
-      <div class="card-header">Berkeley</div>
-      <div class="card-body" style="cursor: pointer;" data-toggle="modal" data-target="#berkeleyModal">
+    <div class="card templatecards" [ngClass]="{'templatecards': toggleBerk, 'templatecardsNew': !toggleBerk}">
+      <div class="card-header">Berkeley<i style="float:right;" *ngIf="isShownBerk" class="fas fa-check-circle"></i></div>
+     
+      <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#berkeleyModal">
         <app-berkeley></app-berkeley>
       </div>
     </div>
-    <div class="card templatecards">
-      <div class="card-header">Harvard</div>
-      <div class="card-body">neo 🔥 </div>
-    </div>
-  </div>
-  <!--  -->
-  <div style="display: flex">
-    <div class="card templatecards">
-      <div class="card-header">Stanford</div>
-      <div class="card-body">neo 🔥 </div>
-    </div>
-    <div class="card templatecards">
-      <div class="card-header">Cambridge</div>
-      <div class="card-body">neo 🔥 </div>
-    </div>
-    <div class="card templatecards">
-      <div class="card-header">Oxford</div>
-      <div class="card-body">neo 🔥 </div>
-    </div>
-  </div>
+    
 </div>
 
 <!-- next step -->
-<div style="margin: auto; width: 17%">
+<div style="margin: auto; width: 28%">
   <div>
     <a href="#">
       <button class="nextButton">
@@ -128,20 +118,40 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
-        <div class="modal-body">
+        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
           <app-ackuland></app-ackuland>
         </div>
         <div class="modal-footer">
           <small>Unfortunately, the preview does not entirely fit on your screen, so
             we are showing you an impression of your final resume.</small>
         </div>
+        <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item" style="margin-right: 10px;">
+            <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
+            <i (mouseup)="onClickAckuColor1()" style="color: lightslategray; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickAckuColor2()" style="color: pink; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickAckuColor3()" style="color: rgb(250, 250, 119); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickAckuColor4()" style="color: rgb(119, 219, 250); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickAckuColor5()" style="color: rgb(248, 149, 142); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickAckuColor6()" style="color: rgb(19, 161, 0); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+        </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-            <a href="/template">
-              <button class="nextButton">
-                <span>Select</span>
+              <button class="nextButton" data-dismiss="modal" (click)="changeAcku()" (click)="onselect()"  ng-init="toggleAcku = true" ng-click="toggleAcku = !toggleAcku">
+                <span>{{toggleAcku ? 'Select' : 'Remove'}}</span>
               </button>
-            </a>
+              <!-- (mouseup)="onClickSelect()" -->
           </div>
         </div>
       </div>
@@ -152,20 +162,39 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
-        <div class="modal-body">
+        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
           <app-edinburgh></app-edinburgh>
         </div>
         <div class="modal-footer">
           <small>Unfortunately, the preview does not entirely fit on your screen, so
             we are showing you an impression of your final resume.</small>
         </div>
+        <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item" style="margin-right: 10px;">
+            <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
+            <i (mouseup)="onClickEdinColor1()" style="color: lightslategray; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickEdinColor2()" style="color: hotpink; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickEdinColor3()" style="color: darkorange; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickEdinColor4()" style="color: darkslateblue; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickEdinColor5()" style="color: brown; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickEdinColor6()" style="color: rgb(19, 161, 0); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+        </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-            <a href="/template">
-              <button class="nextButton">
-                <span>Select</span>
-              </button>
-            </a>
+            <button class="nextButton" data-dismiss="modal" (click)="changeEdin()" (click)="onselectEdin()"  ng-init="toggleEdin = true" ng-click="toggleEdin = !toggleEdin">
+              <span>{{toggleEdin ? 'Select' : 'Remove'}}</span>
+            </button>
           </div>
         </div>
       </div>
@@ -176,20 +205,39 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
-        <div class="modal-body">
+        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
           <app-princeton></app-princeton>
         </div>
         <div class="modal-footer">
           <small>Unfortunately, the preview does not entirely fit on your screen, so
             we are showing you an impression of your final resume.</small>
         </div>
+        <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item" style="margin-right: 10px;">
+            <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
+            <i (mouseup)="onClickPrinColor1()" style="color: black; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickPrinColor2()" style="color: rgb(202, 52, 52); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickPrinColor3()" style="color: rgb(45, 58, 133); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickPrinColor4()" style="color: rgb(99, 57, 57); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickPrinColor5()" style="color: rgb(68, 155, 140); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickPrinColor6()" style="color: darkorange; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+        </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-            <a href="/template">
-              <button class="nextButton">
-                <span>Select</span>
-              </button>
-            </a>
+            <button class="nextButton" data-dismiss="modal" (click)="changePrin()" (click)="onselectPrin()"  ng-init="togglePrin = true" ng-click="togglePrin = !togglePrin">
+              <span>{{togglePrin ? 'Select' : 'Remove'}}</span>
+            </button>
           </div>
         </div>
       </div>
@@ -199,20 +247,39 @@
   <div class="modal fade" id="otagoModal" tabindex="-1" role="dialog" aria-labelledby="otagoModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
-        <div class="modal-body">
+        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
           <app-otago></app-otago>
         </div>
         <div class="modal-footer">
           <small>Unfortunately, the preview does not entirely fit on your screen, so
             we are showing you an impression of your final resume.</small>
         </div>
+        <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item" style="margin-right: 10px;">
+            <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
+            <i (mouseup)="onClickOtagoColor1()" style="color: black; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickOtagoColor2()" style="color: rgb(202, 52, 52); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickOtagoColor3()" style="color: rgb(45, 58, 133); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickOtagoColor4()" style="color: rgb(99, 57, 57); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickOtagoColor5()" style="color: rgb(68, 155, 140); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickOtagoColor6()" style="color: darkorange; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+        </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-            <a href="/template">
-              <button class="nextButton">
-                <span>Select</span>
-              </button>
-            </a>
+            <button class="nextButton" data-dismiss="modal" (click)="changeOtago()" (click)="onselectOtago()"  ng-init="toggleOtago = true" ng-click="toggleOtago = !toggleOtago">
+              <span>{{toggleOtago ? 'Select' : 'Remove'}}</span>
+            </button>
           </div>
         </div>
       </div>
@@ -223,20 +290,39 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
-        <div class="modal-body">
+        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
           <app-berkeley></app-berkeley>
         </div>
         <div class="modal-footer">
           <small>Unfortunately, the preview does not entirely fit on your screen, so
             we are showing you an impression of your final resume.</small>
         </div>
+        <div class="card-header" style="display: flex;"><ul class="nav nav-tabs card-header-tabs">
+          <li class="nav-item" style="margin-right: 10px;">
+            <!-- <a style="font-size: x-small;" class="nav-link" href="#">Red</a> -->
+            <i (mouseup)="onClickBerkColor1()" style="color: black; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickBerkColor2()" style="color: darkgreen; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickBerkColor3()" style="color: rgb(45, 58, 133); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickBerkColor4()" style="color: rgb(99, 57, 57); border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickBerkColor5()" style="color: hotpink; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+          <li class="nav-item" style="margin-right: 10px;">
+            <i (mouseup)="onClickBerkColor6()" style="color: red; border: 1.5px solid black; border-radius: 50%;" class="fas fa-circle"></i>
+          </li>
+        </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-            <a href="/template">
-              <button class="nextButton">
-                <span>Select</span>
-              </button>
-            </a>
+            <button class="nextButton" data-dismiss="modal" (click)="changeBerk()" (click)="onselectBerk()"  ng-init="toggleBerk = true" ng-click="toggleBerk = !toggleBerk">
+              <span>{{toggleBerk ? 'Select' : 'Remove'}}</span>
+            </button>
           </div>
         </div>
       </div>

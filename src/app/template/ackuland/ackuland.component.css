@@ -4,9 +4,12 @@
 }
 .ackuland-header {
     width: 100%;
-    /* padding: 10px; */
+    padding: 10px;
 }
 .ackuland-text {
     background-color: white;
     border: 2px solid black;
+    position: relative;
+    text-align: center;
+    padding: 6px;
 }

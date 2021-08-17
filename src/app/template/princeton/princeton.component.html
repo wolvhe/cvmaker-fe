@@ -1,1 +1,54 @@
-<p>princeton works!</p>
+<div style="padding: 10px">
+  <div>
+    <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)" style="color: grey; font-weight: bold !important; font-size: x-large;">Curriculum Vitae</p>
+  </div>
+  <hr />
+  <div>
+    <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">PERSONAL</p>
+    <div style="margin-left: 80px;">
+      <small>Name : neo</small><br />
+      <small>Email : neo@gmail.com</small>
+    </div>
+  </div>
+  <hr />
+  <div>
+    <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">RESUME OBJECTIVE</p>
+    <small>content</small>
+  </div>
+  <hr />
+  <div>
+    <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">EDUCATION AND QUALIFICATIONS</p>
+    <div style="display: flex; margin-left: 20px;">
+      <div style="width: 200px;">
+        <small>Jan 2021 - Jan 2021</small>
+      </div>
+      <div style="display: flex; flex-direction: column; font-style: italic; font-weight: 200;">
+        <span>Course</span>
+        <span>CourseDetails</span>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div>
+    <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">WORK EXPERIENCE</p>
+    <div style="display: flex; margin-left: 20px;">
+      <div style="width: 200px">
+        <small>Jan 2021 - Jan 2021</small>
+      </div>
+      <div style="display: flex; flex-direction: column; font-style: italic; font-weight: 200;">
+        <span>Designation</span>
+        <span>DesignationDetails</span>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <div>
+    <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">INTERESTS</p>
+    <small>cooking</small>
+  </div>
+  <hr />
+  <div>
+    <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">REFERENCES</p>
+    <small>xyz</small>
+  </div>
+</div>
