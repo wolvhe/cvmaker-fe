@@ -9,9 +9,7 @@ import { CommonService } from '../services/common.service';
 export class TemplateComponent implements OnInit {
   constructor(public styling: CommonService) {}
 
-  ngOnInit(): void {}
- 
- 
+  ngOnInit(): void {  }
 
 
   //akuland

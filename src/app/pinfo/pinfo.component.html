@@ -41,7 +41,7 @@
 
 <div class="pinfo_card my-5 p-5">
 
-  <h3>Personal Detail's</h3>
+  <h3>Personal Details</h3>
   <hr>
   <div class="container">
     <form class="pinfo_form">
@@ -51,12 +51,67 @@
       <div class="row mt-3">
         
         
-        <div class="col-lg-4">
-          <div class="form-group">
-            <label >Profile Picture*</label>
-            <input type="file" class="form-control form-control-lg" > 
+          <div class="col-lg-4">
+            <div class="form-group">
+              <div class="container text-center">
+
+            <!-- Button trigger modal -->
+            <div class="profile_pic">
+              <button type="button"   data-toggle="modal" data-target="#exampleModalCenter">
+                <DIV class="">
+
+                </DIV><i class="fas fa-camera fa-4x" ></i>
+                <br><br>
+
+                <h6>Add profile picture</h6>
+              </button>
+            </div>
+            
+
+<!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Choose Image</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">    
+                    <img [src]="url" width="200" height="200"><br>
+                    <input type="file"(change)="onselectFile($event)">
+                  </div>
+                  <div class="modal-footer" style="text-align: left;">
+                    <div class="row align-content-center" >
+
+
+                      <div class="col tog">
+                        <input type="range"  step="any" min="1" max="10" value="1" style="width: 10rem;">
+                        <span class="btn-modal">Zoom</span>
+                      </div> 
+                      
+                      <div class="col tog">
+                        <button type="button" class="btn-modal" ><i class="fas fa-sync-alt"></i></button>
+                        <br><span class="btn-modal">Rotate</span>
+                      </div>
+                      <div class="col tog">
+                        <button type="button" class="btn-modal" ><i class="fas fa-undo"></i></button>
+                        <br><span class="btn-modal">Reset</span>
+                      </div>
+                      
+                     </div>
+                    
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            </div>
           </div>
-        </div>
+          </div>
+
 
 
         <div class="col-lg-8">
@@ -130,118 +185,134 @@
       </div>
 <br>
     
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div id="collapse1" class="panel-collapse collapse">
+          
+          <!--BIRTH INFO  -->
 
-
-            <!--BIRTH INFO  -->
-
-            <div class="row mt-3">
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label >Date of birth</label>
-                  <input type="date" class="form-control form-control-lg" placeholder="Date of birth">
-                </div>
+          <div class="row mt-3">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label >Date of birth</label>
+                <input type="date" class="form-control form-control-lg" placeholder="Date of birth">
               </div>
+            </div>
 
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label >Place of birth</label>
-                  <input type="text" class="form-control form-control-lg" placeholder="Place of birth">
-                </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label >Place of birth</label>
+                <input type="text" class="form-control form-control-lg" placeholder="Place of birth">
+              </div>
+            </div>
+          </div>
+
+
+          <!-- license & Gender -->
+          <div class="row mt-3">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label >Driving licence</label>
+                <input type="text" class="form-control form-control-lg" placeholder="Driving licence">
               </div>
             </div>
 
 
-            <!-- license & Gender -->
-            <div class="row mt-3">
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label >Driving licence</label>
-                  <input type="text" class="form-control form-control-lg" placeholder="Driving licence">
-                </div>
-              </div>
-
-
-              <div class="col-lg-6">
-                <div class="form-group">
-                  
+            <div class="col-lg-6">
+              <div class="form-group">
                 
-                    <div>
-                      <label for="exampleInputEmail1">Gender</label>
-                    </div>
-                    <select class="custom-select">
-                      <option selected>Select</option>
-                      <option value="1">Male</option>
-                      <option value="2">Female</option>
-                    </select>
-                  
-                </div>
+              
+                  <div>
+                    <label for="exampleInputEmail1">Gender</label>
+                  </div>
+                  <select class="custom-select">
+                    <option selected>Select</option>
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                  </select>
+                
               </div>
             </div>
+          </div>
+      
+
+          <!-- LIFESTYLE -->
+          <div class="row mt-3">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label >Nationality</label>
+                <input type="text" class="form-control form-control-lg" placeholder="Nationality">
+              </div>
+            </div>
+            <div class="col-lg-6">
+
+              <div class="form-group">
+                <label >Martial status</label>
+                <input type="text" class="form-control form-control-lg" placeholder="Martial status">
+              </div>
+            </div>
+          </div>
+
+          <!-- Profiles -->
+          <div class="row mt-3">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label >LinkedIn</label>
+                <input type="text" class="form-control form-control-lg" placeholder="LinkedIn">
+              </div>
+              
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label >Website</label>
+                <input type="text" class="form-control form-control-lg" placeholder="Website">
+              </div>
+            </div>
+          </div>
+
+
+        </div>
         
-
-            <!-- LIFESTYLE -->
-            <div class="row mt-3">
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label >Nationality</label>
-                  <input type="text" class="form-control form-control-lg" placeholder="Nationality">
-                </div>
-              </div>
-              <div class="col-lg-6">
-
-                <div class="form-group">
-                  <label >Martial status</label>
-                  <input type="text" class="form-control form-control-lg" placeholder="Martial status">
-                </div>
-              </div>
-            </div>
-
-            <!-- Profiles -->
-            <div class="row mt-3">
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label >LinkedIn</label>
-                  <input type="text" class="form-control form-control-lg" placeholder="LinkedIn">
-                </div>
-                
-              </div>
-              <div class="col-lg-6">
-                <div class="form-group">
-                  <label >Website</label>
-                  <input type="text" class="form-control form-control-lg" placeholder="Website">
-                </div>
-              </div>
-            </div>
-
-
+        
+        
+          <div class="panel-heading panels_custom">
+          
+            <h4 class="panel-title" style="text-align:center;">
+              <a data-toggle="collapse" href="#collapse1"><i class="fal fa-plus-circle"></i> &nbsp; Additional Information</a>
+            </h4>
+  
+  
+          </div>
+    
+        
       </div>
     </div>
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed"  type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        &nbsp;Additional Information
-      </button>
-    </h2>
-    
-  </div>
-  
-</div>
-
 
     <br>
-    <div class="d-flex justify-content-center">
-      <a href="/experience">
-      <button type="submit" class="submitbtn">Next Step &nbsp;&nbsp;&nbsp;<i class="far fa-angle-right"></i></button>
-    </a>
-    </div>
+    
       
     </form>
+
+    <div class="d-flex justify-content-center">
+      <div style="margin: auto; width: 35%;">
+        <div>
+          <a href="/experience">
+          <button class="nextButton">
+            <span>Next Step<strong style="margin-left: 1rem;"><i class="fas fa-chevron-right"></i></strong></span>
+          </button>
+          </a>
+       </div>
+        
+      </div>
+    </div>
+    <footer>
+      
+      By clicking "Next step", you will begin creating your resume and you agree to our general terms and privacy policy.
+
+    </footer>
   </div>
   
   
   
 
- 
+             

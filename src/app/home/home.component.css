@@ -1,0 +1,37 @@
+.container {
+    height: 200px;
+    position: relative;
+  }
+
+  h1{
+    font-weight: 700;
+    color: white;
+  }
+  
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .buildr a{
+    color:white ;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+
+   .top-box{
+     height: 50%;
+   }
+
+
+   .bottom-box{
+    height: 50%;
+  }
+
+  .dblock{
+    text-align: center;
+  }

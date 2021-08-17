@@ -5,6 +5,10 @@
     padding: 0;
     color: white;
 }
+
+input{
+    font-size: 14px;
+}
 .pinfo_card{
     background-color: white;    
     width: 60%;
@@ -63,7 +67,14 @@ label{
     0%{ width: 0; }
 }
 
-.submitbtn{
+footer{
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    margin: 35px 0 30px 0;
+    padding: 0 150px
+}
+.submitbtn {
     color: #fff;
     background: #626ccc;
     transition: all 0.5s ease;
@@ -74,6 +85,63 @@ label{
     padding: 10px 50px 10px 50px;
 }
 
+
 .submitbtn:hover{
     text-decoration: underline;
 }
+
+.panels_custom{
+    color: black;
+    font-size: 400;
+}
+
+.panels_custom a{
+    font-size: 16px;
+    text-decoration: none;
+}
+
+
+.panels_custom a:hover{
+    color : grey;
+}
+
+
+
+.nextButton {
+    height: 50px;
+    width: 200px;
+    background-color: #626CCC;
+    border: #4287f5;
+    border-radius: 4px;
+    color: white;
+    font-weight: 900;
+    font-size: 16px;
+  }
+
+  .panel-default{
+      border-color: transparent;
+  }
+
+
+  .btn-modal{
+      background: none;
+      border: none;
+
+  }
+
+  .tog{
+   text-align: center;   
+  }
+
+  .profile_pic button{
+      background: #C8C7C6;
+      width: 200px;
+      height: 200px;
+      border: none;
+      border-radius: 5px;
+      justify-content: center;
+      align-content: center;
+      color: rgb(241, 241, 241);
+      
+
+  }
