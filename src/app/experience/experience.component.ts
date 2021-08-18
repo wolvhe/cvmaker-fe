@@ -8,6 +8,7 @@ import * as $ from 'jquery';
 
 export class ExperienceComponent implements OnInit {
  
+
   constructor() { }
 
   ngOnInit(){

@@ -400,6 +400,19 @@
                 <div id="editor" style="height: 100px">
                   <quill-editor [modules]="editorModules"></quill-editor>
                 </div>
+          </div>
+            <div style="display: flex; align-items: baseline;float: right;">
+              <div class="button--move-up">
+               <button  style="background: none; border: none; height: 2rem; width: 2rem;"><i class="fas fa-chevron-up fa-1x"></i></button>
+              </div>
+              <div class="button--move-down">
+                <button style="background: none; border: none; height: 2rem; width: 2rem;"><i class="fas fa-chevron-down fa-1x"></i></button>
+              </div>
+              <div class="sideSettingsButton button--settings" >
+                <i class="fas fa-cog"
+                data-toggle="modal"
+                data-target="#set_1"
+                ></i>
               </div>
             </div>
             <div
@@ -1588,7 +1601,6 @@
                 data-target="#set_1"
               ></i>
             </div>
-          </div>
         </div>
         <div id="collapsePublic" class="collapse" style="padding: 20px">
           <div *ngFor="let item of formPublicArray; let i = index">
