@@ -90,3 +90,12 @@
 .fa-lightbulb:hover{
   color: gold;
 }
+.addNew {
+  cursor: pointer;
+  background-color: rgb(214, 214, 214);
+  border-radius: 8px;
+  width: 50%;
+  margin: auto;
+  /* box-shadow: 1px solid black; */
+  /* border: 1px solid black; */
+}

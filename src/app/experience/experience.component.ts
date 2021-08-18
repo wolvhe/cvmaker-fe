@@ -12,7 +12,15 @@ export class ExperienceComponent implements OnInit {
 
   ngOnInit(){
   
+  
+}
+  filterArray(index: any) {
+    console.log(index)
+    this.formArray = this.formArray.filter((d,i) => i!= index)
   }
+
+  formArray = [{}]
+  
   editorModules = {toolbar: [
     [
       'bold', 'italic', 'underline'
