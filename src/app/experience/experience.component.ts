@@ -18,8 +18,48 @@ export class ExperienceComponent implements OnInit {
     console.log(index)
     this.formArray = this.formArray.filter((d,i) => i!= index)
   }
+  filterResumeArray(index: any) {
+    console.log(index)
+    this.formResumeArray = this.formResumeArray.filter((d,i) => i!= index)
+  }
+  filterEduArray(index: any) {
+    console.log(index)
+    this.formEduArray = this.formEduArray.filter((d,i) => i!= index)
+  }
+  filterInterestArray(index: any) {
+    console.log(index)
+    this.formInterestArray = this.formInterestArray.filter((d,i) => i!= index)
+  }
+  filterRefArray(index: any) {
+    console.log(index)
+    this.formRefArray = this.formRefArray.filter((d,i) => i!= index)
+  }
+  filterAchieveArray(index: any) {
+    console.log(index)
+    this.formAchieveArray = this.formAchieveArray.filter((d,i) => i!= index)
+  }
+  filterPublicArray(index: any) {
+    console.log(index)
+    this.formPublicArray = this.formPublicArray.filter((d,i) => i!= index)
+  }
+ 
 
   formArray = [{}]
+  
+  formResumeArray = [{}]
+
+  formEduArray = [{}]
+
+  formInterestArray=[{}]
+
+  formRefArray=[{}]
+
+  formAchieveArray = [{}]
+
+  formPublicArray = [{}]
+
+ 
+
   
   editorModules = {toolbar: [
     [

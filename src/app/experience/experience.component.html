@@ -187,6 +187,7 @@
         </div>
 
         <div id="collapseOne" class="collapse show" style="padding: 20px">
+          <div *ngFor="let item of formResumeArray; let i = index">
           <p class="card-text">Description</p>
           <div id="editor" style="height: 100px">
             <quill-editor [modules]="editorModules"></quill-editor>
@@ -214,6 +215,16 @@
               <i class="fas fa-save"></i> Save
             </button>
           </div>
+        </div>
+        <div style="position: relative; left: 18rem;">
+          <button
+          type="button"
+          class="btn saveButton btn-outline-secondary btn-sm"
+          (click)="formResumeArray.push({})"
+        >
+          Add another work experience
+        </button>
+        </div>
         </div>
       </div>
     </div>
@@ -510,7 +521,7 @@
           </div>
         </div>
         <div id="collapseEdu" class="collapse" style="padding: 20px">
-          <div>
+          <div *ngFor="let item of formEduArray; let i = index">
             <div
               class="row1"
               style="
@@ -606,8 +617,7 @@
                 <quill-editor [modules]="editorModules"></quill-editor>
               </div>
             </div>
-          </div>
-          <div
+            <div
             style="
               display: flex;
               justify-content: space-between;
@@ -629,6 +639,7 @@
                 type="button"
                 class="btn deleteButton btn-outline-secondary btn-sm"
                 style="margin-right: 1rem"
+                (click)="filterEduArray(i)"
               >
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
@@ -641,8 +652,18 @@
               </button>
             </div>
           </div>
+          </div>
+        
           <div class="addNew" style="text-align: center">
-            <!-- <p>Add another education</p> -->
+            <div>
+              <button
+              type="button"
+              class="btn saveButton btn-outline-secondary btn-sm"
+              (click)="formEduArray.push({})"
+            >
+              Add another Education Qualification
+            </button>
+            </div>
           </div>
         </div>
       </div>
@@ -717,6 +738,7 @@
           </div>
         </div>
         <div id="collapseInterests" class="collapse" style="padding: 20px">
+          <div *ngFor="let item of formInterestArray; let i = index">
           <label for="exampleInputEmail1">Hobby</label>
           <input
             type="text"
@@ -747,6 +769,7 @@
                 type="button"
                 class="btn deleteButton btn-outline-secondary btn-sm"
                 style="margin-right: 1rem"
+                (click)="filterInterestArray(i)"
               >
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
@@ -760,8 +783,17 @@
             </div>
           </div>
           <div class="addNew" style="text-align: center">
-            <!-- <p>Add another hobby</p> -->
+            <div>
+              <button
+              type="button"
+              class="btn saveButton btn-outline-secondary btn-sm"
+              (click)="formInterestArray.push({})"
+            >
+              Add another Interest
+            </button>
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -832,12 +864,14 @@
           </div>
         </div>
         <div id="collapseRef" class="collapse" style="padding: 20px">
+          <div   *ngFor="let item of formRefArray; let i = index">
           <div
             style="
               display: flex;
               justify-content: space-between;
               margin-bottom: 1rem;
             "
+          
           >
             <div class="form-group">
               <label for="exampleInputEmail1">Company Name</label>
@@ -869,6 +903,7 @@
               type="button"
               class="btn deleteButton btn-outline-secondary btn-sm"
               style="margin-right: 1rem"
+              (click)="filterRefArray(i)"
             >
               <i class="fas fa-trash-alt"></i> Delete
             </button>
@@ -880,8 +915,17 @@
               <i class="fas fa-save"></i> Save
             </button>
           </div>
+        </div>
           <div class="addNew" style="text-align: center">
-            <!-- <p>Add another reference</p> -->
+            <div>
+              <button
+              type="button"
+              class="btn saveButton btn-outline-secondary btn-sm"
+              (click)="formRefArray.push({})"
+            >
+              Add another Reference
+            </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1238,7 +1282,7 @@
           </div>
         </div>
         <div id="collapseCourse" class="collapse" style="padding: 20px">
-          <div>
+          <div >
             <div
               class="row1"
               style="
@@ -1334,8 +1378,7 @@
                 <quill-editor [modules]="editorModules"></quill-editor>
               </div>
             </div>
-          </div>
-          <div
+            <div
             style="
               display: flex;
               justify-content: space-between;
@@ -1369,8 +1412,6 @@
               </button>
             </div>
           </div>
-          <div class="addNew" style="text-align: center">
-            <!-- <p>Add another Course</p> -->
           </div>
         </div>
       </div>
@@ -1444,6 +1485,8 @@
         </div>
 
         <div id="collapseAchieve" class="collapse" style="padding: 20px">
+          <div *ngFor="let item of formAchieveArray; let i = index">
+          <div style="margin-top: 4rem;">  
           <p class="card-text">Description</p>
           <div id="editor" style="height: 100px">
             <quill-editor [modules]="editorModules"></quill-editor>
@@ -1463,6 +1506,19 @@
             >
               <i class="fas fa-save"></i> Save
             </button>
+          </div>
+        </div>
+        </div>
+          <div class="addNew1" style="text-align: center">
+            <div>
+              <button
+              type="button"
+              class="btn saveButton btn-outline-secondary btn-sm"
+              (click)="formAchieveArray.push({})"
+            >
+              Add another Course
+            </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1535,7 +1591,8 @@
           </div>
         </div>
         <div id="collapsePublic" class="collapse" style="padding: 20px">
-          <p class="card-text">Description</p>
+          <div *ngFor="let item of formPublicArray; let i = index">
+          <p class="card-text" style="margin-top: 4rem;">Description</p>
           <div id="editor" style="height: 100px">
             <quill-editor [modules]="editorModules"></quill-editor>
           </div>
@@ -1556,6 +1613,18 @@
             </button>
           </div>
         </div>
+        <div class="addNew1" style="text-align: center">
+          <div>
+            <button
+            type="button"
+            class="btn saveButton btn-outline-secondary btn-sm"
+            (click)="formPublicArray.push({})"
+          >
+            Add another Publication
+          </button>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
