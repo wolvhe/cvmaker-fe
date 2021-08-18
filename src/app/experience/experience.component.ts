@@ -45,7 +45,29 @@ export class ExperienceComponent implements OnInit {
   }
  
 
+  filterSkillArray(index: any) {
+    console.log(index)
+    this.formSkillArray = this.formSkillArray.filter((d,i) => i!= index)
+  }
+
+  filterLanguageArray(index: any) {
+    console.log(index)
+    this.formLanguageArray = this.formLanguageArray.filter((d,i) => i!= index)
+  }
+
+  filterCourseArray(index: any) {
+    console.log(index)
+    this.formCourseArray = this.formCourseArray.filter((d,i) => i!= index)
+  }
+
+  
   formArray = [{}]
+
+  formSkillArray = [{}]
+
+  formLanguageArray = [{}]
+
+  formCourseArray = [{}]
   
   formResumeArray = [{}]
 

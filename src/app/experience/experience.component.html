@@ -1010,6 +1010,7 @@
           </div>
         </div>
         <div id="collapseSkills" class="collapse" style="padding: 20px">
+          <div *ngFor="let item of formSkillArray; let i = index">
           <div
             class="row1"
             style="
@@ -1065,6 +1066,7 @@
                 type="button"
                 class="btn deleteButton btn-outline-secondary btn-sm"
                 style="margin-right: 1rem"
+                (click)="filterSkillArray(i)"
               >
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
@@ -1077,7 +1079,17 @@
               </button>
             </div>
           </div>
+
           <div class="addNew" style="text-align: center">
+            <div>
+              <button
+              type="button"
+              class="btn saveButton btn-outline-secondary btn-sm"
+              (click)="formSkillArray.push({})"
+            >
+              Add new Skill
+            </button>
+            </div>
             <!-- <p>Add another education</p> -->
           </div>
         </div>
@@ -1151,6 +1163,7 @@
           </div>
         </div>
         <div id="collapseLanguage" class="collapse" style="padding: 20px">
+         <div *ngFor="let item of formLanguageArray; let i = index">
           <div
             class="row1"
             style="
@@ -1209,6 +1222,7 @@
                 type="button"
                 class="btn deleteButton btn-outline-secondary btn-sm"
                 style="margin-right: 1rem"
+                (click)="filterLanguageArray(i)"
               >
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
@@ -1223,6 +1237,15 @@
           </div>
           <div class="addNew" style="text-align: center">
             <!-- <p>Add another language</p> -->
+            <div>
+              <button
+              type="button"
+              class="btn saveButton btn-outline-secondary btn-sm"
+              (click)="formLanguageArray.push({})"
+            >
+              Add another language
+            </button>
+            </div>
           </div>
         </div>
         <!-- extra -->
@@ -1295,7 +1318,7 @@
           </div>
         </div>
         <div id="collapseCourse" class="collapse" style="padding: 20px">
-          <div >
+          <div *ngFor="let item of formCourseArray; let i = index">
             <div
               class="row1"
               style="
@@ -1323,6 +1346,7 @@
                 />
               </div>
             </div>
+            
             <!-- <div class="row2" style="margin-bottom: 1rem">
             <div class="form-group">
               <label for="exampleInputEmail1">Employer</label>
@@ -1413,6 +1437,7 @@
                 type="button"
                 class="btn deleteButton btn-outline-secondary btn-sm"
                 style="margin-right: 1rem"
+                (click)="filterCourseArray(i)"
               >
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
@@ -1425,6 +1450,19 @@
               </button>
             </div>
           </div>
+          </div>
+          
+          <div class="addNew" style="text-align: center">
+            <!-- <p>Add another Course</p> -->
+            <div>
+              <button
+              type="button"
+              class="btn saveButton btn-outline-secondary btn-sm"
+              (click)="formCourseArray .push({})"
+            >
+              Add another course
+            </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1517,9 +1555,14 @@
               class="saveButton btn btn-outline-secondary btn-sm"
               (click)="onShowCountAchievements()"
             >
+            
               <i class="fas fa-save"></i> Save
             </button>
+            
           </div>
+
+          
+          
         </div>
         </div>
           <div class="addNew1" style="text-align: center">
@@ -1529,14 +1572,17 @@
               class="btn saveButton btn-outline-secondary btn-sm"
               (click)="formAchieveArray.push({})"
             >
-              Add another Course
+              Add another Achievement
             </button>
             </div>
           </div>
         </div>
       </div>
+      
     </div>
+    
   </div>
+  
   <!-- Publications -->
   <div class="accordion">
     <div class="card" style="width: 55rem; margin-bottom: 2rem; padding: 1rem">
@@ -1768,10 +1814,22 @@
             computer and software skills. For example : Word, Excel, Photoshop,
             etc.
           </small>
+
+          <div>
+            <button
+            type="button"
+            class="btn saveButton btn-outline-secondary btn-sm"
+          >
+            Add another Publication
+          </button>
+          </div>
         </div>
+        
       </div>
     </div>
+    
   </div>
+  
   <!-- modalSettings -->
   <div
     class="modal fade"
