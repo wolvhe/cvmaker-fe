@@ -1,0 +1,28 @@
+<p>employee works!</p>
+<div>
+  <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+    <input
+      type="hidden"
+      name="_id"
+      #_id="ngModel"
+      [(ngModel)]="infoService.selectedInfo._id"
+    />
+    <div>
+      <input
+        type="text"
+        name="fname"
+        #name="ngModel"
+        [(ngModel)]="infoService.selectedInfo.fname"
+        placeholder="Enter name"
+      />
+      <label>Name :</label>
+    </div>
+      <div>
+          <button type="button" (click)="resetForm(employeeForm)">Reset</button>
+          <button type="submit">Submit</button>
+      </div>
+  </form>
+</div>
+<div *ngFor = "let emp of infoService.users">
+  <p>{{emp.fname}}</p>
+</div>
