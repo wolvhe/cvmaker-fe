@@ -1,21 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { CommonService } from '../services/common.service';
+import { InfoService } from '../shared/info.service';
+import { Info } from '../shared/cvmaker.model';
 
 @Component({
   selector: 'app-pinfo',
   templateUrl: './pinfo.component.html',
-  styleUrls: ['./pinfo.component.css']
+  styleUrls: ['./pinfo.component.css'],
+  providers: [InfoService]
 })
 export class PinfoComponent implements OnInit {
 
   lang:any;
 
-  constructor(public styling:CommonService) { 
+  constructor(public styling:CommonService, public infoService: InfoService) { 
     
   }
   ngOnInit(): void {
     console.log(this.url);
     this.lang = localStorage.getItem('lang') || 'english';
+    this.refreshInfoList();
+    this.resetForm();
   }
 
   changeLang(lang: any){
@@ -40,8 +46,6 @@ onselectFile(e:any){
 
 zoom : any=1;
  
-
-
 rotate(){
   this.value=this.value+90;
   if(this.value>360){
@@ -61,5 +65,33 @@ change(e:any){
   this.zoom=e.target.value;
   console.log(e)
 }
-
+onSubmit(form : NgForm) {
+  if(form.value._id == "") {
+    this.infoService.postInfo(form.value).subscribe((res) => {
+      // this.resetForm(form);
+      this.refreshInfoList();
+      console.log("hello",res)
+    });
+    
+  }
+  // else {
+  //   this.employeeService.putInfo(form.value).subscribe((res) => {
+  //     // this.resetForm(form);
+  //     // this.refreshEmployeeList();
+  //   });
+  // }
+}
+refreshInfoList() {
+  this.infoService.getInfoList().subscribe((res) => {
+    this.infoService.users = res as Info[];
+  })
+}
+resetForm(form ?: NgForm) {
+  if(form)
+  form.reset();
+  this.infoService.selectedInfo = {
+    _id: "",
+    fname: ""
+  }
+}
 }  
