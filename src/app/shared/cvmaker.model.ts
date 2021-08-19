@@ -1,7 +1,7 @@
 export class Info {
     _id!: string;
     fname: string | undefined;
-    // lname: string | undefined;
+    lname: string | undefined;
     // email: string | undefined;
     // phone_no: number | undefined;
     // address: string | undefined;
@@ -16,4 +16,41 @@ export class Info {
     // linkedin: string | undefined;
     // website: string | undefined;
 }
-
+export class Experience {
+    _id!: string;
+    res_des: string | undefined;
+    work_jobtitle: string | undefined;
+    work_city: string | undefined;
+    work_employer: string | undefined;
+    work_startDate_month: string | undefined;
+    work_startDate_year: string | undefined;
+    work_endDate_month: string | undefined;
+    work_endDate_year: string | undefined;
+    work_des: string | undefined;
+    edu_degree: string | undefined;
+    edu_city: string | undefined;
+    edu_school: string | undefined;
+    edu_startDate_month: string | undefined;
+    edu_startDate_year: string | undefined;
+    edu_endDate_month: string | undefined;
+    edu_endDate_year: string | undefined;
+    edu_des: string | undefined;
+    hobby: string | undefined;
+    ref_companyName: string | undefined;
+    ref_contactPerson: string | undefined;
+    ref_phoneNo: number | undefined;
+    ref_email: string | undefined;
+    skill: string | undefined;
+    skill_startDate: string | undefined;
+    lang: string | undefined;
+    lang_startDate: string | undefined;
+    course_title: string | undefined;
+    course_institution: string | undefined;
+    course_startDate_month: string | undefined;
+    course_startDate_year: string | undefined;
+    course_endDate_month: string | undefined;
+    course_endDate_year: string | undefined;
+    course_des: string | undefined;
+    achiev_des: string | undefined;
+    publi_des: string | undefined;
+}
