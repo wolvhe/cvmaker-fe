@@ -1,20 +1,85 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import * as $ from 'jquery';
+import { Experience } from '../shared/cvmaker.model';
+import { ExperienceService } from '../shared/experience.service';
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html', 
   styleUrls: ['./experience.component.css'],
+  providers: [ExperienceService]
 })
 
 export class ExperienceComponent implements OnInit {
  
 
-  constructor() { }
+  constructor(public expService: ExperienceService) { }
 
   ngOnInit(){
-  
-  
+    this.refreshInfoList();
+    this.resetForm();
 }
+myFunction() {
+  window.location.href="http://programminghead.com";  
+}
+
+  onSubmit(form : NgForm) {
+    // if(form.value._id == "") {
+    this.expService.postInfo(form.value).subscribe((res) => {
+      this.refreshInfoList();
+      console.log("hello",res)
+    });
+  // }
+  }
+  refreshInfoList() {
+  this.expService.getInfoList().subscribe((res) => {
+    this.expService.experience = res as Experience[];
+  })
+  }
+  resetForm(form ?: NgForm) {
+  if(form)
+  form.reset();
+  this.expService.selectedExperience = {
+    _id: "",
+    res_des: "",
+    work_jobtitle: "",
+    work_city: "",
+    work_employer: "",
+    work_startDate_month: "",
+    work_startDate_year: "",
+    work_endDate_month: "",
+    work_endDate_year: "",
+    work_des: "",
+    edu_degree: "",
+    edu_city: "",
+    edu_school: "",
+    edu_startDate_month: "",
+    edu_startDate_year: "",
+    edu_endDate_month: "",
+    edu_endDate_year: "",
+    edu_des: "",
+    hobby: "",
+    ref_companyName: "",
+    ref_contactPerson: "",
+    ref_phoneNo: null,
+    ref_email: "",
+    skill: "",
+    skill_startDate: "",
+    lang: "",
+    lang_startDate: "",
+    course_title: "",
+    course_institution: "",
+    course_startDate_month: "",
+    course_startDate_year: "",
+    course_endDate_month: "",
+    course_endDate_year: "",
+    course_des: "",
+    achiev_des: "",
+    publi_des: ""
+  }
+  }
+
+
   filterArray(index: any) {
     console.log(index)
     this.formArray = this.formArray.filter((d,i) => i!= index)

@@ -66,20 +66,11 @@ change(e:any){
   console.log(e)
 }
 onSubmit(form : NgForm) {
-  if(form.value._id == "") {
     this.infoService.postInfo(form.value).subscribe((res) => {
-      // this.resetForm(form);
       this.refreshInfoList();
       console.log("hello",res)
     });
-    
-  }
-  // else {
-  //   this.employeeService.putInfo(form.value).subscribe((res) => {
-  //     // this.resetForm(form);
-  //     // this.refreshEmployeeList();
-  //   });
-  // }
+
 }
 refreshInfoList() {
   this.infoService.getInfoList().subscribe((res) => {
@@ -91,7 +82,8 @@ resetForm(form ?: NgForm) {
   form.reset();
   this.infoService.selectedInfo = {
     _id: "",
-    fname: ""
+    fname: "",
+    lname: ""
   }
 }
 }  
