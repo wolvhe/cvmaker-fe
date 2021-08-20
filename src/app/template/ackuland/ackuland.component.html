@@ -22,59 +22,64 @@
         <div *ngFor="let emp of expService.experience">
             <p>{{ emp.res_des }}</p>
           </div>
-        <p>EDUCATION AND QUALIFICATIONS</p>
-        <div *ngFor="let emp of expService.experience" style="margin-top: -12px;margin-bottom: 10px;">
-            <small>Degree: {{ emp.edu_degree }}</small><br>
-            <div style="display: flex; justify-content: space-between;">
-                <small>City: {{ emp.edu_city }}</small><br>
-                <small>School: {{ emp.edu_school }}</small><br>
+        <!-- edu -->
+        <div style="display: flex; flex-direction: column">
+            <span>Education and Qualifications</span>
+            <small>
+              <div *ngFor="let emp of expService.experience">
+                <p>{{ emp.edu_degree }}</p>
+              </div></small
+            >
+            <small style="margin-top: -12px; font-size: x-small;" [ngStyle]="styling.sharedEdinTextStyle$ | async">
+              <div *ngFor="let emp of expService.experience" style="display: flex; justify-content: space-between;">
+                <p>{{ emp.edu_school }}, {{ emp.edu_city }}</p>
+                <p style="font-size: xx-small; margin-left: 12px;"><small><span>{{ emp.edu_startDate_month }}{{ emp.edu_startDate_year }}</span> - <span>{{ emp.edu_endDate_month }}{{ emp.edu_endDate_year }}</span></small></p>
+              </div>
+            </small>
+            <br />
+        </div>
+        <!-- work -->
+        <div style="display: flex; flex-direction: column; margin-top: -20px;">
+          <span>WORK EXPERIENCE</span>
+          <small>
+            <div *ngFor="let emp of expService.experience">
+              <p>{{ emp.work_jobtitle }}</p>
+            </div></small
+          >
+          <small style="margin-top: -12px; font-size: x-small;" [ngStyle]="styling.sharedEdinTextStyle$ | async">
+            <div *ngFor="let emp of expService.experience" style="display: flex; justify-content: space-between;">
+              <p>{{ emp.work_employer }}, {{ emp.work_city }}</p>
+              <p style="font-size: xx-small; margin-left: 12px;"><small><span>{{ emp.work_startDate_month }}{{ emp.work_startDate_year }}</span> - <span>{{ emp.work_endDate_month }}{{ emp.work_endDate_year }}</span></small></p>
             </div>
-            <div style="display: flex; justify-content: space-between;">
-                <small>Start Month: {{ emp.edu_startDate_month }}</small><br>
-                <small>Start Year : {{ emp.edu_startDate_year }}</small><br>
+          </small>
+          <br />
+        </div>
+        <!-- ref -->
+        <div style="display: flex; flex-direction: column; margin-top: -20px;">
+          <span>References</span>
+          <small>
+            <div *ngFor="let emp of expService.experience" style="display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between;">
+                <span >{{ emp.ref_contactPerson }}</span><span style="font-size: x-small;">{{ emp.ref_companyName }}</span>
+              </div>
+              <span [ngStyle]="styling.sharedEdinTextStyle$ | async" style="font-size: x-small;">{{ emp.ref_phoneNo }}</span>
+              <span [ngStyle]="styling.sharedEdinTextStyle$ | async" style="font-size: x-small;">{{ emp.ref_email }}</span>
             </div>
-            <div style="display: flex; justify-content: space-between;">
-                <small>End Month : {{ emp.edu_endDate_month }}</small><br>
-                <small>End Year : {{ emp.edu_endDate_year }}</small><br>
+          </small>
+          <br />
+        </div>
+        <!-- skills -->
+        <div style="display: flex; flex-direction: column; margin-top: -10px;">
+          <span>Skills</span>
+          <small>
+            <div *ngFor="let emp of expService.experience">
+                <small [ngStyle]="styling.sharedEdinTextStyle$ | async">{{ emp.skill }}</small>
             </div>
-          </div>
-        <p>WORK EXPERIENCE</p>
-        <div *ngFor="let emp of expService.experience" style="margin-top: -12px;margin-bottom: 10px;">
-            <small>Title: {{ emp.work_jobtitle }}</small><br>
-            <div style="display: flex; justify-content: space-between;">
-                <small>City: {{ emp.work_city }}</small><br>
-                <small>Employer: {{ emp.work_employer }}</small><br>
-            </div>
-            <div style="display: flex; justify-content: space-between;">
-                <small>Start Month: {{ emp.work_startDate_month }}</small><br>
-                <small>Start Year : {{ emp.work_startDate_year }}</small><br>
-            </div>
-            <div style="display: flex; justify-content: space-between;">
-                <small>End Month : {{ emp.work_endDate_month }}</small><br>
-                <small>End Year : {{ emp.work_endDate_year }}</small><br>
-            </div>
-          </div>
-        <p>REFERENCES</p>
-        <div *ngFor="let emp of expService.experience" style="margin-top: -12px;margin-bottom: 10px;">
-            <div style="display: flex; justify-content: space-between;">
-                <small>Compnay name :{{ emp.ref_companyName }}</small>
-                <small>Contact person :{{ emp.ref_contactPerson }}</small>
-            </div>
-            <div style="display: flex; justify-content: space-between;">
-                <small>Phone no :{{ emp.ref_phoneNo }}</small>
-                <small>email :{{ emp.ref_email }}</small>
-                <br>
-            </div>
-          </div>
+          </small>
+  
+      </div>
         
-        <p>SKILLS</p>
-        <div *ngFor="let emp of expService.experience" style="margin-top: -12px;">
-            <p style="display: flex; justify-content: space-between;">
-                <small>Skill :{{ emp.skill }}</small>
-                <small>Start Date :{{ emp.skill_startDate }}</small>
-                <br>
-            </p>
-          </div>
+      
       </div>
     </div>
   </div>
