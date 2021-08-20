@@ -13,18 +13,26 @@
   <hr />
   <div>
     <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">RESUME OBJECTIVE</p>
-    <small>content</small>
+    <div *ngFor="let emp of expService.experience">
+      <p>{{ emp.res_des }}</p>
+    </div>
   </div>
   <hr />
   <div>
     <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">EDUCATION AND QUALIFICATIONS</p>
     <div style="display: flex; margin-left: 20px;">
       <div style="width: 200px;">
-        <small>Jan 2021 - Jan 2021</small>
+        <div *ngFor="let emp of expService.experience">
+          <span style="font-size: x-small;">{{ emp.edu_startDate_month }}{{ emp.edu_startDate_year }} - {{ emp.edu_endDate_month }}{{ emp.edu_endDate_year }}</span>
+        </div>
       </div>
       <div style="display: flex; flex-direction: column; font-style: italic; font-weight: 200;">
-        <span>Course</span>
-        <span>CourseDetails</span>
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.edu_degree }}</span>
+        </div>
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.edu_school }}, {{ emp.edu_city }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -32,23 +40,48 @@
   <div>
     <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">WORK EXPERIENCE</p>
     <div style="display: flex; margin-left: 20px;">
-      <div style="width: 200px">
-        <small>Jan 2021 - Jan 2021</small>
+      <div style="width: 200px;">
+        <div *ngFor="let emp of expService.experience">
+          <span style="font-size: x-small;">{{ emp.work_startDate_month }}{{ emp.work_startDate_year }} - {{ emp.work_endDate_month }}{{ emp.work_endDate_year }}</span>
+        </div>
       </div>
       <div style="display: flex; flex-direction: column; font-style: italic; font-weight: 200;">
-        <span>Designation</span>
-        <span>DesignationDetails</span>
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.work_jobtitle }}</span>
+        </div>
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.work_employer }}, {{ emp.work_city }}</span>
+        </div>
       </div>
     </div>
   </div>
   <hr />
   <div>
     <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">INTERESTS</p>
-    <small>cooking</small>
+    <div *ngFor="let emp of expService.experience">
+      <span>{{ emp.hobby }}</span>
+    </div>
   </div>
   <hr />
   <div>
     <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">REFERENCES</p>
-    <small>xyz</small>
+    <div style="display: flex; margin-left: 20px;">
+      <div style="width: 200px;">
+        <div *ngFor="let emp of expService.experience">
+          <span style="font-size: x-small;">{{ emp.ref_companyName }}</span>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; font-style: italic; font-weight: 200;">
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.ref_contactPerson }}</span>
+        </div>
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.ref_phoneNo }}</span>
+        </div>
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.ref_email }}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

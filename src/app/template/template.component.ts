@@ -10,7 +10,15 @@ export class TemplateComponent implements OnInit {
   constructor(public styling: CommonService) {}
 
   ngOnInit(): void {  }
-
+  // downloadMyFile(){
+  //   const link = document.createElement('a');
+  //   link.setAttribute('target', '_blank');
+  //   link.setAttribute('href', 'abc.net/files/test.ino');
+  //   link.setAttribute('download', `products.csv`);
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   link.remove();
+  // }
 
   //akuland
   onClickAckuColor1() {
@@ -94,22 +102,22 @@ export class TemplateComponent implements OnInit {
 
 //otago
 onClickOtagoColor1() {
-  this.styling.newOtagoStyle({ 'background-color': 'lightslategray' });
+  this.styling.newOtagoStyle({ 'background-color': 'black' });
 }
 onClickOtagoColor2() {
-  this.styling.newOtagoStyle({ 'background-color': 'pink' });
+  this.styling.newOtagoStyle({ 'background-color': 'rgb(202, 52, 52)' });
 }
 onClickOtagoColor3() {
-  this.styling.newOtagoStyle({ 'background-color': 'rgb(250, 250, 119)' });
+  this.styling.newOtagoStyle({ 'background-color': 'rgb(45, 58, 133)' });
 }
 onClickOtagoColor4() {
-  this.styling.newOtagoStyle({ 'background-color': 'rgb(119, 219, 250)' });
+  this.styling.newOtagoStyle({ 'background-color': 'rgb(99, 57, 57)' });
 }
 onClickOtagoColor5() {
-  this.styling.newOtagoStyle({ 'background-color': 'rgb(248, 149, 142)' });
+  this.styling.newOtagoStyle({ 'background-color': 'rgb(68, 155, 140)' });
 }
 onClickOtagoColor6() {
-  this.styling.newOtagoStyle({ 'background-color': 'hotpink' });
+  this.styling.newOtagoStyle({ 'background-color': 'darkorange' });
 }
 
 //berk

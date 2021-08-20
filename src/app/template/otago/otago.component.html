@@ -1,36 +1,170 @@
-<div  class="otago-main">
-    <div style="display: flex;flex-direction: row;">
-        <div  style="display: flex;flex: 1; flex-direction: column;">
-            <h3>Name</h3>
-            <div class="info">
-            <p><i class="fas fa-home"></i> Address</p>
-            <p><i class="fas fa-phone"></i> 7894561231</p>
-            <p><i class="fas fa-envelope"></i> main@gmail.com</p>
+<div class="otago-main">
+  <div style="display: flex; flex-direction: row">
+    <div style="display: flex; flex: 1; flex-direction: column">
+      <h3>Name</h3>
+      <div class="info">
+        <p><i class="fas fa-home"></i> Address</p>
+        <p><i class="fas fa-phone"></i> 7894561231</p>
+        <p><i class="fas fa-envelope"></i> main@gmail.com</p>
+      </div>
+    </div>
+    <div
+      [ngStyle]="styling.sharedOtagoStyle$ | async"
+      style="
+        border: 1px solid none;
+        margin-bottom: 2rem;
+        padding: 5px;
+        background-color: teal;
+        color: white;
+      "
+    >
+      <h3>CV</h3>
+    </div>
+  </div>
+  <hr />
+  <div *ngFor="let emp of expService.experience">
+    <p>{{ emp.res_des }}</p>
+  </div>
+  <hr />
+  <!-- edu -->
+  <div>
+    <p>
+      EDUCATION AND QUALIFICATIONS
+    </p>
+    <div
+      style="
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      "
+    >
+      <div style="width: 200px">
+        <div *ngFor="let emp of expService.experience">
+          <span style="font-size: xx-small"
+            >{{ emp.edu_startDate_month }}{{ emp.edu_startDate_year }} -
+            {{ emp.edu_endDate_month }}{{ emp.edu_endDate_year }}</span
+          >
         </div>
-    </div>
-        <div [ngStyle]="(styling.sharedOtagoStyle$ | async)" style="border: 1px solid none;margin-bottom: 2rem;padding: 5px;background-color: teal;color: white;">
-            <h3>CV</h3>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 400px;
+          font-size: x-small;
+        "
+      >
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.edu_degree }}</span>
         </div>
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.edu_school }}, {{ emp.edu_city }}</span>
+        </div>
+      </div>
     </div>
-    <hr>
-    <h5>Intrest</h5>
-    <p>area of intrest</p>
-    <hr>
-<div style="display: flex;flex-direction: row;">
-   <div style="display: flex; flex: 1;flex-direction: column;">
-        <h5>Education and Qualification</h5>
-        <p>text 1</p>
-        <p>text 2</p>
-        <p>text 3</p>
+  </div>
+  <hr />
+  <!-- work -->
+  <div>
+    <p>WORK EXPERIENCE</p>
+    <div
+      style="
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      "
+    >
+      <div style="width: 200px">
+        <div *ngFor="let emp of expService.experience">
+          <span style="font-size: xx-small"
+            >{{ emp.work_startDate_month }}{{ emp.work_startDate_year }} -
+            {{ emp.work_endDate_month }}{{ emp.work_endDate_year }}</span
+          >
+        </div>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 400px;
+          font-size: x-small;
+        "
+      >
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.work_jobtitle }}</span>
+        </div>
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.work_employer }}, {{ emp.work_city }}</span>
+        </div>
+      </div>
     </div>
-    <div>
-        <p>year</p>
+  </div>
+  <hr />
+  <!-- interests -->
+  <div>
+    <p>INTERESTS</p>
+    <div *ngFor="let emp of expService.experience" style="font-size: x-small">
+      <ul>
+        <li>{{ emp.hobby }}</li>
+      </ul>
     </div>
-</div>
-<hr>
-<h5>Skills</h5>
-<p>intrest in skills</p>
-<hr>
-<h5>Courses</h5>
-<p>courses completed</p>
+  </div>
+  <hr />
+  <!-- skills -->
+  <div>
+    <p>SKILLS</p>
+    <div *ngFor="let emp of expService.experience" style="font-size: x-small">
+        <div style="display: flex;">
+            <small style="width: 10%;">{{ emp.skill }}</small>
+            <small>{{ emp.skill_startDate }}</small>
+        </div>   
+    </div>
+  </div>
+  <hr />
+  <!-- lang -->
+  <div>
+    <p>LANGUAGUES</p>
+    <div *ngFor="let emp of expService.experience" style="font-size: x-small">
+        <div style="display: flex;">
+            <small style="width: 10%;">{{ emp.lang }}</small>
+            <small>{{ emp.lang_startDate }}</small>
+        </div>   
+    </div>
+  </div>
+  <hr />
+  <!-- courses -->
+  <div>
+    <p>COURSES</p>
+    <div
+      style="
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      "
+    >
+      <div style="width: 200px">
+        <div *ngFor="let emp of expService.experience">
+          <span style="font-size: xx-small"
+            >{{ emp.course_startDate_month }}{{ emp.course_startDate_year }} -
+            {{ emp.course_endDate_month }}{{ emp.course_endDate_year }}</span
+          >
+        </div>
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 400px;
+          font-size: x-small;
+        "
+      >
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.course_title }}</span>
+        </div>
+        <div *ngFor="let emp of expService.experience">
+          <span>{{ emp.course_institution }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

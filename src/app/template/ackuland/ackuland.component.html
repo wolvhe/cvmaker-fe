@@ -1,30 +1,81 @@
 <div class="akuland-main">
-    <div class="ackuland-header">
-        <div class="ackuland-text">
-            NEO
-        </div>
+  <div class="ackuland-header">
+    <div class="ackuland-text">NEO</div>
+  </div>
+  <div style="display: flex">
+    <div
+      [ngStyle]="styling.sharedStyle$ | async"
+      style="background-color: lightgray; width: 180px;"
+    >
+      <div>
+        <p>PERSONAL</p>
+        <span>name</span><br />
+        <span>email</span><br /><br />
+        <p>INTERESTS</p>
+        <span>cooking</span><br /><br />
+        <p>LANGUAGUES</p>
+        <span>english</span><br /><br />
+      </div>
     </div>
-    <div style="display: flex;">
-        <div [ngStyle]="(styling.sharedStyle$ | async)" style="background-color: lightgray; height: 100%;">
-            <div style="width: 180px; margin-top: 1rem; padding: 10px;">
-                <p>PERSONAL</p>
-                <span>name</span><br>
-                <span>email</span><br><br>
-                <p>INTERESTS</p>
-                <span>cooking</span><br><br>
-                <p>LANGUAGUES</p>
-                <span>english</span><br><br>
+    <div style="background-color: #fbfbfb">
+      <div style="margin-top: 1rem; padding: 10px">
+        <div *ngFor="let emp of expService.experience">
+            <p>{{ emp.res_des }}</p>
+          </div>
+        <p>EDUCATION AND QUALIFICATIONS</p>
+        <div *ngFor="let emp of expService.experience" style="margin-top: -12px;margin-bottom: 10px;">
+            <small>Degree: {{ emp.edu_degree }}</small><br>
+            <div style="display: flex; justify-content: space-between;">
+                <small>City: {{ emp.edu_city }}</small><br>
+                <small>School: {{ emp.edu_school }}</small><br>
             </div>
-        </div>
-        <div style="background-color: #FBFBFB;">
-            <div style="margin-top: 1rem; padding: 10px;">
-                <p>Developer</p>
-                <p>EDUCATION AND QUALIFICATIONS</p>
-                <p>WORK EXPERIENCE</p>
-                <p>REFERENCES</p>
-                <p>SKILLS</p>
+            <div style="display: flex; justify-content: space-between;">
+                <small>Start Month: {{ emp.edu_startDate_month }}</small><br>
+                <small>Start Year : {{ emp.edu_startDate_year }}</small><br>
             </div>
-        </div>
+            <div style="display: flex; justify-content: space-between;">
+                <small>End Month : {{ emp.edu_endDate_month }}</small><br>
+                <small>End Year : {{ emp.edu_endDate_year }}</small><br>
+            </div>
+          </div>
+        <p>WORK EXPERIENCE</p>
+        <div *ngFor="let emp of expService.experience" style="margin-top: -12px;margin-bottom: 10px;">
+            <small>Title: {{ emp.work_jobtitle }}</small><br>
+            <div style="display: flex; justify-content: space-between;">
+                <small>City: {{ emp.work_city }}</small><br>
+                <small>Employer: {{ emp.work_employer }}</small><br>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <small>Start Month: {{ emp.work_startDate_month }}</small><br>
+                <small>Start Year : {{ emp.work_startDate_year }}</small><br>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <small>End Month : {{ emp.work_endDate_month }}</small><br>
+                <small>End Year : {{ emp.work_endDate_year }}</small><br>
+            </div>
+          </div>
+        <p>REFERENCES</p>
+        <div *ngFor="let emp of expService.experience" style="margin-top: -12px;margin-bottom: 10px;">
+            <div style="display: flex; justify-content: space-between;">
+                <small>Compnay name :{{ emp.ref_companyName }}</small>
+                <small>Contact person :{{ emp.ref_contactPerson }}</small>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <small>Phone no :{{ emp.ref_phoneNo }}</small>
+                <small>email :{{ emp.ref_email }}</small>
+                <br>
+            </div>
+          </div>
+        
+        <p>SKILLS</p>
+        <div *ngFor="let emp of expService.experience" style="margin-top: -12px;">
+            <p style="display: flex; justify-content: space-between;">
+                <small>Skill :{{ emp.skill }}</small>
+                <small>Start Date :{{ emp.skill_startDate }}</small>
+                <br>
+            </p>
+          </div>
+      </div>
     </div>
-
-</div>  
+  </div>
+</div>
