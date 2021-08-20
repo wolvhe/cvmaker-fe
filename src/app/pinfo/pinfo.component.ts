@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { CommonService } from '../services/common.service';
 import { InfoService } from '../shared/info.service';
 import { Info } from '../shared/cvmaker.model';
+import { CroppedEvent } from 'ngx-photo-editor';
 
 @Component({
   selector: 'app-pinfo',
@@ -11,7 +12,8 @@ import { Info } from '../shared/cvmaker.model';
   providers: [InfoService]
 })
 export class PinfoComponent implements OnInit {
-
+  imageChangedEvent: any;
+  base64: any;
   lang:any;
 
   constructor(public styling:CommonService, public infoService: InfoService) { 
@@ -44,26 +46,14 @@ onselectFile(e:any){
   }
 }
 
-zoom : any=1;
- 
-rotate(){
-  this.value=this.value+90;
-  if(this.value>360){
-    this.value=this.value-360;
-  }
-  return this.value;
 
-}
 
 reset(){
 
   this.url="";
+  this.base64="";
 
   console.log(this.url);
-}
-change(e:any){
-  this.zoom=e.target.value;
-  console.log(e)
 }
 onSubmit(form : NgForm) {
     this.infoService.postInfo(form.value).subscribe((res) => {
@@ -77,6 +67,18 @@ refreshInfoList() {
     this.infoService.users = res as Info[];
   })
 }
+
+  
+fileChangeEvent(event: any) {
+  this.imageChangedEvent = event;
+}
+
+imageCropped(event: CroppedEvent) {
+  this.base64 = event.base64;
+  this.url=this.base64;
+  console.log(this.base64);
+}
+
 resetForm(form ?: NgForm) {
   if(form)
   form.reset();
@@ -99,4 +101,7 @@ resetForm(form ?: NgForm) {
     website: "",
   }
 }
-}  
+
+
+}
+

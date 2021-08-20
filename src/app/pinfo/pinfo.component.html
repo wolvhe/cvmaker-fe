@@ -103,34 +103,29 @@
                       </div>
                       <div class="modal-body justify-content-between"  >    
                           <div *ngIf="url.length==0" class="add_profile">
-                            <button type="button"   data-toggle="modal" data-target="#exampleModalCenter">
-                              <i class="fas fa-camera fa-4x" ></i>
-                              <br><br>
-              
-                              <h6>Add profile picture</h6>
-                            </button>
+                            
+                            <ngx-photo-editor
+                              [imageChanedEvent]="imageChangedEvent"
+                              (imageCropped)="imageCropped($event)"
+                              [aspectRatio]="4/3"
+                              [viewMode]="3"
+                              [resizeToWidth]="200"></ngx-photo-editor>
+
+                            <img [src]="base64" alt="">
+
+                            <div><input type="file" (change)="fileChangeEvent($event)"/></div>
                           </div>
                           <div *ngIf="url.length>0">
                             <div style="width: 200px;height: 200px; overflow: hidden; margin-left: 30%;">
-                              <img [src]="url" width="200" height="200" [ngStyle]="{'transform': 'rotate(' + value + 'deg)', 'zoom':zoom}" >
+                              <img [src]="base64" width="200" height="200"  >
+                              
                             </div>
                           </div>
                         <br>
-                        <input type="file"(change)="onselectFile($event)" >
                       </div>
                       <div class="modal-footer" style="text-align: left;">
                         <div class="row align-content-center" >
 
-
-                          <div class="col tog">
-                            <input [value]="zoom" type="range"  step="any" min="1" max="10"  style="width: 10rem;" (change)="change($event)" (input)="change($event)">
-                            <span class="btn-modal">Zoom</span>
-                          </div> 
-                          
-                          <div class="col tog">
-                            <button type="button" class="btn-modal" (click) = "rotate()"><i class="fas fa-sync-alt"></i></button>
-                            <br><span class="btn-modal">Rotate</span>
-                          </div>
                           <div class="col tog">
                             <button type="button" class="btn-modal" (click)="reset()"><i class="fas fa-undo"></i></button>
                             <br><span class="btn-modal" >Reset</span>
