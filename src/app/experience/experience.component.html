@@ -191,8 +191,9 @@
           <div *ngFor="let item of formResumeArray; let i = index">
           <p class="card-text">Description</p>
           <div id="editor" style="height: 100px">
-            <quill-editor [modules]="editorModules"></quill-editor>
-            <div id="justHtml"></div>
+            <quill-editor [modules]="editorModules" name="res_des" #name="ngModel"
+            [(ngModel)]="expService.selectedExperience.res_des"></quill-editor>
+            <!-- <div id="justHtml"></div> -->
           </div>
           <div
             style="
@@ -210,7 +211,7 @@
               <i class="far fa-lightbulb"></i> Tips
             </button>
             <button
-              type="button"
+              type="submit"
               class="saveButton btn btn-outline-secondary btn-sm"
               (click)="onShowCountDescription()"
             >
@@ -513,7 +514,7 @@
               <div class="row4" style="margin-bottom: 3.5rem">
                 <p>Description</p>
                 <div id="editor" style="height: 100px">
-                  <quill-editor [modules]="editorModules"></quill-editor>
+                  <quill-editor [modules]="editorModules" name="work_des" #name="ngModel" [(ngModel)]="expService.selectedExperience.work_des"></quill-editor>
                 </div>
           </div>
             
@@ -544,7 +545,7 @@
                   <i class="fas fa-trash-alt"></i> Delete
                 </button>
                 <button
-                  type="button"
+                  type="submit"
                   class="btn saveButton btn-outline-secondary btn-sm"
                   (click)="onShowCountWork()"
                 >
@@ -843,7 +844,7 @@
             <div class="row4" style="margin-bottom: 3.5rem">
               <p>Description</p>
               <div id="editor" style="height: 100px">
-                <quill-editor [modules]="editorModules"></quill-editor>
+                <quill-editor [modules]="editorModules"  name="edu_des" #name="ngModel" [(ngModel)]="expService.selectedExperience.edu_des"></quill-editor>
               </div>
             </div>
             <div
@@ -873,7 +874,7 @@
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
               <button
-                type="button"
+                type="submit"
                 class="btn saveButton btn-outline-secondary btn-sm"
                 (click)="onShowCountEducation()"
               >
@@ -1006,7 +1007,7 @@
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
               <button
-                type="button"
+                type="submit"
                 class="btn saveButton btn-outline-secondary btn-sm"
                 (click)="onShowCountInterests()"
               >
@@ -1152,7 +1153,7 @@
               <i class="fas fa-trash-alt"></i> Delete
             </button>
             <button
-              type="button"
+              type="submit"
               class="btn saveButton btn-outline-secondary btn-sm"
               (click)="onShowCountReferences()"
             >
@@ -1320,7 +1321,7 @@
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
               <button
-                type="button"
+                type="submit"
                 class="btn saveButton btn-outline-secondary btn-sm"
                 (click)="onShowCountSkills()"
               >
@@ -1483,7 +1484,7 @@
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
               <button
-                type="button"
+                type="submit"
                 class="btn saveButton btn-outline-secondary btn-sm"
                 (click)="onShowCountLanguagues()"
               >
@@ -1779,7 +1780,9 @@
             <div class="row4" style="margin-bottom: 3.5rem">
               <p>Description</p>
               <div id="editor" style="height: 100px">
-                <quill-editor [modules]="editorModules"></quill-editor>
+                <quill-editor [modules]="editorModules" name="course_des"
+                #name="ngModel"
+                [(ngModel)]="expService.selectedExperience.course_des"></quill-editor>
               </div>
             </div>
             <div
@@ -1809,7 +1812,7 @@
                 <i class="fas fa-trash-alt"></i> Delete
               </button>
               <button
-                type="button"
+                type="submit"
                 class="btn saveButton btn-outline-secondary btn-sm"
                 (click)="onShowCountCourses()"
               >
@@ -1906,7 +1909,9 @@
           <div>  
           <p class="card-text">Description</p>
           <div id="editor" style="height: 100px">
-            <quill-editor [modules]="editorModules"></quill-editor>
+            <quill-editor [modules]="editorModules" name="achiev_des"
+            #name="ngModel"
+            [(ngModel)]="expService.selectedExperience.achiev_des"></quill-editor>
           </div>
           <div
             style="
@@ -1917,7 +1922,7 @@
             "
           >
             <button
-              type="button"
+              type="submit"
               class="saveButton btn btn-outline-secondary btn-sm"
               (click)="onShowCountAchievements()"
             >
@@ -1937,8 +1942,114 @@
     </div>
     
   </div>
-  <!-- Publications -->
+<!-- Publications -->
   <div class="accordion">
+    <div class="card" style="width: 55rem; margin-bottom: 2rem; padding: 1rem">
+      <div class="card-body">
+        <div style="display: flex; justify-content: space-between">
+          <div
+            class="collapsed"
+            data-toggle="collapse"
+            data-target="#collapsePublic"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            <div style="display: flex">
+              <div
+                *ngIf="showLog9"
+                style="height: 10px; width: 30px; text-align: center"
+              >
+                <p
+                  style="
+                    margin-right: 5px;
+                    border: 2px solid black;
+                    border-radius: 50%;
+                  "
+                >
+                  {{ log9 }}
+                </p>
+              </div>
+              <h5 class="card-title" style="cursor: pointer">
+                <i class="far fa-file-alt"></i> <strong> Publications</strong>
+              </h5>
+            </div>
+          </div>
+          <div style="display: flex; align-items: baseline">
+            <div class="button--move-up">
+              <button
+                style="
+                  background: none;
+                  border: none;
+                  height: 2rem;
+                  width: 2rem;
+                "
+              >
+                <i class="fas fa-chevron-up fa-1x"></i>
+              </button>
+            </div>
+            <div class="button--move-down">
+              <button
+                style="
+                  background: none;
+                  border: none;
+                  height: 2rem;
+                  width: 2rem;
+                "
+              >
+                <i class="fas fa-chevron-down fa-1x"></i>
+              </button>
+            </div>
+            <div class="sideSettingsButton button--settings">
+              <i
+                class="fas fa-cog"
+                data-toggle="modal"
+                data-target="#set_1"
+              ></i>
+            </div>
+          </div>
+        </div>
+
+        <div id="collapsePublic" class="collapse" style="padding: 20px">
+          <div >
+          <div >  
+          <p class="card-text">Description</p>
+          <div id="editor" style="height: 100px">
+            <quill-editor [modules]="editorModules" name="publi_des"
+            #name="ngModel"
+            [(ngModel)]="expService.selectedExperience.publi_des"></quill-editor>
+          </div>
+          <div
+            style="
+              margin-top: 3.5rem;
+              display: flex;
+              justify-content: space-between;
+              float: right;
+            "
+          >
+            <button
+              type="submit"
+              class="saveButton btn btn-outline-secondary btn-sm"
+              (click)="onShowCountPublications()"
+            >
+            
+              <i class="fas fa-save"></i> Save
+            </button>
+            
+          </div>
+
+          
+          
+        </div>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  <!-- Publications -->
+  <!-- <div class="accordion">
     <div class="card" style="width: 55rem; margin-bottom: 2rem; padding: 1rem">
       <div class="card-body">
         <div style="display: flex; justify-content: space-between">
@@ -2031,7 +2142,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- next step -->
   <div style="margin: auto; width: 28%">

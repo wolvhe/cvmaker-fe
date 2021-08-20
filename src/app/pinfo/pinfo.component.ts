@@ -83,7 +83,20 @@ resetForm(form ?: NgForm) {
   this.infoService.selectedInfo = {
     _id: "",
     fname: "",
-    lname: ""
+    lname:"",
+    email:"",
+    phone_no: null,
+    address:"",
+    zip_code: "",
+    city: "",
+    dob: "",
+    pob: "",
+    driving_license: "",
+    gender: "",
+    nationality: "",
+    marital_status: "",
+    linkedin: "",
+    website: "",
   }
 }
 }  
