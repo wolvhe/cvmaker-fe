@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+// components
 import { PinfoComponent } from './pinfo/pinfo.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { TesttqueryComponent } from './testtquery/testtquery.component';
@@ -33,6 +36,8 @@ import { TestComponent } from './test/test.component';
     BrowserModule,
     AppRoutingModule,
     QuillModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
