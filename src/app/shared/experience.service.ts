@@ -1,25 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Info } from './cvmaker.model';
+import { Experience } from './cvmaker.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class InfoService {
+export class ExperienceService {
 
-  selectedInfo: Info = new Info;
-  users: Info[] = [];
+  selectedExperience: Experience = new Experience;
+  experience: Experience[] = [];
 
-  readonly baseURL = 'http://localhost:3000/info';
+  readonly baseURL = 'http://localhost:3000/experience';
   
   constructor(private http: HttpClient) { }
 
-  postInfo(emp: Info){
+  postInfo(emp: Experience){
     return this.http.post(this.baseURL, emp);
   }
 
   getInfoList() {
     return this.http.get(this.baseURL);
   }
-
 }

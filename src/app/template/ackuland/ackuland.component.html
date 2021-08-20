@@ -1,7 +1,7 @@
 <div class="akuland-main">
     <div class="ackuland-header">
-        <div class="ackuland-text">
-            NEO
+        <div *ngFor = "let emp of infoService.users" class="ackuland-text">
+            {{emp.fname}}
         </div>
     </div>
     <div style="display: flex;">
