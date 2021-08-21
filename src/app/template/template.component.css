@@ -118,3 +118,6 @@
   width: 3px;
   visibility: hidden;
 }
+.modal-footer {
+  text-align: center;
+}

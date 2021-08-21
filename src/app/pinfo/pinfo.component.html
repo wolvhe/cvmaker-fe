@@ -81,10 +81,13 @@
                       <h6>Add profile picture</h6>
                     </button>
                   </div>
-                  <div *ngIf="url.length>0">
-                    <div style="width: 200px; height: 200px;">
-                      <img [src]="url" alt="no image found" width="200" height="200">
-                    </div>
+                  <div *ngIf="url.length>0" >
+
+                    <div style="width: 200px; height: 200px; ">
+                    <button type="button" class="btn-modal"  data-toggle="modal" data-target="#exampleModalCenter">
+                        <img [src]="url" alt="no image found"  width="200" height="200">
+                    </button>
+                      </div>
 
                   </div>
                   
@@ -102,14 +105,15 @@
                         </button>
                       </div>
                       <div class="modal-body justify-content-between"  >    
-                          <div *ngIf="url.length==0" class="add_profile">
+                          <div *ngIf="url.length==0" class="add_profile" >
                             
                             <ngx-photo-editor
                               [imageChanedEvent]="imageChangedEvent"
                               (imageCropped)="imageCropped($event)"
-                              [aspectRatio]="4/3"
-                              [viewMode]="3"
-                              [resizeToWidth]="200"></ngx-photo-editor>
+                              [scalable]=true
+                              [viewMode]="1"
+                              [resizeToWidth]="200"
+                              [cropBoxResizable]=true></ngx-photo-editor>
 
                             <img [src]="base64" alt="">
 

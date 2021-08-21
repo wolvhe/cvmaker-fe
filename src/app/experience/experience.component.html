@@ -1,3 +1,6 @@
+<div *ngFor="let emp of expService.experience">
+  <p>{{ emp.work_jobtitle }}</p>
+</div>
 <div class="experience-page-header">
   <strong>My experiences</strong>
 </div>
@@ -191,9 +194,10 @@
           <div *ngFor="let item of formResumeArray; let i = index">
           <p class="card-text">Description</p>
           <div id="editor" style="height: 100px">
-            <quill-editor [modules]="editorModules" name="res_des" #name="ngModel"
+            <quill-editor [modules]="editorModules" 
+            name="res_des"
+            #name="ngModel"
             [(ngModel)]="expService.selectedExperience.res_des"></quill-editor>
-            <!-- <div id="justHtml"></div> -->
           </div>
           <div
             style="
@@ -998,6 +1002,7 @@
               </button>
             </div>
             <div>
+              
               <button
                 type="button"
                 class="btn deleteButton btn-outline-secondary btn-sm"

@@ -19,9 +19,7 @@ export class ExperienceComponent implements OnInit {
     this.refreshInfoList();
     this.resetForm();
 }
-myFunction() {
-  window.location.href="http://programminghead.com";  
-}
+
 
   onSubmit(form : NgForm) {
     // if(form.value._id == "") {

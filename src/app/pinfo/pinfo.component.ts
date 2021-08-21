@@ -77,6 +77,8 @@ imageCropped(event: CroppedEvent) {
   this.base64 = event.base64;
   this.url=this.base64;
   console.log(this.base64);
+  console.log(typeof this.base64);
+  
 }
 
 resetForm(form ?: NgForm) {

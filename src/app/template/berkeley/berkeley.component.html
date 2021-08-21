@@ -1,30 +1,151 @@
 <div class="body">
-    <h1 [ngStyle]="(styling.sharedBerkStyle$ | async)">Name</h1>
-    <h6 [ngStyle]="(styling.sharedBerkStyle$ | async)"><i class="fas fa-user-friends"></i> Personal</h6>
-    <p >Name:</p>
-    <p>Email:</p>
-    <h6 [ngStyle]="(styling.sharedBerkStyle$ | async)"><i class="fas fa-stream"></i> Resume Objective</h6>
-    <p>type here</p>
-    <h6 [ngStyle]="(styling.sharedBerkStyle$ | async)"><i class="fas fa-graduation-cap"></i> Education and Qualification</h6>
-    <div style="display: flex;flex-direction: row;">
-        <div style="display: flex; flex: 1;flex-direction: column;">
-             <p>text 1</p>
-             <p>text 2</p>
-             <p>text 3</p>
-         </div>
-         <div>
-             <p>year</p>
-         </div>
-     </div>
-     <h6 [ngStyle]="(styling.sharedBerkStyle$ | async)"><i class="fas fa-briefcase"></i> Work Experience</h6>
-     <div style="display: flex;flex-direction: row;">
-        <div style="display: flex; flex: 1;flex-direction: column;">
-             <p>text 1</p>
-             <p>text 2</p>
-             <p>text 3</p>
-         </div>
-         <div>
-             <p>year</p>
-         </div>
-     </div>
+  <h1 [ngStyle]="styling.sharedBerkStyle$ | async">Name</h1>
+  <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
+    <i class="fas fa-user-friends"></i> Personal
+  </h6>
+  <p>Name:</p>
+  <p>Email:</p>
+  <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
+    <i class="fas fa-stream"></i> Resume Objective
+  </h6>
+  <div *ngFor="let emp of expService.experience">
+    <p>{{ emp.res_des }}</p>
+  </div>
+  <!-- edu -->
+  <div>
+    <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
+        <i class="fas fa-graduation-cap"></i> Education and Qualification
+      </h6>
+      <div
+        style="
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        "
+      >
+        <div style="width: 200px">
+          <div *ngFor="let emp of expService.experience">
+            <span style="font-size: xx-small;"
+              >{{ emp.edu_startDate_month }}{{ emp.edu_startDate_year }} -
+              {{ emp.edu_endDate_month }}{{ emp.edu_endDate_year }}</span
+            >
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            font-size: x-small;
+          "
+        >
+          <div *ngFor="let emp of expService.experience">
+            <span style=" font-weight: bold;">{{ emp.edu_degree }}</span>
+          </div>
+          <div *ngFor="let emp of expService.experience">
+            <span><i>{{ emp.edu_school }}, {{ emp.edu_city }}</i></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <br>
+  <!-- work -->
+  <div>
+    <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
+        <i class="fas fa-briefcase"></i> Work Experience
+    </h6>
+    <div
+        style="
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        "
+      >
+        <div style="width: 200px">
+          <div *ngFor="let emp of expService.experience">
+            <span style="font-size: xx-small;"
+              >{{ emp.work_startDate_month }}{{ emp.work_startDate_year }} -
+              {{ emp.work_endDate_month }}{{ emp.work_endDate_year }}</span
+            >
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            font-size: x-small;
+          "
+        >
+          <div *ngFor="let emp of expService.experience">
+            <span style=" font-weight: bold;">{{ emp.work_jobtitle }}</span>
+          </div>
+          <div *ngFor="let emp of expService.experience">
+            <span><i>{{ emp.work_employer }}, {{ emp.work_city }}</i></span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <br>
+  <!-- interests -->
+  <div>
+    <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
+        <i class="fas fa-user"></i> Interests
+    </h6>
+    <div *ngFor="let emp of expService.experience">
+        <span style=" font-weight: bold; font-size: x-small">{{ emp.hobby }}</span>
+      </div>
+  </div>
+  <br>
+  <!-- references -->
+  <div>
+    <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
+        <i class="fas fa-file-alt"></i> References
+    </h6>
+    <div
+        style="
+          display: flex;
+          flex-direction: row-reverse;
+          justify-content: space-between;
+        "
+      >
+        <div style="width: 200px">
+          <div *ngFor="let emp of expService.experience">
+            <span style="font-size: xx-small;"
+              >{{ emp.ref_companyName }}</span
+            >
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            font-size: x-small;
+          "
+        >
+          <div *ngFor="let emp of expService.experience">
+            <span style=" font-weight: bold;">{{ emp.ref_contactPerson }}</span>
+          </div>
+          <div *ngFor="let emp of expService.experience">
+            <span>{{ emp.ref_phoneNo }}</span>
+          </div>
+          <div *ngFor="let emp of expService.experience">
+            <span>{{ emp.ref_email }}</span>
+          </div>
+        </div>
+      </div>
+  </div>
+  <br>
+  <!-- skills -->
+  <div>
+    <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
+        <i class="fas fa-code"></i> Skills
+    </h6>
+    <div *ngFor="let emp of expService.experience" style="display: flex; flex-direction: column;">
+        <small style=" font-weight: bold; font-size: x-small">{{ emp.skill }}</small>
+        <small style="font-size: x-small">{{ emp.skill_startDate }}</small>
+      </div>
+  </div>
+  <br>
 </div>
