@@ -1,8 +1,8 @@
 import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import { CommonService } from '../services/common.service';
 import { InfoService } from '../shared/info.service';
-// import {jsPDF} from 'jspdf'
 import { Info } from '../shared/cvmaker.model';
+import {jsPDF} from 'jspdf'
 
 @Component({
   selector: 'app-template',
@@ -23,6 +23,19 @@ export class TemplateComponent implements OnInit {
         this.infoService.users = res as Info[];
       })
     }
+  @ViewChild('Acku',{static:false}) el!:ElementRef;
+
+  @ViewChild('Edin',{static:false}) ed!:ElementRef;
+
+  @ViewChild('Prin',{static:false}) any!:ElementRef;
+
+  @ViewChild('Otago',{static:false}) ot!:ElementRef;
+
+  @ViewChild('Berk',{static:false}) be!:ElementRef;
+  
+
+ 
+
   // downloadMyFile(){
   //   const link = document.createElement('a');
   //   link.setAttribute('target', '_blank');
@@ -38,16 +51,61 @@ export class TemplateComponent implements OnInit {
   }
   //akuland
 
-  // makePDF(){
-  //   let pdf = new jsPDF('p','pt','a4');
-  //   pdf.html(this.el.nativeElement,{
-  //     callback:(pdf)=>{
-  //       pdf.save("file.pdf");
-  //     }
-  //   })
-  //   pdf.save();
-  // }
-
+  makeAckuPDF(){
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+    pdf.setFont('FontAwesome');
+    pdf.html(this.el.nativeElement,{
+      callback:(pdf)=>{
+        pdf.save("file.pdf");
+      }
+    })
+    pdf.save();
+  }
+  makePrinPDF(){
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+    pdf.setFont('FontAwesome');
+    pdf.html(this.any.nativeElement,{
+      callback:(pdf)=>{
+        pdf.save("file.pdf");
+      }
+    })
+    pdf.save();
+  }
+  makeEdinPDF(){
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+    pdf.setFont('FontAwesome');
+    pdf.html(this.ed.nativeElement,{
+      callback:(pdf)=>{
+        pdf.save("file.pdf");
+      }
+    })
+    pdf.save();
+  }
+  makeOtagoPDF(){
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+    pdf.setFont('FontAwesome');
+    pdf.html(this.ot.nativeElement,{
+      callback:(pdf)=>{
+        pdf.save("file.pdf");
+      }
+    })
+    pdf.save();
+  }
+  makeBerkPDF(){
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+    pdf.setFont('FontAwesome');
+    pdf.html(this.be.nativeElement,{
+      callback:(pdf)=>{
+        pdf.save("file.pdf");
+      }
+    })
+    pdf.save();
+  }
 
   onClickAckuColor1() {
     this.styling.newStyle({ 'background-color': 'lightslategray' });
@@ -226,5 +284,7 @@ onClickBerkColor6() {
   onselectBerk() {
     this.isShownBerk = !this.isShownBerk;
   }
+
+
 
 }

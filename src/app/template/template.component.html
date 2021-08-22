@@ -103,12 +103,11 @@
 <!-- next step -->
 <div style="margin: auto; width: 28%">
   <div>
-    <a href="#">
+    <!-- <a href="#"> -->
       <button class="nextButton" >
         <span><i class="fas fa-arrow-alt-to-bottom"></i><strong style="margin-left: 1rem">Download
             resume</strong></span>
       </button>
-    </a>
     <div class="prevButton" style="margin-top: 1rem; margin-bottom: 4rem; margin-left: 2.5rem">
       <a href="/experience" style="text-decoration: none; color: gray">
         <span><i class="fas fa-chevron-left" style="margin-right: 1rem"></i>Previous step</span>
@@ -123,9 +122,9 @@
   <!-- ackuland -->
   <div class="modal fade" id="ackulandModal" tabindex="-1" role="dialog" aria-labelledby="ackulandModal"
     aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-dialog-centered" role="document" >
       <div class="modal-content template-modal-content">
-        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
+        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;" id="Acku" #Acku>
           <app-ackuland ></app-ackuland>
         </div>
         <div class="modal-footer" style="text-align: center;">
@@ -169,7 +168,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
-        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
+        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;" id="Edin" #Edin>
           <app-edinburgh></app-edinburgh>
         </div>
         <div class="modal-footer">
@@ -199,7 +198,7 @@
         </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-            <button class="nextButton" data-dismiss="modal" (click)="changeEdin()" (click)="onselectEdin()"  ng-init="toggleEdin = true" ng-click="toggleEdin = !toggleEdin">
+            <button class="nextButton" data-dismiss="modal" (click)="makeEdinPDF()" (click)="changeEdin()" (click)="onselectEdin()"  ng-init="toggleEdin = true" ng-click="toggleEdin = !toggleEdin">
               <span>{{toggleEdin ? 'Select' : 'Remove'}}</span>
             </button>
           </div>
@@ -212,7 +211,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
-        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
+        <div class="modal-body " style="overflow: scroll; overflow-x: hidden;" id="Prin" #Prin>
           <app-princeton></app-princeton>
         </div>
         <div class="modal-footer">
@@ -242,7 +241,7 @@
         </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-            <button class="nextButton" data-dismiss="modal" (click)="changePrin()" (click)="onselectPrin()"  ng-init="togglePrin = true" ng-click="togglePrin = !togglePrin">
+            <button class="nextButton" data-dismiss="modal" (click)="makePrinPDF()" (click)="changePrin()" (click)="onselectPrin()"  ng-init="togglePrin = true" ng-click="togglePrin = !togglePrin">
               <span>{{togglePrin ? 'Select' : 'Remove'}}</span>
             </button>
           </div>
@@ -254,7 +253,7 @@
   <div class="modal fade" id="otagoModal" tabindex="-1" role="dialog" aria-labelledby="otagoModal" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
-        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
+        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;" id="Otago" #Otago>
           <app-otago></app-otago>
         </div>
         <div class="modal-footer">
@@ -284,7 +283,7 @@
         </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-            <button class="nextButton" data-dismiss="modal" (click)="changeOtago()" (click)="onselectOtago()"  ng-init="toggleOtago = true" ng-click="toggleOtago = !toggleOtago">
+            <button class="nextButton" data-dismiss="modal" (click)="makeOtagoPDF()" (click)="changeOtago()" (click)="onselectOtago()"  ng-init="toggleOtago = true" ng-click="toggleOtago = !toggleOtago">
               <span>{{toggleOtago ? 'Select' : 'Remove'}}</span>
             </button>
           </div>
@@ -297,7 +296,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
-        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
+        <div class="modal-body" style="overflow: scroll; overflow-x: hidden;" id="Berk" #Berk>
           <app-berkeley></app-berkeley>
         </div>
         <div class="modal-footer">
@@ -327,7 +326,7 @@
         </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-            <button class="nextButton" data-dismiss="modal" (click)="changeBerk()" (click)="onselectBerk()"  ng-init="toggleBerk = true" ng-click="toggleBerk = !toggleBerk">
+            <button class="nextButton" data-dismiss="modal" (click)=" makeBerkPDF()" (click)="changeBerk()" (click)="onselectBerk()"  ng-init="toggleBerk = true" ng-click="toggleBerk = !toggleBerk">
               <span>{{toggleBerk ? 'Select' : 'Remove'}}</span>
             </button>
           </div>
