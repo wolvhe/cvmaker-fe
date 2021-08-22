@@ -1,9 +1,10 @@
 <div class="akuland-main" id="content" #content>
   <div class="ackuland-header">
     <div class="ackuland-text">
+        <div></div>
         <div *ngFor = "let emp of infoService.users">
-            <p>{{emp.fname}}</p>
-          </div>
+          <span><p>{{emp.fname}}</p></span> <img style="height: 45px; width: 55px; position: absolute; right: 26rem;bottom: 0.1rem;" src="https://image.shutterstock.com/image-vector/user-icon-person-profile-avatar-260nw-601712213.jpg" alt="">
+        </div>
     </div>
   </div>
   <div style="display: flex">
