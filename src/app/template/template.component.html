@@ -1,7 +1,8 @@
 <div class="experience-page-header">
   <strong>Select template</strong>
 </div>
-  <div style="
+
+<div style="
       display: flex;
       margin: auto;
       width: 35%;
@@ -48,12 +49,11 @@
           src="https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/write-circle-blue-512.png" />
       </span>
     </div>
-  </div>
+</div>
 
-
-<div style="margin: 3rem auto; width: 60%">
+<div style="margin: 3rem auto; width: 60%;">
   <div style="display: flex">
-    <div class="card templatecards" [ngClass]="{'templatecards': toggleAcku, 'templatecardsNew': !toggleAcku}">
+    <div class="card templatecards " [ngClass]="{'templatecards': toggleAcku, 'templatecardsNew': !toggleAcku}">
       <div class="card-header">Ackuland<i style="float:right;" *ngIf="isShown" class="fas fa-check-circle"></i></div>
       <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#ackulandModal">
         <app-ackuland></app-ackuland>
@@ -79,14 +79,14 @@
     <div class="card templatecards" [ngClass]="{'templatecards': toggleOtago, 'templatecardsNew': !toggleOtago}">
       <div class="card-header">Otago<i style="float:right;" *ngIf="isShownOtago" class="fas fa-check-circle"></i></div>
 
-      <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#otagoModal">
+      <div class="card-body scaled" style="cursor: pointer;overflow: hidden" data-toggle="modal" data-target="#otagoModal">
         <app-otago></app-otago>
       </div>
     </div>
     <div class="card templatecards" [ngClass]="{'templatecards': toggleBerk, 'templatecardsNew': !toggleBerk}">
       <div class="card-header">Berkeley<i style="float:right;" *ngIf="isShownBerk" class="fas fa-check-circle"></i></div>
      
-      <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#berkeleyModal">
+      <div class="card-body scaled" style="cursor: pointer; overflow: hidden" data-toggle="modal" data-target="#berkeleyModal">
         <app-berkeley></app-berkeley>
       </div>
     </div>
@@ -97,7 +97,7 @@
 <div style="margin: auto; width: 28%">
   <div>
     <a href="#">
-      <button class="nextButton">
+      <button class="nextButton" >
         <span><i class="fas fa-arrow-alt-to-bottom"></i><strong style="margin-left: 1rem">Download
             resume</strong></span>
       </button>
@@ -119,9 +119,9 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
         <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
-          <app-ackuland></app-ackuland>
+          <app-ackuland ></app-ackuland>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer" style="text-align: center;">
           <small>Unfortunately, the preview does not entirely fit on your screen, so
             we are showing you an impression of your final resume.</small>
         </div>
@@ -148,7 +148,7 @@
         </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-              <button class="nextButton" data-dismiss="modal" (click)="changeAcku()" (click)="onselect()"  ng-init="toggleAcku = true" ng-click="toggleAcku = !toggleAcku">
+              <button class="nextButton" data-dismiss="modal"  (click)="changeAcku()" (click)="onselect()"  ng-init="toggleAcku = true" ng-click="toggleAcku = !toggleAcku">
                 <span>{{toggleAcku ? 'Select' : 'Remove'}}</span>
               </button>
               <!-- (mouseup)="onClickSelect()" -->
