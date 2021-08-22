@@ -21,33 +21,13 @@ export class PinfoComponent implements OnInit {
   }
   ngOnInit(): void {
     this.base64="";
-    console.log(this.url);
-    this.lang = localStorage.getItem('lang') || 'english';
     this.refreshInfoList();
     this.resetForm();
     
   }
 
-  changeLang(lang: any){
-      localStorage.setItem('lang', lang);
-      window.location.reload();
-
-  }
 
 public url="";
-public value=0;
-
-onselectFile(e:any){
-  if(e.target.files){
-    var reader = new FileReader();
-    reader.readAsDataURL(e.target.files[0]);
-    reader.onload=(event:any)=>{
-      this.url=event.target.result;
-    
-    }
-  }
-}
-
 
 
 reset(){
@@ -58,6 +38,7 @@ reset(){
   console.log(this.url);
 }
 onSubmit(form : NgForm) {
+    form.value.photo=this.base64;
     this.infoService.postInfo(form.value).subscribe((res) => {
       this.refreshInfoList();
       console.log("hello",res)

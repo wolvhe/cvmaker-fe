@@ -8,6 +8,7 @@ import {jsPDF} from 'jspdf'
   selector: 'app-template',
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.css'],
+  
 })
 export class TemplateComponent implements OnInit {
   constructor(public styling: CommonService , public infoService: InfoService) {}
@@ -17,10 +18,19 @@ export class TemplateComponent implements OnInit {
   ngOnInit(): void{
     this.refreshPersonalInfoList();
   }
+
+  user1 :any
+
   
     refreshPersonalInfoList() {
       this.infoService.getInfoList().subscribe((res) => {
+        
         this.infoService.users = res as Info[];
+        console.log(this.infoService.users);
+        this.user1=this.infoService.users[0];
+       
+
+       
       })
     }
   @ViewChild('Acku',{static:false}) el!:ElementRef;
@@ -106,6 +116,7 @@ export class TemplateComponent implements OnInit {
     })
     pdf.save();
   }
+
 
   onClickAckuColor1() {
     this.styling.newStyle({ 'background-color': 'lightslategray' });
