@@ -4,7 +4,7 @@ import { CommonService } from 'src/app/services/common.service';
 import { ExperienceService } from 'src/app/shared/experience.service';
 import { Experience, Info } from 'src/app/shared/cvmaker.model';
 import { InfoService } from 'src/app/shared/info.service';
-import {jsPDF} from 'jspdf'
+// import {jsPDF} from 'jspdf';
 
 
 @Component({
@@ -18,15 +18,15 @@ export class AckulandComponent implements OnInit {
 
   @ViewChild('content',{static:false}) el!:ElementRef;
   
-  makePDF(){
-    let pdf = new jsPDF('p','pt','a4');
-    pdf.html(this.el.nativeElement,{
-      callback:(pdf)=>{
-        pdf.save("file.pdf");
-      }
-    })
-    pdf.save();
-  }
+  // makePDF(){
+  //   let pdf = new jsPDF('p','pt','a4');
+  //   pdf.html(this.el.nativeElement,{
+  //     callback:(pdf)=>{
+  //       pdf.save("file.pdf");
+  //     }
+  //   })
+  //   pdf.save();
+  // }
 
   ngOnInit(): void {
     this.refreshInfoList();
