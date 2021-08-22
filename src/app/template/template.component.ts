@@ -70,7 +70,6 @@ export class TemplateComponent implements OnInit {
         pdf.save("file.pdf");
       }
     })
-    pdf.save();
   }
   makePrinPDF(){
     let pdf = new jsPDF('p','pt','a4');
@@ -81,7 +80,6 @@ export class TemplateComponent implements OnInit {
         pdf.save("file.pdf");
       }
     })
-    pdf.save();
   }
   makeEdinPDF(){
     let pdf = new jsPDF('p','pt','a4');
@@ -92,7 +90,6 @@ export class TemplateComponent implements OnInit {
         pdf.save("file.pdf");
       }
     })
-    pdf.save();
   }
   makeOtagoPDF(){
     let pdf = new jsPDF('p','pt','a4');
@@ -103,7 +100,6 @@ export class TemplateComponent implements OnInit {
         pdf.save("file.pdf");
       }
     })
-    pdf.save();
   }
   makeBerkPDF(){
     let pdf = new jsPDF('p','pt','a4');
@@ -114,7 +110,6 @@ export class TemplateComponent implements OnInit {
         pdf.save("file.pdf");
       }
     })
-    pdf.save();
   }
 
 

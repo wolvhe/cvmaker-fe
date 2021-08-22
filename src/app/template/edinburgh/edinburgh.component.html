@@ -9,42 +9,20 @@
         <img style="height: 45px; width: 55px; border-radius: 50%;" src="https://image.shutterstock.com/image-vector/user-icon-person-profile-avatar-260nw-601712213.jpg" alt="">
       </div>
     </div>
-    <div style="padding: 10px">
-      <div style="display: flex; flex-direction: column">
-        <span>Personal</span>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Address</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.address}}</p> </div>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Phone no</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.phone_no}}</p> </div>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">emailId</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.email}}</p> </div>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Date of birth</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.dob}}</p> </div>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Place of birth</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.pob}}</p> </div>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Gender</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.gender}}</p> </div>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Nationality</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.nationality}}</p> </div>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Marital Status</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.marital_status}}</p> </div>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Driving license</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.driving_license}}</p> </div>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Website</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.website}}</p> </div>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">LinkedIn</small>
-        <div *ngFor = "let emp of infoService.users"> <p>{{emp.linkedin}}</p> </div>
-        <br />
-        <span>Interests</span>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async"
-          ><li>Cooking</li></small
-        >
-        <br />
-        <span>Languagues</span>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async"
-          ><li>english</li></small
-        >
-      </div>
+    <div style="padding: 10px; margin-top: 15px;">
+        <p style="margin-bottom: -5px; font-weight: 600;">PERSONAL</p>
+        <small>name <div *ngFor = "let emp of infoService.users"><small style="font-size: x-small;">{{emp.fname}}&nbsp;{{emp.lname}}</small></div></small>
+        <small>Address <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.address}}</small> </div></small>
+        <small>Phone no <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.phone_no}}</small> </div></small>
+        <small>email <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.email}}</small> </div></small>
+        <small>Date of birth <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.dob}}</small> </div></small>
+        <small>Place of birth <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.pob}}</small> </div></small>
+        <small>Gender <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.gender}}</small> </div></small>
+        <small>Nationality <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.nationality}}</small> </div></small>
+        <small>Marital status <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.marital_status}}</small> </div></small>
+        <small>Driving license <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.driving_license}}</small> </div></small>
+        <small>Website <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.website}}</small> </div></small>
+        <small>LinkedIn <div *ngFor = "let emp of infoService.users"> <small style="font-size: x-small;">{{emp.linkedin}}</small> </div></small>
     </div>
   </div>
   <div class="edinburgh-right">
@@ -52,7 +30,7 @@
       <p [innerHTML]="emp.res_des"></p>
     </div>
     <hr />
-    <div style="display: flex; flex-direction: column">
+    <div style="display: flex; flex-direction: column; margin-bottom: -40px;">
       <span>Education and Qualifications</span>
       <small>
         <div *ngFor="let emp of expService.experience">
@@ -67,7 +45,8 @@
       </small>
       <br />
     </div>
-    <div style="display: flex; flex-direction: column; margin-top: -20px;">
+    <hr />
+    <div style="display: flex; flex-direction: column; margin-bottom: -40px;">
       <span>Work experience</span>
       <small>
         <div *ngFor="let emp of expService.experience">
@@ -82,7 +61,8 @@
       </small>
       <br />
     </div>
-    <div style="display: flex; flex-direction: column; margin-top: -20px;">
+    <hr />
+    <div style="display: flex; flex-direction: column; margin-bottom: -20px;">
         <span>References</span>
         <small>
           <div *ngFor="let emp of expService.experience" style="display: flex; flex-direction: column;">
@@ -95,7 +75,8 @@
         </small>
         <br />
     </div>
-    <div style="display: flex; flex-direction: column; margin-top: -10px;">
+    <hr />
+    <div style="display: flex; flex-direction: column; margin-bottom: -20px;">
         <span>Skills</span>
         <small>
           <div *ngFor="let emp of expService.experience">
@@ -106,7 +87,8 @@
         </small>
 
     </div>
-    <div style="display: flex; flex-direction: column;">
+    <hr />
+    <div style="display: flex; flex-direction: column; margin-bottom: -20px;">
       <span>Courses</span>
       <small>
         <div *ngFor="let emp of expService.experience">
@@ -119,7 +101,33 @@
           <p style="font-size: xx-small; margin-left: 12px;"><small><span>{{ emp.course_startDate_month }}{{ emp.course_startDate_year }}</span> - <span>{{ emp.course_endDate_month }}{{ emp.course_endDate_year }}</span></small></p>
         </div>
       </small>
-  </div>
+    </div>
+    <hr />
+    <!-- achievements -->
+    <div style="display: flex; flex-direction: column;margin-bottom: -40px;">
+      <span>Achievements</span>
+      <small>
+        <div *ngFor="let emp of expService.experience" style="display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between;">
+            <p [innerHTML]="emp.achiev_des"></p>
+          </div>
+        </div>
+      </small>
+      <br />
+    </div>
+    <hr />
+    <!-- publications -->
+    <div style="display: flex; flex-direction: column">
+      <span>Publications</span>
+      <small>
+        <div *ngFor="let emp of expService.experience" style="display: flex; flex-direction: column;">
+          <div style="display: flex; justify-content: space-between;">
+            <p [innerHTML]="emp.publi_des"></p>
+          </div>
+        </div>
+      </small>
+      <br />
+    </div>
     
   </div>
 </div>
