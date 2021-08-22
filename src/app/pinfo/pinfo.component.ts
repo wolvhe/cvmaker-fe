@@ -20,7 +20,7 @@ export class PinfoComponent implements OnInit {
     
   }
   ngOnInit(): void {
-    this.base64="";
+    // this.base64="";
     console.log(this.url);
     this.lang = localStorage.getItem('lang') || 'english';
     this.refreshInfoList();

@@ -1,5 +1,9 @@
 <div class="body">
-  <h1 [ngStyle]="styling.sharedBerkStyle$ | async">Name</h1>
+  <div style="column-count: 2;">
+    <img style="height: 45px; width: 55px; border-radius: 50%;" src="https://image.shutterstock.com/image-vector/user-icon-person-profile-avatar-260nw-601712213.jpg" alt=""> 
+    <h1 [ngStyle]="styling.sharedBerkStyle$ | async" style="position: relative; left: 5rem; bottom: 3rem;">Name</h1>
+  </div>
+ 
   <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
     <i class="fas fa-user-friends"></i> Personal
   </h6>
