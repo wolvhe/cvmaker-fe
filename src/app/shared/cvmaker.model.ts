@@ -1,5 +1,6 @@
 export class Info {
     _id!: string;
+    photo : string|undefined;
     fname: string | undefined;
     lname: string | undefined;
     email: string | undefined;

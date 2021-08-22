@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import { CommonService } from '../services/common.service';
+import { InfoService } from '../shared/info.service';
+// import {jsPDF} from 'jspdf'
+import { Info } from '../shared/cvmaker.model';
 
 @Component({
   selector: 'app-template',
@@ -7,9 +10,19 @@ import { CommonService } from '../services/common.service';
   styleUrls: ['./template.component.css'],
 })
 export class TemplateComponent implements OnInit {
-  constructor(public styling: CommonService) {}
+  constructor(public styling: CommonService , public infoService: InfoService) {}
 
-  ngOnInit(): void {  }
+  // @ViewChild('content',{static:false}) el!:ElementRef;
+  photo_url:string  
+  ngOnInit(): void{
+    this.refreshPersonalInfoList();
+  }
+  
+    refreshPersonalInfoList() {
+      this.infoService.getInfoList().subscribe((res) => {
+        this.infoService.users = res as Info[];
+      })
+    }
   // downloadMyFile(){
   //   const link = document.createElement('a');
   //   link.setAttribute('target', '_blank');
@@ -20,7 +33,22 @@ export class TemplateComponent implements OnInit {
   //   link.remove();
   // }
 
+  test(){
+    
+  }
   //akuland
+
+  // makePDF(){
+  //   let pdf = new jsPDF('p','pt','a4');
+  //   pdf.html(this.el.nativeElement,{
+  //     callback:(pdf)=>{
+  //       pdf.save("file.pdf");
+  //     }
+  //   })
+  //   pdf.save();
+  // }
+
+
   onClickAckuColor1() {
     this.styling.newStyle({ 'background-color': 'lightslategray' });
   }

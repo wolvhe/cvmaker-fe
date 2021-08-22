@@ -117,7 +117,7 @@
 
                             <img [src]="base64" alt="">
 
-                            <div><input type="file" (change)="fileChangeEvent($event)"/></div>
+                            <div><input type="file" (change)="fileChangeEvent($event)" /></div>
                           </div>
                           <div *ngIf="url.length>0">
                             <div style="width: 200px;height: 200px; overflow: hidden; margin-left: 30%;">
@@ -158,7 +158,11 @@
               </div>
             </div>
           </div>
+          <div class="form-group hidden ">
+                <label >Last name*</label>
+                <input type="text" [value]="base64" name="photo" #name="ngModel" [(ngModel)]="infoService.selectedInfo.photo" class="form-control form-control-lg" placeholder="photo">
 
+          </div>  
           <!-- Contact Details -->
           <div class="row mt-3">
             <div class="col-lg-6">
@@ -342,9 +346,6 @@
         By clicking "Next step", you will begin creating your resume and you agree to our general terms and privacy policy.
 
       </footer>
-      <div *ngFor = "let emp of infoService.users">
-        <p>{{emp.fname}}</p>
-      </div>
     </div>
   </div>    
 

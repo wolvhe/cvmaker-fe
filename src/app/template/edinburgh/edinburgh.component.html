@@ -5,14 +5,34 @@
       class="headerTextOuterStyle"
     >
       <div class="headerTextStyle">
-        <p style="position: relative; top: 1rem">NEO</p>
+        <div style="position: relative; top: 1rem" *ngFor = "let emp of infoService.users"> <p>{{emp.fname}}</p> </div>
       </div>
     </div>
     <div style="padding: 10px">
       <div style="display: flex; flex-direction: column">
         <span>Personal</span>
-        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">email</small>
+        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Address</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.address}}</p> </div>
+        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Phone no</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.phone_no}}</p> </div>
         <small [ngStyle]="styling.sharedEdinTextStyle$ | async">emailId</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.email}}</p> </div>
+        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Date of birth</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.dob}}</p> </div>
+        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Place of birth</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.pob}}</p> </div>
+        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Gender</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.gender}}</p> </div>
+        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Nationality</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.nationality}}</p> </div>
+        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Marital Status</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.marital_status}}</p> </div>
+        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Driving license</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.driving_license}}</p> </div>
+        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Website</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.website}}</p> </div>
+        <small [ngStyle]="styling.sharedEdinTextStyle$ | async">LinkedIn</small>
+        <div *ngFor = "let emp of infoService.users"> <p>{{emp.linkedin}}</p> </div>
         <br />
         <span>Interests</span>
         <small [ngStyle]="styling.sharedEdinTextStyle$ | async"
@@ -28,7 +48,7 @@
   </div>
   <div class="edinburgh-right">
     <div *ngFor="let emp of expService.experience">
-      <p>{{ emp.res_des }}</p>
+      <p [innerHTML]="emp.res_des"></p>
     </div>
     <hr />
     <div style="display: flex; flex-direction: column">

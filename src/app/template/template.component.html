@@ -1,3 +1,10 @@
+<div *ngFor = "let emp of infoService.users"> 
+  <img [src]="emp.photo" alt="">
+</div>
+
+
+
+
 <div class="experience-page-header">
   <strong>Select template</strong>
 </div>
@@ -51,9 +58,9 @@
     </div>
 </div>
 
-<div style="margin: 3rem auto; width: 60%">
+<div style="margin: 3rem auto; width: 60%;">
   <div style="display: flex">
-    <div class="card templatecards" [ngClass]="{'templatecards': toggleAcku, 'templatecardsNew': !toggleAcku}">
+    <div class="card templatecards " [ngClass]="{'templatecards': toggleAcku, 'templatecardsNew': !toggleAcku}">
       <div class="card-header">Ackuland<i style="float:right;" *ngIf="isShown" class="fas fa-check-circle"></i></div>
       <div class="card-body scaled" style="cursor: pointer;" data-toggle="modal" data-target="#ackulandModal">
         <app-ackuland></app-ackuland>
@@ -97,7 +104,7 @@
 <div style="margin: auto; width: 28%">
   <div>
     <a href="#">
-      <button class="nextButton">
+      <button class="nextButton" >
         <span><i class="fas fa-arrow-alt-to-bottom"></i><strong style="margin-left: 1rem">Download
             resume</strong></span>
       </button>
@@ -119,7 +126,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content template-modal-content">
         <div class="modal-body" style="overflow: scroll; overflow-x: hidden;">
-          <app-ackuland></app-ackuland>
+          <app-ackuland ></app-ackuland>
         </div>
         <div class="modal-footer" style="text-align: center;">
           <small>Unfortunately, the preview does not entirely fit on your screen, so
@@ -148,7 +155,7 @@
         </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-              <button class="nextButton" data-dismiss="modal" (click)="changeAcku()" (click)="onselect()"  ng-init="toggleAcku = true" ng-click="toggleAcku = !toggleAcku">
+              <button class="nextButton" data-dismiss="modal"  (click)="changeAcku()" (click)="onselect()"  ng-init="toggleAcku = true" ng-click="toggleAcku = !toggleAcku">
                 <span>{{toggleAcku ? 'Select' : 'Remove'}}</span>
               </button>
               <!-- (mouseup)="onClickSelect()" -->

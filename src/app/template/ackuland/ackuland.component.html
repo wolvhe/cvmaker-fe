@@ -1,6 +1,10 @@
-<div class="akuland-main">
+<div class="akuland-main" id="content" #content>
   <div class="ackuland-header">
-    <div class="ackuland-text">NEO</div>
+    <div class="ackuland-text">
+        <div *ngFor = "let emp of infoService.users">
+            <p>{{emp.fname}}</p>
+          </div>
+    </div>
   </div>
   <div style="display: flex">
     <div
@@ -9,8 +13,24 @@
     >
       <div>
         <p>PERSONAL</p>
-        <span>name</span><br />
-        <span>email</span><br /><br />
+        <span>name : <div *ngFor = "let emp of infoService.users"> <p>{{emp.fname}}</p> </div></span>
+        <span>Address: <div *ngFor = "let emp of infoService.users"> <p>{{emp.address}}</p> </div></span>
+        <span>Phone no: <div *ngFor = "let emp of infoService.users"> <p>{{emp.phone_no}}</p> </div></span>
+        <span>email: <div *ngFor = "let emp of infoService.users"> <p>{{emp.email}}</p> </div></span>
+        <span>Date of birth: <div *ngFor = "let emp of infoService.users"> <p>{{emp.dob}}</p> </div></span>
+        <span>Place of birth: <div *ngFor = "let emp of infoService.users"> <p>{{emp.pob}}</p> </div></span>
+        <span>Gender: <div *ngFor = "let emp of infoService.users"> <p>{{emp.gender}}</p> </div></span>
+        <span>Nationality: <div *ngFor = "let emp of infoService.users"> <p>{{emp.nationality}}</p> </div></span>
+        <span>Marital status: <div *ngFor = "let emp of infoService.users"> <p>{{emp.marital_status}}</p> </div></span>
+        <span>Driving license: <div *ngFor = "let emp of infoService.users"> <p>{{emp.driving_license}}</p> </div></span>
+        <span>Website: <div *ngFor = "let emp of infoService.users"> <p>{{emp.website}}</p> </div></span>
+        <span>LinkedIn: <div *ngFor = "let emp of infoService.users"> <p>{{emp.linkedin}}</p> </div></span>
+
+
+
+
+
+
         <p>INTERESTS</p>
         <span>cooking</span><br /><br />
         <p>LANGUAGUES</p>
@@ -20,7 +40,7 @@
     <div style="background-color: #fbfbfb">
       <div style="margin-top: 1rem; padding: 10px">
         <div *ngFor="let emp of expService.experience">
-            <p [innerHTML]="emp.res_des"> </p>
+            <p [innerHTML]="emp.res_des"></p>
           </div>
         <!-- edu -->
         <div style="display: flex; flex-direction: column">

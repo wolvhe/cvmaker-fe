@@ -2,10 +2,10 @@
   <div style="display: flex; flex-direction: row">
     <div style="display: flex; flex: 1; flex-direction: column">
       <h3>Name</h3>
-      <div class="info">
-        <p><i class="fas fa-home"></i> Address</p>
-        <p><i class="fas fa-phone"></i> 7894561231</p>
-        <p><i class="fas fa-envelope"></i> main@gmail.com</p>
+      <div class="info" style="column-count: 3;">
+        <small ><p><i class="fas fa-home"></i> Address</p></small>
+        <small ><p><i class="fas fa-phone"></i> 7894561231</p></small>
+        <small ><p><i class="fas fa-envelope"></i> main@gmail.com</p></small>
       </div>
     </div>
     <div
@@ -21,9 +21,24 @@
       <h3>CV</h3>
     </div>
   </div>
+  <hr>
+  <div>
+    <div style="column-count: 4;">
+      <span>Date of birth: <div *ngFor = "let emp of infoService.users"> <p>{{emp.dob}}</p> </div></span>
+      <span>Nationality: <div *ngFor = "let emp of infoService.users"> <p>{{emp.nationality}}</p> </div></span>
+      <span>Gender: <div *ngFor = "let emp of infoService.users"> <p>{{emp.gender}}</p> </div></span>
+      <span>Website: <div *ngFor = "let emp of infoService.users"> <p>{{emp.website}}</p> </div></span>
+    </div>
+    <div style="column-count: 4;">
+      <span>Place of birth: <div *ngFor = "let emp of infoService.users"> <p>{{emp.pob}}</p> </div></span>
+      <span>Marital status: <div *ngFor = "let emp of infoService.users"> <p>{{emp.marital_status}}</p> </div></span>
+      <span>Driving license: <div *ngFor = "let emp of infoService.users"> <p>{{emp.driving_license}}</p> </div></span>
+      <span>LinkedIn: <div *ngFor = "let emp of infoService.users"> <p>{{emp.linkedin}}</p> </div></span>
+    </div>
+  </div>
   <hr />
   <div *ngFor="let emp of expService.experience">
-    <p>{{ emp.res_des }}</p>
+    <p [innerHTML]="emp.res_des"></p>
   </div>
   <hr />
   <!-- edu -->

@@ -23,6 +23,7 @@
     "bootstrap": "^5.1.0",
     "fast-diff": "^1.2.0",
     "jquery": "^3.6.0",
+    "jspdf": "^2.3.1",
     "lodash": "^4.17.21",
     "ng-bootstrap": "^0.46.0",
     "ngx-photo-editor": "^0.3.6",

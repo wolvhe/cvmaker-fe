@@ -24,6 +24,7 @@ export class PinfoComponent implements OnInit {
     this.lang = localStorage.getItem('lang') || 'english';
     this.refreshInfoList();
     this.resetForm();
+    
   }
 
   changeLang(lang: any){
@@ -86,6 +87,7 @@ resetForm(form ?: NgForm) {
   form.reset();
   this.infoService.selectedInfo = {
     _id: "",
+    photo: "",
     fname: "",
     lname:"",
     email:"",
