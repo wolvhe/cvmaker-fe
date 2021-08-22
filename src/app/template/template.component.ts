@@ -1,15 +1,51 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import { CommonService } from '../services/common.service';
+import { InfoService } from '../shared/info.service';
+import { Info } from '../shared/cvmaker.model';
+import {jsPDF} from 'jspdf'
 
 @Component({
   selector: 'app-template',
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.css'],
+  
 })
 export class TemplateComponent implements OnInit {
-  constructor(public styling: CommonService) {}
+  constructor(public styling: CommonService , public infoService: InfoService) {}
 
-  ngOnInit(): void {  }
+  // @ViewChild('content',{static:false}) el!:ElementRef;
+  photo_url:string  
+  ngOnInit(): void{
+    this.refreshPersonalInfoList();
+  }
+
+  user1 :any
+
+  
+    refreshPersonalInfoList() {
+      this.infoService.getInfoList().subscribe((res) => {
+        
+        this.infoService.users = res as Info[];
+        console.log(this.infoService.users);
+        this.user1=this.infoService.users[0];
+       
+
+       
+      })
+    }
+  @ViewChild('Acku',{static:false}) el!:ElementRef;
+
+  @ViewChild('Edin',{static:false}) ed!:ElementRef;
+
+  @ViewChild('Prin',{static:false}) any!:ElementRef;
+
+  @ViewChild('Otago',{static:false}) ot!:ElementRef;
+
+  @ViewChild('Berk',{static:false}) be!:ElementRef;
+  
+
+ 
+
   // downloadMyFile(){
   //   const link = document.createElement('a');
   //   link.setAttribute('target', '_blank');
@@ -20,7 +56,68 @@ export class TemplateComponent implements OnInit {
   //   link.remove();
   // }
 
+  test(){
+    
+  }
   //akuland
+
+  makeAckuPDF(){
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+    pdf.setFont('FontAwesome');
+    pdf.html(this.el.nativeElement,{
+      callback:(pdf)=>{
+        pdf.save("file.pdf");
+      }
+    })
+    pdf.save();
+  }
+  makePrinPDF(){
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+    pdf.setFont('FontAwesome');
+    pdf.html(this.any.nativeElement,{
+      callback:(pdf)=>{
+        pdf.save("file.pdf");
+      }
+    })
+    pdf.save();
+  }
+  makeEdinPDF(){
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+    pdf.setFont('FontAwesome');
+    pdf.html(this.ed.nativeElement,{
+      callback:(pdf)=>{
+        pdf.save("file.pdf");
+      }
+    })
+    pdf.save();
+  }
+  makeOtagoPDF(){
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+    pdf.setFont('FontAwesome');
+    pdf.html(this.ot.nativeElement,{
+      callback:(pdf)=>{
+        pdf.save("file.pdf");
+      }
+    })
+    pdf.save();
+  }
+  makeBerkPDF(){
+    let pdf = new jsPDF('p','pt','a4');
+    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
+    pdf.setFont('FontAwesome');
+    pdf.html(this.be.nativeElement,{
+      callback:(pdf)=>{
+        pdf.save("file.pdf");
+      }
+    })
+    pdf.save();
+  }
+
+
   onClickAckuColor1() {
     this.styling.newStyle({ 'background-color': 'lightslategray' });
   }
@@ -198,5 +295,7 @@ onClickBerkColor6() {
   onselectBerk() {
     this.isShownBerk = !this.isShownBerk;
   }
+
+
 
 }

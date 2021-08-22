@@ -6,15 +6,26 @@
   <div>
     <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">PERSONAL</p>
     <div style="margin-left: 80px;">
-      <small>Name : neo</small><br />
-      <small>Email : neo@gmail.com</small>
+      <small *ngFor = "let emp of infoService.users">Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;{{emp.fname}}</small><br>
+      <small *ngFor = "let emp of infoService.users">Phone no&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{emp.phone_no}}</small><br>
+      <small *ngFor = "let emp of infoService.users">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{emp.email}}</small><br>
+      <small *ngFor = "let emp of infoService.users">Date of Birth&nbsp;&nbsp;: {{emp.dob}}</small><br>
+      <small *ngFor = "let emp of infoService.users">Place of Birth&nbsp;: {{emp.pob}}</small><br>
+      <small *ngFor = "let emp of infoService.users">Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{emp.gender}}</small><br>
+      <small *ngFor = "let emp of infoService.users">Nationality&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{emp.nationality}}</small><br>
+      <small *ngFor = "let emp of infoService.users">Marital status&nbsp;: {{emp.marital_status}}</small><br>
+      <small *ngFor = "let emp of infoService.users">Driving license: {{emp.driving_license}}</small><br>
+      <small *ngFor = "let emp of infoService.users">Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{emp.website}}</small><br>
+      <small *ngFor = "let emp of infoService.users">LinkedIn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{emp.linkedin}}</small><br>
+
+
     </div>
   </div>
   <hr />
   <div>
     <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)">RESUME OBJECTIVE</p>
     <div *ngFor="let emp of expService.experience">
-      <p>{{ emp.res_des }}</p>
+      <p [innerHTML]="emp.res_des"></p>
     </div>
   </div>
   <hr />

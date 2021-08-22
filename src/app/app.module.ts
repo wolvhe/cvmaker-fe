@@ -17,6 +17,7 @@ import { OtagoComponent } from './template/otago/otago.component';
 import { BerkeleyComponent } from './template/berkeley/berkeley.component';
 import { HomeComponent } from './home/home.component';
 import { TestComponent } from './test/test.component';
+import { NgxPhotoEditorModule } from 'ngx-photo-editor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { TestComponent } from './test/test.component';
     AppRoutingModule,
     QuillModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPhotoEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
