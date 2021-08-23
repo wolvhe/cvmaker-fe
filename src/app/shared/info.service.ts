@@ -10,7 +10,7 @@ export class InfoService {
   selectedInfo: Info = new Info;
   users: Info[] = [];
 
-  readonly baseURL = 'https://salty-island-35783.herokuapp.com/info';
+  readonly baseURL = 'http://localhost:3000/info';
   
   constructor(private http: HttpClient) { }
 
