@@ -1268,7 +1268,7 @@
             </div>
             <div>
               <div>
-                <label for="exampleInputEmail1">Start Date</label>
+                <label for="exampleInputEmail1">Select Level</label>
               </div>
               <div>
                 <select
@@ -1280,19 +1280,12 @@
                     #name="ngModel"
                     [(ngModel)]="expService.selectedExperience.skill_startDate"
                   >
-                    <option value="" disabled selected hidden>month</option>
-                    <option value="January">January</option>
-                    <option value="Feburary">Feburary</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
+                    <option value="" disabled selected hidden>Select Level</option>
+                    <option value="Expert">Expert</option>
+                    <option value="Experienced">Experienced</option>
+                    <option value="Skillfull">Skillfull</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Beginner">Beginner</option>
                   </select>
               </div>
             </div>

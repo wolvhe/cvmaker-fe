@@ -5,7 +5,7 @@
       class="headerTextOuterStyle"
     >
       <div class="headerTextStyle">
-        <div style="position: relative; top: 1rem" *ngFor = "let emp of infoService.users"> <p>{{emp.fname}}</p> </div>
+        <div style="position: relative; top: 1rem" *ngFor = "let emp of infoService.users"> <p>{{emp.fname}}&nbsp;{{emp.lname}}</p> </div>
         <img *ngFor = "let emp of infoService.users" style="height: 45px; width: 55px; border-radius: 50%;" [src]="emp.photo" alt="">
       </div>
     </div>
