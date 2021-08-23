@@ -1,7 +1,7 @@
 <div class="body">
   <div style="column-count: 2;">
-    <img style="height: 45px; width: 55px; border-radius: 50%;" src="https://image.shutterstock.com/image-vector/user-icon-person-profile-avatar-260nw-601712213.jpg" alt=""> 
-    <h1 [ngStyle]="styling.sharedBerkStyle$ | async" style="position: relative; left: 5rem; bottom: 3rem;">Name</h1>
+    <img *ngFor = "let emp of infoService.users" style="height: 45px; width: 55px; border-radius: 50%;" [src]="emp.photo" alt=""> 
+    <h1  *ngFor = "let emp of infoService.users"[ngStyle]="styling.sharedBerkStyle$ | async" style="position: relative; left: 5rem; bottom: 3rem;">{{emp.fname}}&nbsp;{{emp.lname}}</h1>
   </div>
  
   <h6 [ngStyle]="styling.sharedBerkStyle$ | async">

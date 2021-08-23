@@ -104,10 +104,10 @@
 <div style="margin: auto; width: 28%">
   <div>
     <!-- <a href="#"> -->
-      <button class="nextButton" >
+      <!-- <button class="nextButton" >
         <span><i class="fas fa-arrow-alt-to-bottom"></i><strong style="margin-left: 1rem">Download
             resume</strong></span>
-      </button>
+      </button> -->
     <div class="prevButton" style="margin-top: 1rem; margin-bottom: 4rem; margin-left: 2.5rem">
       <a href="/experience" style="text-decoration: none; color: gray">
         <span><i class="fas fa-chevron-left" style="margin-right: 1rem"></i>Previous step</span>
@@ -154,8 +154,8 @@
         </ul></div>
         <div style="margin: auto; width: 38%">
           <div>
-              <button class="nextButton" data-dismiss="modal"  (click)="changeAcku()" (click)="onselect()"  ng-init="toggleAcku = true" ng-click="toggleAcku = !toggleAcku">
-                <span>{{toggleAcku ? 'Select' : 'Remove'}}</span>
+              <button class="nextButton" data-dismiss="modal" (click)="makeAckuPDF()" (click)="changeAcku()" (click)="onselect()"  ng-init="toggleAcku = true" ng-click="toggleAcku = !toggleAcku">
+                <span>{{toggleAcku ? 'Download Resume' : 'Remove'}}</span>
               </button>
               <!-- (mouseup)="onClickSelect()" -->
           </div>
@@ -199,7 +199,7 @@
         <div style="margin: auto; width: 38%">
           <div>
             <button class="nextButton" data-dismiss="modal" (click)="makeEdinPDF()" (click)="changeEdin()" (click)="onselectEdin()"  ng-init="toggleEdin = true" ng-click="toggleEdin = !toggleEdin">
-              <span>{{toggleEdin ? 'Select' : 'Remove'}}</span>
+              <span>{{toggleEdin ? 'Download Resume' : 'Remove'}}</span>
             </button>
           </div>
         </div>
@@ -242,7 +242,7 @@
         <div style="margin: auto; width: 38%">
           <div>
             <button class="nextButton" data-dismiss="modal" (click)="makePrinPDF()" (click)="changePrin()" (click)="onselectPrin()"  ng-init="togglePrin = true" ng-click="togglePrin = !togglePrin">
-              <span>{{togglePrin ? 'Select' : 'Remove'}}</span>
+              <span>{{togglePrin ? 'Download Resume' : 'Remove'}}</span>
             </button>
           </div>
         </div>
@@ -284,7 +284,7 @@
         <div style="margin: auto; width: 38%">
           <div>
             <button class="nextButton" data-dismiss="modal" (click)="makeOtagoPDF()" (click)="changeOtago()" (click)="onselectOtago()"  ng-init="toggleOtago = true" ng-click="toggleOtago = !toggleOtago">
-              <span>{{toggleOtago ? 'Select' : 'Remove'}}</span>
+              <span>{{toggleOtago ? 'Download Resume' : 'Remove'}}</span>
             </button>
           </div>
         </div>
@@ -327,7 +327,7 @@
         <div style="margin: auto; width: 38%">
           <div>
             <button class="nextButton" data-dismiss="modal" (click)=" makeBerkPDF()" (click)="changeBerk()" (click)="onselectBerk()"  ng-init="toggleBerk = true" ng-click="toggleBerk = !toggleBerk">
-              <span>{{toggleBerk ? 'Select' : 'Remove'}}</span>
+              <span>{{toggleBerk ? 'Download Resume' : 'Remove'}}</span>
             </button>
           </div>
         </div>

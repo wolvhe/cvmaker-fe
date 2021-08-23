@@ -40,6 +40,7 @@ export class AckulandComponent implements OnInit {
     refreshPersonalInfoList() {
       this.infoService.getInfoList().subscribe((res) => {
         this.infoService.users = res as Info[];
+        console.log(this.infoService.users)
       })
     }
  
