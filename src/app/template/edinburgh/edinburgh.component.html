@@ -6,10 +6,10 @@
     >
       <div class="headerTextStyle">
         <div style="position: relative; top: 1rem" *ngFor = "let emp of infoService.users"> <p>{{emp.fname}}</p> </div>
-        <img style="height: 45px; width: 55px; border-radius: 50%;" src="https://image.shutterstock.com/image-vector/user-icon-person-profile-avatar-260nw-601712213.jpg" alt="">
+        <img *ngFor = "let emp of infoService.users" style="height: 45px; width: 55px; border-radius: 50%;" [src]="emp.photo" alt="">
       </div>
     </div>
-    <div style="padding: 10px">
+    <div style="padding: 20px">
       <div style="display: flex; flex-direction: column">
         <span>Personal</span>
         <small [ngStyle]="styling.sharedEdinTextStyle$ | async">Address</small>

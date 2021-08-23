@@ -1,7 +1,11 @@
 <div class="otago-main">
   <div style="display: flex; flex-direction: row">
     <div style="display: flex; flex: 1; flex-direction: column">
-      <h3>Name</h3>
+      <div style="column-count: 2;">
+      <img *ngFor = "let emp of infoService.users" style="height: 45px; width: 55px; border-radius: 50%;" [src]="emp.photo" alt=""> 
+      <h3 *ngFor = "let emp of infoService.users"  style="position: relative; right: 9rem; top: 0.5rem;">{{emp.fname}}&nbsp;{{emp.lname}}</h3>
+      </div>
+      <br>
       <div class="info" style="column-count: 3;">
         <small ><p><i class="fas fa-home"></i> Address</p></small>
         <small ><p><i class="fas fa-phone"></i> 7894561231</p></small>
@@ -136,6 +140,10 @@
     </div>
   </div>
   <hr />
+  <!-- Ref -->
+  <div *ngFor="let emp of expService.experience" style="font-size: x-small">
+
+  </div>
   <!-- lang -->
   <div>
     <p>LANGUAGUES</p>
