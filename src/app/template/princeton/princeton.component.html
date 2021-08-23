@@ -10,7 +10,7 @@
     <p style="font-family: 'Open Sans Condensed', sans-serif; color: #4c4c4c;" [ngStyle]="(styling.sharedPrinTextStyle$ | async)">PERSONAL</p>
     <div style="margin-left: 80px;">
       <div *ngIf="newData_fname">
-        <small >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.fname}}</small><br>
+        <small >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.fname}}&nbsp;{{newData.lname}}</small><br>
         </div>
         <div *ngIf="newData_phone_no">
         <small >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone no&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.phone_no}}</small><br>
