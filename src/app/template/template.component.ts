@@ -11,31 +11,7 @@ import { jsPDF } from 'jspdf'
 export class TemplateComponent implements OnInit {
   constructor(public styling: CommonService) { }
 
-<<<<<<< HEAD
-  // @ViewChild('content',{static:false}) el!:ElementRef;
-  photo_url:string  
-  ngOnInit(): void{
-    this.refreshPersonalInfoList();
-  }
-
-  user1 :any
-
-  
-    refreshPersonalInfoList() {
-      this.infoService.getInfoList().subscribe((res) => {
-        
-        this.infoService.users = res as Info[];
-        console.log(this.infoService.users);
-        this.user1=this.infoService.users[0];
-       
-
-       
-      })
-    }
-  @ViewChild('Acku',{static:false}) el!:ElementRef;
-=======
   @ViewChild('Acku', { static: false }) el!: ElementRef;
->>>>>>> 260f3ce925f069faa6b5a239b12a516e6ee09330
 
   @ViewChild('Edin', { static: false }) ed!: ElementRef;
 
@@ -90,7 +66,6 @@ export class TemplateComponent implements OnInit {
         pdf.save("file.pdf");
       }
     })
-    
   }
   makeOtagoPDF() {
     let pdf = new jsPDF('p', 'pt', 'a4');
