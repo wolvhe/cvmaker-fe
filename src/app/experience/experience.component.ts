@@ -21,9 +21,9 @@ export class ExperienceComponent implements OnInit {
 }
 
 
-  onSubmit(form : NgForm) {
+  onSubmit() {
     // if(form.value._id == "") {
-    this.expService.postInfo(form.value).subscribe((res) => {
+    this.expService.postInfo().subscribe((res) => {
       this.refreshInfoList();
       console.log("hello",res)
     });

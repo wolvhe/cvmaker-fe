@@ -15,9 +15,8 @@ export class ExperienceService {
   
   constructor(private http: HttpClient) { }
 
-  postInfo(emp: Experience){
-    console.log(emp)
-    return this.http.post(this.baseURL, emp);
+  postInfo(){
+    return this.http.post(this.baseURL, this.selectedExperience);
   }
 
   getInfoList() {

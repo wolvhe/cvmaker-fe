@@ -127,7 +127,7 @@
 
   <div class="container">
     <div class="pinfo_form">
-      <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)">
+      <form>
         <input
           type="hidden"
           name="_id"
@@ -535,8 +535,7 @@
           <div style="margin: auto; width: 35%">
             <div>
               <button
-                onclick="location.href='/experience'"
-                type="submit"
+                (click)="onSubmit()" routerLink = "/experience"
                 class="nextButton"
               >
                 <span

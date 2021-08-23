@@ -37,9 +37,9 @@ reset(){
 
   console.log(this.url);
 }
-onSubmit(form : NgForm) {
-    form.value.photo=this.base64;
-    this.infoService.postInfo(form.value).subscribe((res) => {
+onSubmit() {
+    this.infoService.selectedInfo.photo=this.base64;
+    this.infoService.postInfo().subscribe((res) => {
       this.refreshInfoList();
       console.log("hello",res)
       console.log(res)

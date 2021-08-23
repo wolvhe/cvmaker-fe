@@ -15,9 +15,8 @@ export class InfoService {
   
   constructor(private http: HttpClient) { }
 
-  postInfo(emp: Info){
-      console.log(emp);
-     return this.http.post(this.baseURL, emp);
+  postInfo(){
+     return this.http.post(this.baseURL, this.selectedInfo);
   }
 
   getInfoList() {

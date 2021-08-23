@@ -13,7 +13,8 @@ import { InfoService } from 'src/app/shared/info.service';
 
 })
 export class OtagoComponent implements OnInit {
-  newData: any | string; newData_fname: any | string;
+  newData: any | string = {}; 
+  newData_fname: any | string;
   newData_lname: any;
   newData_address: any;
   newData_city: any;

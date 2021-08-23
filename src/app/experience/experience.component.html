@@ -110,7 +110,7 @@
 </div>
 <div style="margin: 3rem auto; width: 60%">
 
-<form #experienceForm="ngForm" (ngSubmit)="onSubmit(experienceForm)">
+<form>
   <!-- resumeObjective -->
   <div id="codingmart" class="accordion">
     <div
@@ -335,7 +335,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="place"
+                    id="work_city"
                     placeholder="eg. Chennai"
                     name="work_city"
                     #name="ngModel"
@@ -349,7 +349,7 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="jobTitle"
+                    id="work_employer"
                     placeholder="eg. PwC"
                     name="work_employer"
                     #name="ngModel"
@@ -653,7 +653,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="jobTitle"
+                  id="edu_degree"
                   placeholder="eg. Bachelor of Science"
                   name="edu_degree"
                   #name="ngModel"
@@ -665,7 +665,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="place"
+                  id="edu_city"
                   placeholder="eg. Chennai"
                   name="edu_city"
                   #name="ngModel"
@@ -679,7 +679,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="jobTitle"
+                  id="edu_school"
                   placeholder="eg. Chennai University"
                   name="edu_school"
                   #name="ngModel"
@@ -974,7 +974,7 @@
           <input
             type="text"
             class="form-control"
-            id="jobTitle"
+            id="hobby"
             placeholder="eg. Hiking"
             name="hobby"
             #name="ngModel"
@@ -1113,14 +1113,14 @@
               <input 
               type="text" 
               class="form-control" 
-              id="jobTitle" 
+              id="ref_companyName" 
               name="ref_companyName"
               #name="ngModel"
               [(ngModel)]="expService.selectedExperience.ref_companyName"/>
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Contact Person</label>
-              <input type="text" class="form-control" id="jobTitle" name="ref_contactPerson"
+              <input type="text" class="form-control" id="ref_contactPerson" name="ref_contactPerson"
               #name="ngModel"
               [(ngModel)]="expService.selectedExperience.ref_contactPerson"/>
             </div>
@@ -1134,13 +1134,13 @@
           >
             <div class="form-group">
               <label for="exampleInputEmail1">Phone number</label>
-              <input type="number" class="form-control" id="jobTitle" name="ref_phoneNo"
+              <input type="number" class="form-control" id="ref_phoneNo" name="ref_phoneNo"
               #name="ngModel"
               [(ngModel)]="expService.selectedExperience.ref_phoneNo" />
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
-              <input type="text" class="form-control" id="jobTitle" name="ref_email"
+              <input type="text" class="form-control" id="ref_email" name="ref_email"
               #name="ngModel"
               [(ngModel)]="expService.selectedExperience.ref_email"/>
             </div>
@@ -1258,7 +1258,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="jobTitle"
+                id="skill"
                 placeholder="eg. Microsoft Word"
                 name="skill"
                 #name="ngModel"
@@ -1423,7 +1423,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="jobTitle"
+                id="lang"
                 placeholder="eg. Spanish"
                 style="width: 20rem; height: 3rem"
                 name="lang"
@@ -1585,7 +1585,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="jobTitle"
+                  id="course_title"
                   placeholder="eg.Finance Management "
                   name="course_title"
                   #name="ngModel"
@@ -1597,7 +1597,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="place"
+                  id="course_institution"
                   placeholder="eg. NewYork Buisness School"
                   name="course_institution"
                   #name="ngModel"
@@ -2142,7 +2142,7 @@
   <!-- next step -->
   <div style="margin: auto; width: 28%">
     <div>
-        <button onclick="location.href='/template'" type="submit" class="nextButton">
+        <button (click)="onSubmit()" routerLink = "/template" class="nextButton">
           <span
             >Next Step<strong style="margin-left: 1rem"
               ><i class="fas fa-chevron-right"></i></strong
