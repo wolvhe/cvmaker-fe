@@ -1,10 +1,10 @@
 <div class="body">
   <div style="column-count: 2;">
     <img *ngFor = "let emp of infoService.users" style="height: 45px; width: 55px; border-radius: 50%;" [src]="emp.photo" alt=""> 
-    <h1  *ngFor = "let emp of infoService.users"[ngStyle]="styling.sharedBerkStyle$ | async" style="position: relative; left: 5rem; bottom: 3rem;">{{emp.fname}}&nbsp;{{emp.lname}}</h1>
+    <h1  *ngFor = "let emp of infoService.users"[ngStyle]="styling.sharedBerkStyle$ | async" style="position: relative; left: 5rem; bottom: 3rem; font-size: 25px;">{{emp.fname}}&nbsp;{{emp.lname}}</h1>
   </div>
  
-  <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
+  <h6 style="margin-top: 10px;" [ngStyle]="styling.sharedBerkStyle$ | async">
     <i class="fas fa-user-friends"></i> Personal
   </h6>
   <div>
