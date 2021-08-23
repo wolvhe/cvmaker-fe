@@ -5,8 +5,8 @@
       class="headerTextOuterStyle"
     >
       <div class="headerTextStyle">
-        <div style="position: relative; top: 1rem" *ngFor = "let emp of infoService.users"> <p>{{emp.fname}}</p> </div>
-        <img style="height: 45px; width: 55px; border-radius: 50%;" src="https://image.shutterstock.com/image-vector/user-icon-person-profile-avatar-260nw-601712213.jpg" alt="">
+        <div style="position: relative; top: 1rem" *ngFor = "let emp of infoService.users"> <p>{{emp.fname}}&nbsp;{{emp.lname}}</p> </div>
+        <img *ngFor = "let emp of infoService.users" style="height: 45px; width: 55px; border-radius: 50%;" [src]="emp.photo" alt="">
       </div>
     </div>
     <div style="padding: 10px; margin-top: 15px;">
@@ -129,7 +129,7 @@
       <span>Achievements</span>
       <small>
         <div *ngFor="let emp of expService.experience" style="display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between;">
+          <div style="display: flex; justify-content: space-between;" [ngStyle]="styling.sharedEdinTextStyle$ | async">
             <p [innerHTML]="emp.achiev_des"></p>
           </div>
         </div>
@@ -141,7 +141,7 @@
       <span>Publications</span>
       <small>
         <div *ngFor="let emp of expService.experience" style="display: flex; flex-direction: column;">
-          <div style="display: flex; justify-content: space-between;">
+          <div style="display: flex; justify-content: space-between;" [ngStyle]="styling.sharedEdinTextStyle$ | async">
             <p [innerHTML]="emp.publi_des"></p>
           </div>
         </div>

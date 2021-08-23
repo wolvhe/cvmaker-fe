@@ -99,7 +99,7 @@
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Choose Image</h5>
+                        <h5 style="text-align: left;" class="modal-title" id="exampleModalLongTitle">Choose Image<br><p style="font-size: small;">**please upload an image below 500kb to avoid conflicts</p></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
@@ -158,10 +158,8 @@
               </div>
             </div>
           </div>
-          <div class="form-group  ">
-                <label >imageurl*</label>
-                <input type="text" [value]="base64" name="photo" #name="ngModel" [(ngModel)]="infoService.selectedInfo.photo" class="form-control form-control-lg" required>
-
+          <div class="form-group hidden ">
+                <input type="text" [value]="base64" name="photo" #name="ngModel" [(ngModel)]="infoService.selectedInfo.photo" class="form-control form-control-lg" placeholder="photo">
           </div>  
           <!-- Contact Details -->
           <div class="row mt-3">

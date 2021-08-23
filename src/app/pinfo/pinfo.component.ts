@@ -17,13 +17,13 @@ export class PinfoComponent implements OnInit {
   lang:any;
 
   constructor(public styling:CommonService, public infoService: InfoService) { 
-    
+
   }
   ngOnInit(): void {
     this.base64="";
     this.refreshInfoList();
     this.resetForm();
-    
+
   }
 
 
@@ -42,6 +42,7 @@ onSubmit(form : NgForm) {
     this.infoService.postInfo(form.value).subscribe((res) => {
       this.refreshInfoList();
       console.log("hello",res)
+      console.log(res)
     });
 
 }
@@ -51,7 +52,7 @@ refreshInfoList() {
   })
 }
 
-  
+
 fileChangeEvent(event: any) {
   this.imageChangedEvent = event;
 }
@@ -61,7 +62,7 @@ imageCropped(event: CroppedEvent) {
   this.url=this.base64;
   console.log(this.base64);
   console.log(typeof this.base64);
-  
+
 }
 
 resetForm(form ?: NgForm) {
@@ -90,4 +91,3 @@ resetForm(form ?: NgForm) {
 
 
 }
-

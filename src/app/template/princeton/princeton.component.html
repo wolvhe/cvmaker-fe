@@ -3,12 +3,18 @@
   </style>
 <div style="padding: 10px">
   <div>
-    <p [ngStyle]="(styling.sharedPrinTextStyle$ | async)" style="color: grey; font-weight: bold !important; font-size: x-large;">Curriculum Vitae</p>
+    <img *ngFor = "let emp of infoService.users" style="height: 45px; width: 55px; border-radius: 50%;" [src]="emp.photo" alt=""><span><p [ngStyle]="(styling.sharedPrinTextStyle$ | async)" style="color: grey; font-weight: bold !important; font-size: x-large;position: relative;left: 5rem;bottom: 3rem;">Curriculum Vitae</p></span>
   </div>
-  <hr />
+  <div *ngIf="expData_res_des">
+    <p style="font-family: 'Open Sans Condensed', sans-serif; color: #4c4c4c;" [ngStyle]="(styling.sharedPrinTextStyle$ | async)">RESUME OBJECTIVE</p>
+    <div>
+      <p [innerHTML]="expData.res_des"></p>
+    </div>
+    <hr />
+  </div>
   <div>
     <p style="font-family: 'Open Sans Condensed', sans-serif; color: #4c4c4c;" [ngStyle]="(styling.sharedPrinTextStyle$ | async)">PERSONAL</p>
-    <div style="margin-left: 80px;">
+    <div style="margin-left: 30px;">
       <div *ngIf="newData_fname">
         <small >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.fname}}&nbsp;{{newData.lname}}</small><br>
         </div>
@@ -45,13 +51,7 @@
     </div>
     <hr />
   </div>
-  <div *ngIf="expData_res_des">
-    <p style="font-family: 'Open Sans Condensed', sans-serif; color: #4c4c4c;" [ngStyle]="(styling.sharedPrinTextStyle$ | async)">RESUME OBJECTIVE</p>
-    <div>
-      <p [innerHTML]="expData.res_des"></p>
-    </div>
-    <hr />
-  </div>
+
   <div *ngIf="expData_edu_degree">
     <p style="font-family: 'Open Sans Condensed', sans-serif; color: #4c4c4c;" [ngStyle]="(styling.sharedPrinTextStyle$ | async)">EDUCATION AND QUALIFICATIONS</p>
     <div style="display: flex; margin-left: 20px;">

@@ -1,20 +1,47 @@
 <div class="body">
-  <h1 [ngStyle]="styling.sharedBerkStyle$ | async">Name</h1>
+  <div style="column-count: 2;" class="my-4">
+    <img *ngFor = "let emp of infoService.users" style="height: 45px; width: 55px; border-radius: 50%;" [src]="emp.photo" alt=""> 
+    <h1  *ngFor = "let emp of infoService.users"[ngStyle]="styling.sharedBerkStyle$ | async" style="position: relative; left: 5rem; bottom: 3rem; font-size: 30px">{{emp.fname}}&nbsp;{{emp.lname}}</h1>
+  </div>
+ 
   <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
     <i class="fas fa-user-friends"></i> Personal
   </h6>
-  <small><p *ngFor = "let emp of infoService.users">name : {{emp.fname}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">Address : {{emp.address}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">Phone no : {{emp.phone_no}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">email : {{emp.email}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">Date of Birth : {{emp.dob}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">Place of Birth : {{emp.pob}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">Gender : {{emp.gender}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">Nationality : {{emp.nationality}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">Marital status : {{emp.marital_status}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">Driving license : {{emp.driving_license}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">Website: {{emp.website}}</p></small>
-  <small><p *ngFor = "let emp of infoService.users">LinkedIn : {{emp.linkedin}}</p></small>
+  <div>
+    <div *ngIf="newData_fname">
+      <small >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.fname}}&nbsp;{{newData.lname}}</small><br>
+      </div>
+      <div *ngIf="newData_phone_no">
+      <small >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone no&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.phone_no}}</small><br>
+      </div>
+      <div *ngIf="newData_email">
+      <small >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.email}}</small><br>
+      </div>
+      <div *ngIf="newData_dob">
+      <small >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date of Birth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.dob}}</small><br>
+      </div>
+      <div *ngIf="newData_pob">
+        <small >&nbsp;&nbsp;&nbsp;&nbsp;Place of Birth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.pob}}</small><br>
+      </div>
+      <div>
+        <small *ngIf="newData_gender">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.gender}}</small><br>
+      </div>
+      <div>
+        <small *ngIf="newData_nationality">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nationality&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.nationality}}</small><br>
+      </div>
+      <div>
+        <small *ngIf="newData_marital_status">&nbsp;&nbsp;&nbsp;Marital status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.marital_status}}</small><br>
+      </div>
+      <div>
+        <small *ngIf="newData_driving_license">&nbsp;&nbsp;Driving license&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.driving_license}}</small><br>
+      </div>
+      <div>
+        <small *ngIf="newData_website">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Website&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.website}}</small><br>
+      </div>
+      <div style="padding-bottom: 15px;">
+        <small *ngIf="newData_linkedin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LinkedIn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{newData.linkedin}}</small><br>
+      </div>
+  </div>
 
 
 
@@ -30,14 +57,16 @@
   <span>Driving license: <div *ngFor = "let emp of infoService.users"> <p>{{emp.driving_license}}</p> </div></span>
   <span>Website: <div *ngFor = "let emp of infoService.users"> <p>{{emp.website}}</p> </div></span>
   <span>LinkedIn: <div *ngFor = "let emp of infoService.users"> <p>{{emp.linkedin}}</p> </div></span> -->
+ <div style="margin-top: 10px;" *ngIf="expData_res_des">
   <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
     <i class="fas fa-stream"></i> Resume Objective
   </h6>
   <div *ngFor="let emp of expService.experience">
     <p [innerHTML]="emp.res_des "></p>
   </div>
+</div>
   <!-- edu -->
-  <div>
+  <div *ngIf="expData_edu_degree">
     <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
         <i class="fas fa-graduation-cap"></i> Education and Qualification
       </h6>
@@ -75,7 +104,7 @@
   </div>
   <br>
   <!-- work -->
-  <div>
+  <div *ngIf="expData_work_jobtitle">
     <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
         <i class="fas fa-briefcase"></i> Work Experience
     </h6>
@@ -113,7 +142,7 @@
   </div>
   <br>
   <!-- interests -->
-  <div>
+  <div *ngIf="expData_hobby">
     <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
         <i class="fas fa-user"></i> Interests
     </h6>
@@ -123,7 +152,7 @@
   </div>
   <br>
   <!-- references -->
-  <div>
+  <div *ngIf="expData_ref_companyName">
     <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
         <i class="fas fa-file-alt"></i> References
     </h6>
@@ -163,7 +192,7 @@
   </div>
   <br>
   <!-- skills -->
-  <div>
+  <div *ngIf="expData_skill">
     <h6 [ngStyle]="styling.sharedBerkStyle$ | async">
         <i class="fas fa-code"></i> Skills
     </h6>

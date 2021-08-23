@@ -1,8 +1,6 @@
-import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { CommonService } from '../services/common.service';
-import { InfoService } from '../shared/info.service';
-import { Info } from '../shared/cvmaker.model';
-import {jsPDF} from 'jspdf'
+import { jsPDF } from 'jspdf'
 
 @Component({
   selector: 'app-template',
@@ -11,41 +9,23 @@ import {jsPDF} from 'jspdf'
   
 })
 export class TemplateComponent implements OnInit {
-  constructor(public styling: CommonService , public infoService: InfoService) {}
+  constructor(public styling: CommonService) { }
 
-  // @ViewChild('content',{static:false}) el!:ElementRef;
-  photo_url:string  
-  ngOnInit(): void{
-    this.refreshPersonalInfoList();
-  }
+  @ViewChild('Acku', { static: false }) el!: ElementRef;
 
-  user1 :any
+  @ViewChild('Edin', { static: false }) ed!: ElementRef;
 
-  
-    refreshPersonalInfoList() {
-      this.infoService.getInfoList().subscribe((res) => {
-        
-        this.infoService.users = res as Info[];
-        console.log(this.infoService.users);
-        this.user1=this.infoService.users[0];
-       
+  @ViewChild('Prin', { static: false }) any!: ElementRef;
 
-       
-      })
-    }
-  @ViewChild('Acku',{static:false}) el!:ElementRef;
+  @ViewChild('Otago', { static: false }) ot!: ElementRef;
 
-  @ViewChild('Edin',{static:false}) ed!:ElementRef;
+  @ViewChild('Berk', { static: false }) be!: ElementRef;
 
-  @ViewChild('Prin',{static:false}) any!:ElementRef;
 
-  @ViewChild('Otago',{static:false}) ot!:ElementRef;
 
-  @ViewChild('Berk',{static:false}) be!:ElementRef;
-  
 
- 
 
+  ngOnInit(): void { }
   // downloadMyFile(){
   //   const link = document.createElement('a');
   //   link.setAttribute('target', '_blank');
@@ -61,52 +41,48 @@ export class TemplateComponent implements OnInit {
   }
   //akuland
 
-  makeAckuPDF(){
-    let pdf = new jsPDF('p','pt','a4');
-    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
-    pdf.setFont('FontAwesome');
-    pdf.html(this.el.nativeElement,{
-      callback:(pdf)=>{
+  makeAckuPDF() {
+    let pdf = new jsPDF('p', 'pt', 'a4');
+    pdf.html(this.el.nativeElement, {
+      callback: (pdf) => {
         pdf.save("file.pdf");
       }
     })
   }
-  makePrinPDF(){
-    let pdf = new jsPDF('p','pt','a4');
-    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
-    pdf.setFont('FontAwesome');
-    pdf.html(this.any.nativeElement,{
-      callback:(pdf)=>{
+  makePrinPDF() {
+    let pdf = new jsPDF('p', 'pt', 'a4');
+    pdf.html(this.any.nativeElement, {
+      callback: (pdf) => {
         pdf.save("file.pdf");
       }
     })
   }
-  makeEdinPDF(){
-    let pdf = new jsPDF('p','pt','a4');
-    pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
-    pdf.setFont('FontAwesome');
-    pdf.html(this.ed.nativeElement,{
-      callback:(pdf)=>{
+  makeEdinPDF() {
+    var img = ""
+    let pdf = new jsPDF('p', 'pt', 'a4');
+    pdf.addImage(img,'JPEG',45,45,150,150)
+    pdf.html(this.ed.nativeElement, {
+      callback: (pdf) => {
         pdf.save("file.pdf");
       }
     })
   }
-  makeOtagoPDF(){
-    let pdf = new jsPDF('p','pt','a4');
+  makeOtagoPDF() {
+    let pdf = new jsPDF('p', 'pt', 'a4');
     pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
     pdf.setFont('FontAwesome');
-    pdf.html(this.ot.nativeElement,{
-      callback:(pdf)=>{
+    pdf.html(this.ot.nativeElement, {
+      callback: (pdf) => {
         pdf.save("file.pdf");
       }
     })
   }
-  makeBerkPDF(){
-    let pdf = new jsPDF('p','pt','a4');
+  makeBerkPDF() {
+    let pdf = new jsPDF('p', 'pt', 'a4');
     pdf.addFont('FontAwesome', 'FontAwesome', 'normal');
     pdf.setFont('FontAwesome');
-    pdf.html(this.be.nativeElement,{
-      callback:(pdf)=>{
+    pdf.html(this.be.nativeElement, {
+      callback: (pdf) => {
         pdf.save("file.pdf");
       }
     })
@@ -192,62 +168,62 @@ export class TemplateComponent implements OnInit {
     });
   }
 
-//otago
-onClickOtagoColor1() {
-  this.styling.newOtagoStyle({ 'background-color': 'black' });
-}
-onClickOtagoColor2() {
-  this.styling.newOtagoStyle({ 'background-color': 'rgb(202, 52, 52)' });
-}
-onClickOtagoColor3() {
-  this.styling.newOtagoStyle({ 'background-color': 'rgb(45, 58, 133)' });
-}
-onClickOtagoColor4() {
-  this.styling.newOtagoStyle({ 'background-color': 'rgb(99, 57, 57)' });
-}
-onClickOtagoColor5() {
-  this.styling.newOtagoStyle({ 'background-color': 'rgb(68, 155, 140)' });
-}
-onClickOtagoColor6() {
-  this.styling.newOtagoStyle({ 'background-color': 'darkorange' });
-}
+  //otago
+  onClickOtagoColor1() {
+    this.styling.newOtagoStyle({ 'background-color': 'black' });
+  }
+  onClickOtagoColor2() {
+    this.styling.newOtagoStyle({ 'background-color': 'rgb(202, 52, 52)' });
+  }
+  onClickOtagoColor3() {
+    this.styling.newOtagoStyle({ 'background-color': 'rgb(45, 58, 133)' });
+  }
+  onClickOtagoColor4() {
+    this.styling.newOtagoStyle({ 'background-color': 'rgb(99, 57, 57)' });
+  }
+  onClickOtagoColor5() {
+    this.styling.newOtagoStyle({ 'background-color': 'rgb(68, 155, 140)' });
+  }
+  onClickOtagoColor6() {
+    this.styling.newOtagoStyle({ 'background-color': 'darkorange' });
+  }
 
-//berk
-onClickBerkColor1() {
-  this.styling.newBerkStyle({ color: 'black', 'font-weight': 'bold' });
-}
-onClickBerkColor2() {
-  this.styling.newBerkStyle({
-    color: 'darkgreen',
-    'font-weight': 'bold',
-  });
-}
-onClickBerkColor3() {
-  this.styling.newBerkStyle({
-    color: 'rgb(45, 58, 133)',
-    'font-weight': 'bold',
-  });
-}
-onClickBerkColor4() {
-  this.styling.newBerkStyle({
-    color: 'rgb(99, 57, 57)',
-    'font-weight': 'bold',
-  });
-}
-onClickBerkColor5() {
-  this.styling.newBerkStyle({
-    color: 'hotpink',
-    'font-weight': 'bold',
-  });
-}
-onClickBerkColor6() {
-  this.styling.newBerkStyle({
-    color: 'red',
-    'font-weight': 'bold',
-  });
-}
+  //berk
+  onClickBerkColor1() {
+    this.styling.newBerkStyle({ color: 'black', 'font-weight': 'bold' });
+  }
+  onClickBerkColor2() {
+    this.styling.newBerkStyle({
+      color: 'darkgreen',
+      'font-weight': 'bold',
+    });
+  }
+  onClickBerkColor3() {
+    this.styling.newBerkStyle({
+      color: 'rgb(45, 58, 133)',
+      'font-weight': 'bold',
+    });
+  }
+  onClickBerkColor4() {
+    this.styling.newBerkStyle({
+      color: 'rgb(99, 57, 57)',
+      'font-weight': 'bold',
+    });
+  }
+  onClickBerkColor5() {
+    this.styling.newBerkStyle({
+      color: 'hotpink',
+      'font-weight': 'bold',
+    });
+  }
+  onClickBerkColor6() {
+    this.styling.newBerkStyle({
+      color: 'red',
+      'font-weight': 'bold',
+    });
+  }
 
-//toggle border
+  //toggle border
   toggleAcku: boolean = true;
   changeAcku() {
     this.toggleAcku = !this.toggleAcku;
@@ -268,8 +244,8 @@ onClickBerkColor6() {
   changeBerk() {
     this.toggleBerk = !this.toggleBerk;
   }
-  
-//toggle show button
+
+  //toggle show button
   isShown: boolean = false;
   onselect() {
     this.isShown = !this.isShown;

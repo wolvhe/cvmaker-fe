@@ -1,31 +1,36 @@
 <div class="otago-main">
   <div style="display: flex; flex-direction: row">
     <div style="display: flex; flex: 1; flex-direction: column">
-      <h3>{{newData.fname}}&nbsp;{{newData.lname}}</h3>
-      <div class="info" style="column-count: 3;">
+     <div style="display: flex;">
+        <h3>{{newData.fname}}&nbsp;{{newData.lname}}</h3>
+        <div
+        [ngStyle]="styling.sharedOtagoStyle$ | async"
+        style="
+        margin-left: 42%;
+          border: 1px solid none;
+          margin-bottom: 2rem;
+          padding: 5px;
+          background-color: teal;
+          color: white;
+        "
+        >
+        <h3>CV</h3>
+        </div>
+     </div>
+     
+      <div class="info" style=" display: flex; justify-content: space-between; align-items: baseline;">
         <div *ngIf="newData_address">
           <small style="font-size: x-small;" ><i class="fas fa-home"></i>&nbsp;{{newData.address}}</small>
         </div>
         <div *ngIf="newData_phone_no">
-          <small><p><i class="fas fa-phone"></i>&nbsp;{{newData.phone_no}}</p></small>
+          <small style="font-size: x-small;"><p><i class="fas fa-phone"></i>&nbsp;{{newData.phone_no}}</p></small>
         </div>
         <div *ngIf="newData_email">
-          <small><p><i class="fas fa-envelope"></i>&nbsp;{{newData.email}}</p></small>
+          <small style="font-size: x-small;"><p><i class="fas fa-envelope"></i>&nbsp;{{newData.email}}</p></small>
         </div>
       </div>
     </div>
-    <div
-      [ngStyle]="styling.sharedOtagoStyle$ | async"
-      style="
-        border: 1px solid none;
-        margin-bottom: 2rem;
-        padding: 5px;
-        background-color: teal;
-        color: white;
-      "
-    >
-      <h3>CV</h3>
-    </div>
+    
   </div>
   <hr>
   <div>
@@ -227,7 +232,7 @@
   </div>
   <!-- reference -->
   <div *ngIf="expData_ref_companyName">
-    <p style="font-family: 'Open Sans Condensed', sans-serif; color: #4c4c4c;" [ngStyle]="(styling.sharedPrinTextStyle$ | async)">REFERENCES</p>
+    <p style="font-family: 'Open Sans Condensed', sans-serif; color: #4c4c4c;">REFERENCES</p>
     <div style="display: flex; margin-left: 20px;">
       <div style="width: 200px;">
         <div *ngFor="let emp of expService.experience">
